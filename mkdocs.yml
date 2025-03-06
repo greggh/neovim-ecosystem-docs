@@ -1,0 +1,59 @@
+site_name: Neovim Ecosystem Documentation
+site_description: Documentation for the Neovim ecosystem projects
+site_author: gregg
+
+repo_name: greggh/neovim-ecosystem-docs
+repo_url: https://github.com/greggh/neovim-ecosystem-docs
+edit_uri: edit/main/
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.indexes
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - toc:
+      permalink: true
+
+nav:
+  - Home: README.md
+  - Ecosystem Overview: ecosystem-overview.md
+  - Project Status: project-status.md
+  - Cross-Reference: cross-reference.md
+  - Project History: project-history.md
+  - Archives: archives/project-history-archive.md
+  - Specifications: 
+    - Documentation Structure: specs/documentation-structure.md
+    - Template Repositories: specs/template-repositories.md
+  - Workflow Prompts:
+    - Session Management:
+      - Startup Prompt: prompts/startup-prompt.md
+      - End of Session: prompts/end-of-session.md
+    - Development Workflows:
+      - Project Initialization: prompts/project-initialization.md
+      - Feature Implementation: prompts/feature-implementation.md
+      - Bug Fixing: prompts/bug-fixing.md
+      - Code Review: prompts/code-review.md
+    - System Maintenance:
+      - Command Patterns: prompts/command-patterns.md
+      - Ecosystem Review: prompts/ecosystem-review.md
+      - Hooks Workflow: prompts/hooks-workflow-maintenance.md
+      - Prompts Maintenance: prompts/prompts-maintenance.md

@@ -2,6 +2,12 @@
 
 This document provides a comprehensive cross-reference system to help navigate the interconnected documentation across our Neovim ecosystem projects.
 
+## Repository Information
+
+| Repository | URL | Description |
+|------------|-----|-------------|
+| Neovim Ecosystem Docs | [github.com/greggh/neovim-ecosystem-docs](https://github.com/greggh/neovim-ecosystem-docs) | Centralized documentation for the entire Neovim ecosystem |
+
 ## Core Documentation Map
 
 ```mermaid
