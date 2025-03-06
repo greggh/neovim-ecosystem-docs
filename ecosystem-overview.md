@@ -66,9 +66,9 @@
 
 ## Current Priorities
 
-1. **Documentation Reorganization** - Implement the new tiered documentation structure and create necessary prompts
-2. **Complete Modular Reporting System** - Finish the reporting module in lust-next with reliable output formats
-3. **Implement Test Quality Validation** - Integrate test quality checks in pre-commit hooks
+1. **Metrics System Enhancement** - Build comprehensive metrics tracking and validation for documentation
+2. **Documentation Visualization** - Create visual documentation for architecture and workflows
+3. **Automated README Updates** - Create workflow for automated README updates across all projects
 4. **Standardize Version Management** - Ensure consistent version handling across all projects
 5. **Implement Nvim-Toolkit Integration** - Integrate shared utilities into plugins and configurations
 
