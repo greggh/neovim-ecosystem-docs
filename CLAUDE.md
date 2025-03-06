@@ -9,9 +9,15 @@ Neovim Ecosystem Documentation is the central knowledge repository for all Neovi
 - Check Markdown Formatting: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs markdownlint '**/*.md' --ignore node_modules`
 - Fix Markdown Issues: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs markdownlint --fix '**/*.md' --ignore node_modules`
 - Check YAML Formatting: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs yamllint .`
+- Run Pre-commit Hooks: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs pre-commit run --all-files`
+- Push to GitHub: `git -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs push origin main`
+
+## Auto-Fix Scripts
+
 - Fix Newlines: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_newlines.sh`
 - Fix Code Blocks: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_code_blocks.sh`
-- Push to GitHub: `git -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs push origin main`
+- Fix List Numbering: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_list_numbering.sh`
+- Fix Heading Levels: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_heading_levels.sh`
 
 ## Project Structure
 
