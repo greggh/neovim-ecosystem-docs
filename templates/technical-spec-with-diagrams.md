@@ -1,3 +1,4 @@
+
 # [Component Name] Technical Specification
 
 ## Overview
@@ -12,6 +13,7 @@ graph TD
     A --> C[Component C]
     B --> D[Component D]
     C --> D
+
 ```text
 
 *Figure 1: High-level architecture showing component relationships*
@@ -31,6 +33,7 @@ classDiagram
         +doSomething()
     }
     MainComponent --> SubComponent
+
 ```text
 
 *Figure 2: Component class structure*
@@ -43,13 +46,14 @@ sequenceDiagram
     participant Component A
     participant Component B
     participant Component C
-    
+
     User->>Component A: Request
     Component A->>Component B: Process
     Component B->>Component C: Query
     Component C-->>Component B: Result
     Component B-->>Component A: Response
     Component A-->>User: Display
+
 ```text
 
 *Figure 3: Data flow sequence between components*
@@ -64,6 +68,7 @@ stateDiagram-v2
     Processing --> Error: failure
     Completed --> Idle: reset
     Error --> Idle: reset
+
 ```text
 
 *Figure 4: Component state transitions*
@@ -75,12 +80,13 @@ flowchart LR
     subgraph "Project A"
         A1[Module 1] --- A2[Module 2]
     end
-    
+
     subgraph "Project B"
         B1[Module 1] --- B2[Module 2]
     end
-    
+
     A2 --> B1
+
 ```text
 
 *Figure 5: Integration with other ecosystem components*
@@ -94,7 +100,7 @@ flowchart LR
    - Responsibilities: Key responsibilities
    - Dependencies: What it depends on
 
-2. **[Component 2]**
+1. **[Component 2]**
    - Purpose: What this component does
    - Responsibilities: Key responsibilities
    - Dependencies: What it depends on
@@ -122,6 +128,7 @@ function Component.run()
 end
 
 return Component
+
 ```text
 
 ### Data Structures
@@ -138,6 +145,7 @@ local DataModel = {
     -- Content fields
   }
 }
+
 ```text
 
 ## Implementation Considerations
@@ -192,3 +200,4 @@ local DataModel = {
 1. *Use a Markdown editor that supports Mermaid (e.g., VS Code with Markdown Preview Enhanced)*
 2. *Use the Mermaid Live Editor: <https://mermaid.live/>*
 3. *Export as SVG/PNG and place in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/assets/diagrams/`*
+

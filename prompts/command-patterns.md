@@ -1,3 +1,4 @@
+
 # Command Patterns and Tool Usage
 
 This prompt provides guidance on optimal command patterns and tool usage across our Neovim ecosystem projects.
@@ -24,22 +25,22 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    ```bash
    # NEVER do this:
    cd /home/gregg/Projects/lua-library/lust-next && lua run_tests.lua
-   
+
    # ALWAYS do this instead:
    env -C /home/gregg/Projects/lua-library/lust-next lua run_tests.lua
    ```
 
-2. **For git operations:**
+1. **For git operations:**
 
    ```bash
    # NEVER do this:
    cd /home/gregg/Projects/lua-library/lust-next && git status
-   
+
    # ALWAYS do this instead:
    git -C /home/gregg/Projects/lua-library/lust-next status
    ```
 
-3. **For operations that don't support -C:**
+1. **For operations that don't support -C:**
 
    ```bash
    # PREFERRED: Use full paths with every command whenever possible
@@ -48,13 +49,13 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    cat /home/gregg/Projects/lua-library/lust-next/README.md
    ```
 
-4. **ONLY as a last resort - use pushd/popd pattern in a SINGLE COMMAND:**
+1. **ONLY as a last resort - use pushd/popd pattern in a SINGLE COMMAND:**
 
    ```bash
    # LAST RESORT: If -C isn't supported AND full paths won't work
    # ALWAYS combine pushd, commands, and popd in a SINGLE LINE:
    pushd /home/gregg/Projects/lua-library/lust-next > /dev/null && command1 && command2 && popd > /dev/null
-   
+
    # NEVER do this (separate commands):
    # pushd /home/gregg/Projects/lua-library/lust-next
    # command1
@@ -63,6 +64,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    ```
 
    ⚠️ **IMPORTANT RULES for pushd/popd:**
+
    - Only use when both `-C` AND full paths are impossible
    - Always chain everything in a SINGLE command line with && operators
    - Always use `> /dev/null` to suppress directory stack output
@@ -76,15 +78,15 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    - Always use full paths instead of relative paths
    - Example: `/home/gregg/Projects/lua-library/lust-next` not `../lust-next`
 
-2. **Modern Command-Line Tools**
+1. **Modern Command-Line Tools**
    - Prefer modern alternatives with better performance
    - Example: `rg --type lua "function"` not `grep -r "function" --include="*.lua"`
 
-3. **Targeted File Operations**
+1. **Targeted File Operations**
    - Use specific patterns to limit search scope
    - Example: `fd -p "**/*.lua" /home/gregg/Projects/lua-library/lust-next`
 
-4. **Local Git Workflow**
+1. **Local Git Workflow**
    - Make changes locally and push, rather than using direct API calls
    - Sync local and remote repositories after any API operations
 
@@ -93,6 +95,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
 ### Git Operations
 
 ```bash
+
 # Repository status
 git -C /home/gregg/Projects/lua-library/lust-next status
 
@@ -102,11 +105,13 @@ git -C /home/gregg/Projects/lua-library/lust-next commit -m "Enhance reporting m
 
 # Pull latest changes
 git -C /home/gregg/Projects/lua-library/lust-next pull origin main
+
 ```text
 
-### File Operations
+## File Operations
 
 ```bash
+
 # Find specific file types
 fd -p "**/*.lua" /home/gregg/Projects/lua-library/lust-next
 
@@ -115,11 +120,13 @@ rg --type lua "function setup" /home/gregg/Projects/lua-library/lust-next
 
 # View file content with syntax highlighting
 bat /home/gregg/Projects/lua-library/lust-next/src/reporting.lua
+
 ```text
 
-### Project-Specific Commands
+## Project-Specific Commands
 
 ```bash
+
 # Run tests (using command from project's CLAUDE.md)
 env -C /home/gregg/Projects/lua-library/lust-next lua run_tests.lua
 
@@ -128,11 +135,13 @@ git -C /home/gregg/Projects/lua-library/lust-next submodule update --remote
 
 # Run specific project commands (always check CLAUDE.md)
 env -C /home/gregg/Projects/lua-library/lust-next ./scripts/version_bump.lua patch
+
 ```text
 
-### GitHub CLI Operations
+## GitHub CLI Operations
 
 ```bash
+
 # List repository issues
 gh issue list -R greggh/lust-next
 
@@ -141,6 +150,7 @@ gh pr create -R greggh/lust-next --title "Add enhanced reporting" --body "Implem
 
 # Check workflow status
 gh workflow list -R greggh/lust-next
+
 ```text
 
 ## Important Notes
@@ -158,14 +168,17 @@ Remember: Good command patterns lead to more efficient development workflows and
 After using this prompt, please record its effectiveness to help us improve our documentation:
 
 ```bash
+
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
+
 ```text
 
 Add a new entry with the following format:
 
 ```markdown
-### YYYY-MM-DD - command-patterns
+
+## YYYY-MM-DD - command-patterns
 
 - **Task**: Brief description of how command patterns were applied
 - **Completion**: ✅ Successful / ❌ Unsuccessful
@@ -173,6 +186,8 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
+
 ```text
 
 This data helps us continuously improve our workflow prompts.
+

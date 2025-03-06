@@ -1,3 +1,4 @@
+
 # Adapter Architecture Specification
 
 ## Overview
@@ -22,33 +23,34 @@ local Adapter = {
   id = "adapter_id",             -- Unique identifier for the adapter
   name = "Display Name",         -- Human-readable name
   description = "Description",   -- Brief description of the adapter's purpose
-  
+
   -- Core functionality
   detect = function(path)        -- Returns true if this adapter should be used for the project
     -- Implementation
   end,
-  
+
   setup = function(config)       -- Sets up the adapter with the given configuration
     -- Implementation
   end,
-  
+
   get_hooks_path = function()    -- Returns the path to the hooks directory
     -- Implementation
   end,
-  
+
   get_lint_command = function()  -- Returns the command to run for linting
     -- Implementation
   end,
-  
+
   get_test_command = function()  -- Returns the command to run for testing
     -- Implementation
   end,
-  
+
   -- Optional helpers
   get_default_config = function() -- Returns default configuration for this adapter
     -- Implementation
   end
 }
+
 ```text
 
 ## Current Adapter Types
@@ -118,6 +120,7 @@ registry.register(require("hooks-util.adapters.generic_lua"))
 
 -- Register custom adapter
 registry.register(require("my_custom_adapter"))
+
 ```text
 
 The registry provides discovery mechanisms:
@@ -131,6 +134,7 @@ local adapter = registry.get("neovim_plugin")
 
 -- Automatically discover the correct adapter for the current project
 local detected_adapter = registry.detect(cwd)
+
 ```text
 
 ## Configuration Integration
@@ -142,19 +146,20 @@ Adapters integrate with the configuration system:
 return {
   -- Explicitly set adapter (overrides automatic detection)
   project_type = "neovim_plugin",
-  
+
   -- Or use automatic detection
   project_type = "auto",
-  
+
   -- Adapter-specific configuration
   neovim_plugin = {
     -- Configuration specific to Neovim plugin adapter
   },
-  
+
   lua_library = {
     -- Configuration specific to Lua library adapter
   }
 }
+
 ```text
 
 ## Extension Points
@@ -175,27 +180,27 @@ local NeovimPluginAdapter = {
   id = "neovim_plugin",
   name = "Neovim Plugin",
   description = "Adapter for Neovim plugin projects",
-  
+
   detect = function(path)
     local has_plugin_dir = fs.directory_exists(path .. "/plugin")
     local has_lua_init = fs.glob(path .. "/lua/*/init.lua")
     local name_contains_nvim = path:find("%.nvim") or path:find("nvim%-")
-    
+
     return has_plugin_dir or #has_lua_init > 0 or name_contains_nvim
   end,
-  
+
   setup = function(config)
     -- Implementation
   end,
-  
+
   get_lint_command = function()
     return "luacheck --config .luacheckrc ."
   end,
-  
+
   get_test_command = function()
     return "lua ./test/run_tests.lua"
   end,
-  
+
   get_default_config = function()
     return {
       lint = {
@@ -214,6 +219,8 @@ local NeovimPluginAdapter = {
 }
 
 return NeovimPluginAdapter
+
 ```text
 
 This architecture provides a flexible foundation for extending hooks-util to support various project types while maintaining a consistent interface and user experience.
+

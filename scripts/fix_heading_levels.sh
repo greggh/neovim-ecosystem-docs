@@ -5,19 +5,19 @@
 
 find /home/gregg/Projects/docs-projects/neovim-ecosystem-docs -name "*.md" -type f | while read -r file; do
     echo "Processing $file for heading levels"
-    
+
     # Create a temporary file
     temp_file=$(mktemp)
-    
+
     # Process the file line by line
     last_level=0
-    
+
     while IFS= read -r line; do
         # Check if line is a heading
         if [[ "$line" =~ ^(#+)[[:space:]] ]]; then
             # Get the heading level (number of # symbols)
             level=${#BASH_REMATCH[1]}
-            
+
             # If this is the first heading, allow it to be any level
             if [[ $last_level -eq 0 ]]; then
                 last_level=$level
@@ -41,7 +41,7 @@ find /home/gregg/Projects/docs-projects/neovim-ecosystem-docs -name "*.md" -type
             echo "$line" >> "$temp_file"
         fi
     done < "$file"
-    
+
     # Replace the original file with the fixed one
     mv "$temp_file" "$file"
 done

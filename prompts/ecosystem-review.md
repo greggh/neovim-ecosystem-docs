@@ -1,3 +1,4 @@
+
 # Comprehensive Ecosystem Review
 
 This prompt initiates a systematic review of all projects in our Neovim ecosystem to ensure consistency, quality, and alignment with our standards.
@@ -90,27 +91,27 @@ For each project:
    - Verify documentation files exist and follow standards
    - Check CLAUDE.md for current information
 
-2. **Version Verification**
+1. **Version Verification**
    - Identify authoritative version source
    - Check all files for consistent version references
    - Verify version management system implementation
 
-3. **Documentation Review**
+1. **Documentation Review**
    - Audit all documentation files
    - Check for consistency with standardized formats
    - Update README.md, CHANGELOG.md, and CLAUDE.md as needed
 
-4. **Quality Assurance Audit**
+1. **Quality Assurance Audit**
    - Verify test suite implementation
    - Check pre-commit hooks configuration
    - Audit GitHub workflow configurations
 
-5. **Integration Check**
+1. **Integration Check**
    - Verify dependencies management
    - Check integration between related projects
    - Ensure template inheritance is properly configured
 
-6. **Updates and Fixes**
+1. **Updates and Fixes**
    - Implement necessary updates for consistency
    - Fix any issues with hooks or workflows
    - Update documentation to reflect current state
@@ -124,12 +125,12 @@ Upon completion, create:
    - Consistency across the ecosystem
    - Identified issues and their resolutions
 
-2. **Documentation Updates**
+1. **Documentation Updates**
    - Updated project status in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md`
    - Updated tasks in relevant task files
    - Updated CLAUDE.md files for projects with changes
 
-3. **Action Items**
+1. **Action Items**
    - List of remaining issues to address
    - Prioritized recommendations for improvement
    - Timeline for addressing critical issues
@@ -149,14 +150,17 @@ Remember to follow the command pattern guidelines, using full paths with appropr
 After using this prompt, please record its effectiveness to help us improve our documentation:
 
 ```bash
+
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
+
 ```text
 
 Add a new entry with the following format:
 
 ```markdown
-### YYYY-MM-DD - ecosystem-review
+
+## YYYY-MM-DD - ecosystem-review
 
 - **Task**: Brief description of the review conducted
 - **Completion**: ✅ Successful / ❌ Unsuccessful
@@ -164,6 +168,8 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
+
 ```text
 
 This data helps us continuously improve our workflow prompts.
+

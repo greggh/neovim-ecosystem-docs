@@ -1,3 +1,4 @@
+
 # Monthly Prompt Metrics Review
 
 This prompt guides the process of reviewing and analyzing our prompt effectiveness metrics on a monthly basis, leading to actionable improvements.
@@ -9,15 +10,17 @@ This prompt guides the process of reviewing and analyzing our prompt effectivene
 Start by gathering all prompt usage data from the most recent month:
 
 ```bash
+
 # View the prompt metrics file
 cat /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
+
 ```text
 
-### 2. Metrics Analysis
+## 2. Metrics Analysis
 
 For each prompt, calculate and assess the following metrics from the past month:
 
-#### Usage Analysis
+### Usage Analysis
 
 - **Total Usage Count**: How many times was the prompt used?
 - **Usage Trends**: Is usage increasing, decreasing, or stable compared to previous months?
@@ -54,6 +57,7 @@ Based on the analysis, create an improvement plan:
 Document the review findings in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/monthly-reviews/YYYY-MM.md`:
 
 ```markdown
+
 # Prompt Metrics Review: [Month Year]
 
 ## Summary Statistics
@@ -78,7 +82,7 @@ Document the review findings in `/home/gregg/Projects/docs-projects/neovim-ecosy
    - Improvement Ideas: [suggestions]
    - Priority: [High/Medium/Low]
 
-2. [Prompt Name]
+1. [Prompt Name]
    - Current Issues: [description]
    - Improvement Ideas: [suggestions]
    - Priority: [High/Medium/Low]
@@ -92,6 +96,7 @@ Document the review findings in `/home/gregg/Projects/docs-projects/neovim-ecosy
 ## Long-term Trends and Observations
 
 [Analysis of longer-term patterns and strategic implications]
+
 ```text
 
 ## Implementation Plan
@@ -103,7 +108,7 @@ After completing the review:
    ```bash
    # Edit prompts that need improvements
    [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/[prompt-name].md
-   
+
    # Commit changes
    git -C /home/gregg/Projects/docs add prompts/[prompt-name].md
    git -C /home/gregg/Projects/docs commit -m "Improve [prompt-name] based on metrics review"
@@ -114,15 +119,15 @@ After completing the review:
    - Add a note in the metrics file indicating the prompt was updated
    - Begin collecting new metrics to measure improvement
 
-2. **Create New Prompts** (if needed):
+1. **Create New Prompts** (if needed):
 
    ```bash
    # Create new prompt file
    [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/[new-prompt-name].md
-   
+
    # Add to metrics tracking
    [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-   
+
    # Commit changes
    git -C /home/gregg/Projects/docs add prompts/[new-prompt-name].md metrics/prompt-metrics.md
    git -C /home/gregg/Projects/docs commit -m "Add new [new-prompt-name] prompt"
@@ -145,14 +150,17 @@ By conducting regular reviews of prompt effectiveness, we can continuously impro
 After using this prompt, please record its effectiveness to help us improve our documentation:
 
 ```bash
+
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
+
 ```text
 
 Add a new entry with the following format:
 
 ```markdown
-### YYYY-MM-DD - metrics-review
+
+## YYYY-MM-DD - metrics-review
 
 - **Task**: Brief description of the metrics review conducted
 - **Completion**: ✅ Successful / ❌ Unsuccessful
@@ -160,6 +168,8 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
+
 ```text
 
 This data helps us continuously improve our workflow prompts.
+

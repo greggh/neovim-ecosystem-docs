@@ -17,7 +17,7 @@ add_newlines() {
 # Find all Markdown files
 find /home/gregg/Projects/docs-projects/neovim-ecosystem-docs -name "*.md" -type f | while read -r file; do
     echo "Processing $file"
-    
+
     # Add newline at the end of file
     add_newlines "$file"
 done

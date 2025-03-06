@@ -1,3 +1,4 @@
+
 # Hooks-Util Architecture
 
 ## Overview
@@ -16,19 +17,19 @@ The hooks-util framework consists of the following primary components:
    - Provides mechanisms for adapter selection
    - Manages adapter lifecycle and initialization
 
-2. **Configuration System** (`hooks-util/core/config.lua`):
+1. **Configuration System** (`hooks-util/core/config.lua`):
    - Supports both shell-based (.hooksrc) and Lua-based (.hooks-util.lua) configurations
    - Implements configuration merging and validation
    - Provides hierarchical access to configuration options
    - Handles environment variables and defaults
 
-3. **Adapter Interface** (`hooks-util/core/adapter.lua`):
+1. **Adapter Interface** (`hooks-util/core/adapter.lua`):
    - Defines the standard interface for all adapters
    - Provides base adapter implementation
    - Includes utility functions for common adapter operations
    - Sets up conventions for adapter capabilities
 
-4. **Project Type Adapters** (`hooks-util/adapters/`):
+1. **Project Type Adapters** (`hooks-util/adapters/`):
    - Specialized implementations for different project types:
      - Neovim plugin adapter
      - Neovim configuration adapter
@@ -36,19 +37,19 @@ The hooks-util framework consists of the following primary components:
      - Generic Lua adapter (fallback)
    - Each implements detection, setup, and hook operations
 
-5. **Shell Scripts** (`hooks-util/scripts/`):
+1. **Shell Scripts** (`hooks-util/scripts/`):
    - Bash scripts for hook execution
    - Utility scripts for setup and configuration
    - Pre-commit hooks implementation
    - Integration scripts for CI platforms
 
-6. **Test Quality Integration** (`hooks-util/scripts/test_quality.sh`):
+1. **Test Quality Integration** (`hooks-util/scripts/test_quality.sh`):
    - Integration with lust-next for test validation
    - Coverage validation implementation
    - Quality level verification
    - Custom rule support
 
-7. **CI Templates** (`hooks-util/templates/`):
+1. **CI Templates** (`hooks-util/templates/`):
    - GitHub Actions workflow templates
    - Template generation utilities
    - CI configuration helpers
@@ -75,6 +76,7 @@ The adapter architecture forms the core of hooks-util's flexibility:
 │  Neovim     ││  Neovim   ││  Lua      ││  Generic  ││  Custom   │
 │  Plugin     ││  Config   ││  Library  ││  Lua      ││  Adapter  │
 └─────────────┘└───────────┘└───────────┘└───────────┘└───────────┘
+
 ```text
 
 1. **Registry**: Central component for adapter management
@@ -85,6 +87,7 @@ The adapter architecture forms the core of hooks-util's flexibility:
 
 ```text
 [Project Directory] → [Try Each Adapter's detect()] → [Select Matching Adapter] → [Configuration Override Check] → [Final Adapter Selection]
+
 ```text
 
 1. Start with the project directory
@@ -103,20 +106,21 @@ Each adapter must implement the following interface:
   id = "unique_id",
   name = "Human Readable Name",
   description = "Description of the adapter",
-  
+
   -- Core Functions
   detect = function(path),           -- Determine if this adapter should be used
   setup = function(config),          -- Initialize the adapter
   get_hooks_path = function(),       -- Get path to hooks
   get_lint_command = function(),     -- Get command for linting
   get_test_command = function(),     -- Get command for testing
-  
+
   -- Hook Implementations
   pre_commit = function(),           -- Pre-commit hook implementation
-  
+
   -- Helpers
   get_default_config = function()    -- Get default configuration
 }
+
 ```text
 
 ## Configuration System
@@ -133,11 +137,11 @@ Hooks-util supports two configuration formats:
    ```bash
    # Project type
    HOOKS_PROJECT_TYPE="neovim_plugin"
-   
+
    # Linting options
    HOOKS_LINT_ENABLED=1
    HOOKS_LINT_COMMAND="luacheck"
-   
+
    # Test options
    HOOKS_TEST_ENABLED=1
    HOOKS_TEST_COVERAGE_THRESHOLD=80
@@ -151,13 +155,13 @@ Hooks-util supports two configuration formats:
    ```lua
    return {
      project_type = "neovim_plugin",
-     
+
      lint = {
        enabled = true,
        command = "luacheck",
        args = {"--config", ".luacheckrc"}
      },
-     
+
      test = {
        enabled = true,
        coverage = {
@@ -199,6 +203,7 @@ end
 
 -- Get configuration with defaults
 local lint_config = config.get("lint", {enabled = false})
+
 ```text
 
 ## Lust-Next Integration
@@ -222,12 +227,14 @@ Hooks-util integrates with lust-next for test quality validation:
 │coverage│◄────┌──────────┐───►│   quality   │
 └────────┘     │lust-next │    └─────────────┘
                └──────────┘
+
 ```text
 
 ### Integration Flow
 
 ```text
 [Pre-Commit Hook] → [Check Config] → [Find lust-next] → [Determine Features] → [Run Tests] → [Check Results] → [Pass/Fail Commit]
+
 ```text
 
 1. Pre-commit hook activates test quality check
@@ -243,6 +250,7 @@ Hooks-util integrates with lust-next for test quality validation:
 The system dynamically detects lust-next capabilities:
 
 ```bash
+
 # Check if lust-next has coverage module
 if lua -e "pcall(function() require('path.to.lust-next.src.coverage') end)" &>/dev/null; then
   # Coverage is available
@@ -252,6 +260,7 @@ fi
 if lua -e "pcall(function() require('path.to.lust-next.src.quality') end)" &>/dev/null; then
   # Quality validation is available
 fi
+
 ```text
 
 ## Pre-Commit Hook Implementation
@@ -260,6 +269,7 @@ fi
 
 ```text
 [git commit] → [pre-commit hook] → [load config] → [select adapter] → [quality check] → [lint check] → [test check] → [commit allowed/blocked]
+
 ```text
 
 1. Git commit triggers pre-commit hook
@@ -304,6 +314,7 @@ fi
 
 # All checks passed
 exit 0
+
 ```text
 
 ## CLI and Automation
@@ -319,6 +330,7 @@ hooks-util check      # Run all checks (lint, test, quality)
 hooks-util lint       # Run linting only
 hooks-util test       # Run tests only
 hooks-util quality    # Run quality validation only
+
 ```text
 
 ### Setup Wizard
@@ -327,6 +339,7 @@ The interactive setup wizard helps configure hooks-util:
 
 ```text
 [Start Wizard] → [Detect Project Type] → [Configure Linting] → [Configure Tests] → [Configure Quality] → [Generate Config] → [Install Hooks]
+
 ```text
 
 1. Wizard is initiated with `hooks-util configure`
@@ -344,6 +357,7 @@ The interactive setup wizard helps configure hooks-util:
 Hooks-util provides templates for CI workflows:
 
 ```yaml
+
 # GitHub Actions workflow example
 name: Tests
 
@@ -357,34 +371,37 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/checkout@v2
-      
+
       - name: Set up Lua
         uses: leafo/gh-actions-lua@v8
         with:
           luaVersion: "5.1"
-          
+
       - name: Set up LuaRocks
         uses: leafo/gh-actions-luarocks@v4
-          
+
       - name: Install dependencies
         run: |
           luarocks install luacheck
           luarocks install busted
-          
+
       - name: Lint
         run: luacheck .
-        
+
       - name: Test
         run: busted
+
 ```text
 
-### Template Generation
+## Template Generation
 
 CI templates are generated based on project type:
 
 ```text
 [Project Type] → [Select Template] → [Fill Variables] → [Generate Workflow] → [Save to Project]
+
 ```text
 
 1. Project type determines which template to use
@@ -402,19 +419,20 @@ CI templates are generated based on project type:
    - Standard API for hook extensions
    - Plugin registry and lifecycle management
 
-2. **Additional Adapters**:
+1. **Additional Adapters**:
    - Support for more project types and languages
    - Framework-specific adapters (e.g., Love2D games)
    - Build system integration adapters
 
-3. **Enhanced Reporting**:
+1. **Enhanced Reporting**:
    - Visual reports for quality and test results
    - Historical tracking of project quality
    - Integration with notification systems
 
-4. **Advanced Configuration**:
+1. **Advanced Configuration**:
    - Schema-based configuration validation
    - Remote configuration support
    - Team-based configuration sharing
 
 This architecture document provides a comprehensive overview of the hooks-util design, emphasizing its adapter-based approach and integration with lust-next for test quality validation.
+

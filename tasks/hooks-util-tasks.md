@@ -1,3 +1,4 @@
+
 # Hooks-Util Tasks
 
 ## Current Focus
@@ -13,14 +14,14 @@ The current focus for hooks-util is completing comprehensive testing across all 
    - [ ] Validate configuration loading from different sources
    - [ ] Test pre-commit hooks with various quality settings
 
-2. **Documentation Finalization**
+1. **Documentation Finalization**
    - [ ] Complete adapter system documentation with detailed examples
    - [ ] Finalize Lua configuration documentation
    - [ ] Create detailed setup guide for each project type
    - [ ] Add troubleshooting guide for common issues
    - [ ] Enhance README with clear feature overview
 
-3. **Integration Preparation**
+1. **Integration Preparation**
    - [ ] Create standardized integration workflow for adding to projects
    - [ ] Test integration with all project templates
    - [ ] Prepare submodule setup scripts
@@ -34,13 +35,13 @@ The current focus for hooks-util is completing comprehensive testing across all 
    - [ ] Improve error messages and user feedback
    - [ ] Add automated setup wizard improvements
 
-2. **Adapter Improvements**
+1. **Adapter Improvements**
    - [ ] Create additional specialized adapters for specific project types
    - [ ] Add extended configuration options for existing adapters
    - [ ] Improve detection accuracy for edge cases
    - [ ] Implement adapter-specific documentation
 
-3. **CI Integration**
+1. **CI Integration**
    - [ ] Enhance GitHub Actions workflow templates
    - [ ] Add support for additional CI platforms
    - [ ] Improve test reporting in CI context
@@ -54,7 +55,7 @@ The current focus for hooks-util is completing comprehensive testing across all 
    - [ ] Create hook management dashboard
    - [ ] Add telemetry options for tracking quality improvements
 
-2. **Performance Optimization**
+1. **Performance Optimization**
    - [ ] Optimize hook execution time
    - [ ] Improve caching mechanisms
    - [ ] Add selective execution based on changed files

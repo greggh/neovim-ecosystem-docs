@@ -1,3 +1,4 @@
+
 # Test Quality Levels Specification
 
 ## Overview
@@ -26,7 +27,7 @@ Level 1 represents the minimum acceptable quality for tests, focusing on basic t
 - No empty describe or it blocks
 - Basic structural validation (proper nesting)
 
-**Purpose:**  
+**Purpose:**
 Ensures that tests exist and have minimal validation logic. This level is suitable for projects just starting with testing or with minimal test requirements.
 
 ### Level 2: Standard Testing
@@ -42,7 +43,7 @@ Level 2 builds on Level 1 by requiring more comprehensive test coverage and impr
 - Proper test organization with describe blocks
 - Consistent naming patterns for tests and blocks
 
-**Purpose:**  
+**Purpose:**
 Ensures that tests cover more than just the happy path and use a variety of assertion types. This level is suitable for most projects as a baseline quality standard.
 
 ### Level 3: Comprehensive Testing
@@ -58,7 +59,7 @@ Level 3 introduces more rigorous requirements for testing edge cases and proper 
 - Proper use of mocks and stubs for dependencies
 - Testing of all exported functions
 
-**Purpose:**  
+**Purpose:**
 Ensures thorough testing with good isolation between tests. This level is suitable for projects where reliability is important, and represents a solid testing practice.
 
 ### Level 4: Advanced Testing
@@ -75,7 +76,7 @@ Level 4 adds requirements for comprehensive verification and advanced testing sc
 - Testing of behavior with invalid inputs
 - Mock reset verification between tests
 
-**Purpose:**  
+**Purpose:**
 Ensures very thorough testing that validates both correctness and behavior. This level is suitable for critical libraries and tools where reliability is essential.
 
 ### Level 5: Complete Testing
@@ -92,7 +93,7 @@ Level 5 represents the highest standard of test quality with comprehensive cover
 - Negative testing (test that errors occur when they should)
 - Documentation examples tested
 
-**Purpose:**  
+**Purpose:**
 Ensures the most rigorous testing standards for mission-critical projects. This level is suitable for security-sensitive or high-reliability requirements.
 
 ## Implementation Details
@@ -106,12 +107,12 @@ The quality validation process follows these steps:
    - Runtime tracking of assertions and test behavior
    - Collection of metrics like assertion counts, types, and patterns
 
-2. **Level Validation**:
+1. **Level Validation**:
    - Check all requirements for the configured quality level
    - Identify any missing requirements
    - Calculate an overall quality score
 
-3. **Report Generation**:
+1. **Report Generation**:
    - Generate detailed report of passing/failing requirements
    - Provide actionable suggestions for improvement
    - Highlight specific files or tests that need enhancement
@@ -153,12 +154,12 @@ Quality validation is configured in `.hooks-util.lua`:
 ```lua
 test_quality = {
   enabled = true,      -- Enable test quality validation
-  
+
   quality = {
     enabled = true,    -- Enable quality level validation
     level = 3,         -- Quality level to enforce (1-5)
     strict = false,    -- If true, fail on first issue
-    
+
     -- Custom rules (optional)
     custom_rules = {
       require_pending_tests = false,  -- Require pending tests for unimplemented features
@@ -167,6 +168,7 @@ test_quality = {
     }
   }
 }
+
 ```text
 
 ### Report Format
@@ -183,12 +185,15 @@ Overall Quality Score: 82% (pass)
 ✓ Standard testing requirements (Level 2): PASS
 ✓ Comprehensive testing requirements (Level 3): PASS
 ✗ Advanced testing requirements (Level 4): FAIL
+
   - Missing complete mock verification in 3 tests
   - No performance validation tests found
 
 Files needing improvement:
+
 - test/api_spec.lua: Missing edge case tests
 - test/config_spec.lua: Incomplete mock verification
+
 ```text
 
 #### Detailed JSON/HTML Format
@@ -215,7 +220,7 @@ quality.validate_level = function(test_results, level)
     score = 0,
     details = {}
   }
-  
+
   -- Check level 1 requirements
   if level >= 1 then
     validation.details.level1 = quality.validate_level1(test_results)
@@ -226,16 +231,16 @@ quality.validate_level = function(test_results, level)
       end
     end
   end
-  
+
   -- Check higher levels similarly
   if level >= 2 and validation.pass then
     validation.details.level2 = quality.validate_level2(test_results)
     -- Same pattern for checking issues
   end
-  
+
   -- Calculate overall score
   validation.score = quality.calculate_score(validation.details, level)
-  
+
   return validation
 end
 
@@ -244,7 +249,7 @@ quality.validate_level1 = function(test_results)
     pass = true,
     issues = {},
   }
-  
+
   -- Check if all test files have at least one test
   for file, file_results in pairs(test_results.files) do
     if #file_results.tests == 0 then
@@ -256,7 +261,7 @@ quality.validate_level1 = function(test_results)
       })
     end
   end
-  
+
   -- Check if all tests have at least one assertion
   for file, file_results in pairs(test_results.files) do
     for _, test in ipairs(file_results.tests) do
@@ -271,13 +276,15 @@ quality.validate_level1 = function(test_results)
       end
     end
   end
-  
+
   -- Additional level 1 checks would follow
-  
+
   return validation
 end
 
 -- Additional validation functions for other levels
+
 ```text
 
 This tiered approach allows projects to gradually improve their test quality while providing clear guidance on what's needed to reach the next level.
+

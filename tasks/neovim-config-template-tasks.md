@@ -1,3 +1,4 @@
+
 # Neovim Config Template Tasks
 
 ## Current Focus
@@ -13,14 +14,14 @@ The current focus for the Neovim config template is enhancing modularity, ensuri
    - [ ] Add conditional module loading
    - [ ] Improve configuration options for modules
 
-2. **Nvim-Toolkit Integration**
+1. **Nvim-Toolkit Integration**
    - [ ] Replace custom utilities with nvim-toolkit modules
    - [ ] Add examples using UI components
    - [ ] Implement logging for debugging
    - [ ] Use keymap management module
    - [ ] Integrate configuration validation
 
-3. **Template Inheritance**
+1. **Template Inheritance**
    - [ ] Ensure proper inheritance from base-project-template
    - [ ] Create update mechanism for base template changes
    - [ ] Document inheritance hierarchy
@@ -36,14 +37,14 @@ The current focus for the Neovim config template is enhancing modularity, ensuri
    - [ ] Add theme customization examples
    - [ ] Create plugin configuration examples
 
-2. **Testing Framework**
+1. **Testing Framework**
    - [ ] Improve testing environment
    - [ ] Create more comprehensive tests
    - [ ] Add Neovim API mocking utilities
    - [ ] Implement CI testing workflow
    - [ ] Add configuration validation tests
 
-3. **Performance Optimization**
+1. **Performance Optimization**
    - [ ] Enhance startup time with better lazy-loading
    - [ ] Add profiling utilities
    - [ ] Implement conditional plugin loading
@@ -59,7 +60,7 @@ The current focus for the Neovim config template is enhancing modularity, ensuri
    - [ ] Add advanced keymapping system
    - [ ] Create dashboard examples
 
-2. **Integration Examples**
+1. **Integration Examples**
    - [ ] Add LSP configuration examples
    - [ ] Create DAP (debugging) setup
    - [ ] Implement terminal integration examples

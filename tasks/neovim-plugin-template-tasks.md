@@ -1,3 +1,4 @@
+
 # Neovim Plugin Template Tasks
 
 ## Current Focus
@@ -13,14 +14,14 @@ The current focus for the Neovim plugin template is integrating nvim-toolkit, en
    - [ ] Update plugin structure to leverage nvim-toolkit
    - [ ] Create migration guide for existing plugins
 
-2. **Template Inheritance**
+1. **Template Inheritance**
    - [ ] Ensure proper inheritance from base-project-template
    - [ ] Create update mechanism for base template changes
    - [ ] Document inheritance hierarchy
    - [ ] Add template-specific overrides with rationale
    - [ ] Implement template version tracking
 
-3. **Development Environment**
+1. **Development Environment**
    - [ ] Enhance test environment with proper mocking
    - [ ] Create development documentation
    - [ ] Add debugging utilities
@@ -36,14 +37,14 @@ The current focus for the Neovim plugin template is integrating nvim-toolkit, en
    - [ ] Implement proper versioning structure
    - [ ] Create API documentation templates
 
-2. **Testing Framework**
+1. **Testing Framework**
    - [ ] Integrate lust-next as testing framework
    - [ ] Create comprehensive test examples
    - [ ] Add Neovim API mocking utilities
    - [ ] Implement CI testing workflow
    - [ ] Add coverage reporting
 
-3. **Documentation Enhancement**
+1. **Documentation Enhancement**
    - [ ] Create comprehensive README template
    - [ ] Add API documentation generation
    - [ ] Implement usage examples for common patterns
@@ -59,7 +60,7 @@ The current focus for the Neovim plugin template is integrating nvim-toolkit, en
    - [ ] Add user command registration patterns
    - [ ] Create UI component examples
 
-2. **Performance Templates**
+1. **Performance Templates**
    - [ ] Add performance testing examples
    - [ ] Create lazy-loading patterns
    - [ ] Implement caching examples

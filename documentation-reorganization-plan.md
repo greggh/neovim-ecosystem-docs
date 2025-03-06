@@ -1,3 +1,4 @@
+
 # Documentation Reorganization Plan
 
 ## Problem
@@ -55,9 +56,11 @@ Create a small script that just lists active projects and directs to load only w
 
 ```text
 To continue work on [project]:
+
 1. Read ecosystem-overview.md
 2. Read [project]-tasks.md
 3. Load the CLAUDE.md from [project] directory
+
 ```text
 
 ## Proposed Directory Structure
@@ -91,34 +94,41 @@ To continue work on [project]:
 │   ├── CLAUDE.md
 │   └── ...
 └── ...
+
 ```text
 
 ## Standard CLAUDE.md Template
 
 ```markdown
+
 # Project: [Project Name]
 
 ## Overview
 [1-2 paragraph description of the project]
 
 ## Essential Commands
+
 - Build: `command`
 - Test: `command`
 - Lint: `command`
 - [Other key commands]
 
 ## Project Structure
+
 - `/src`: [brief description]
 - `/tests`: [brief description]
 - [Other key directories]
 
 ## Current Focus
+
 - [1-3 bullet points about current priorities]
 
 ## Documentation Links
+
 - Tasks: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/[project]-tasks.md`
 - Architecture: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/[relevant-spec].md`
 - [Other relevant links]
+
 ```text
 
 ## Migration Plan
@@ -133,3 +143,4 @@ To continue work on [project]:
 8. Create a startup script for continued development
 
 This approach will reduce initial context by 70-80% while ensuring all information remains accessible when needed.
+

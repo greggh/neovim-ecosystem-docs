@@ -1,3 +1,4 @@
+
 # Project History Archive
 
 *This file contains archived historical project sessions. For recent sessions, see the main [`project-history.md`](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-history.md) file.*
@@ -17,7 +18,7 @@ In this session, we implemented the complete test infrastructure for validating 
    - Set up complete project structures with appropriate directory layouts
    - Established proper git repositories for each project for version control
 
-2. **Source File Implementation**:
+1. **Source File Implementation**:
    - Created source files with deliberate style and lint issues:
      - Inconsistent spacing and indentation for StyLua to detect
      - Global variables and undefined references for Luacheck to flag

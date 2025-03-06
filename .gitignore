@@ -1,0 +1,33 @@
+# Pre-commit environments
+.pre-commit-cache/
+.cache/pre-commit/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules
+node_modules/
+
+# Build artifacts
+site/
+build/
+dist/
+
+# OS specific files
+.DS_Store
+Thumbs.db

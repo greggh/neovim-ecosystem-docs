@@ -1,3 +1,4 @@
+
 # Documentation Structure Specification
 
 This document defines the tiered documentation structure for the Neovim ecosystem projects.
@@ -114,13 +115,13 @@ The documentation system requires regular maintenance:
    - Archive oldest history entry if more than 10 entries exist
    - Update project-specific CLAUDE.md files as needed
 
-2. **Regular audits**:
+1. **Regular audits**:
    - Conduct monthly audit of all documentation for accuracy
    - Ensure documentation reflects current project state
    - Update any outdated references or instructions
    - Maintain cross-references between documentation files
 
-3. **Prompt maintenance**:
+1. **Prompt maintenance**:
    - Review and update prompts quarterly
    - Add new prompts as workflow needs are identified
    - Ensure all prompts are consistent with current practices

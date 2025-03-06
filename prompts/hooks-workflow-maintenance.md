@@ -1,3 +1,4 @@
+
 # Hooks and Workflows Maintenance
 
 This prompt initiates a comprehensive audit and maintenance of pre-commit hooks and GitHub workflows across all Neovim ecosystem projects.
@@ -9,12 +10,12 @@ This prompt initiates a comprehensive audit and maintenance of pre-commit hooks 
    - Verify all required checks are configured and passing
    - Fix any failing or misconfigured hooks
 
-2. **Validate GitHub Workflows**
+1. **Validate GitHub Workflows**
    - Verify CI/CD, documentation, and release workflows
    - Ensure consistent patterns across projects
    - Fix any failing or misconfigured workflows
 
-3. **Check Integration Components**
+1. **Check Integration Components**
    - Verify proper submodule and dependency management
    - Check for cross-project integration consistency
    - Ensure version management is working properly
@@ -126,12 +127,12 @@ When addressing issues:
    - Update dependencies rather than disable failing checks
    - Investigate root causes for persistent failures
 
-2. **Preserve Consistency**
+1. **Preserve Consistency**
    - Apply fixes that maintain cross-project consistency
    - Follow established patterns from template repositories
    - Document any necessary exceptions with clear rationale
 
-3. **Verify Fixes**
+1. **Verify Fixes**
    - Test all hooks and workflows after changes
    - Ensure fixes don't introduce new issues
    - Document the fix process for future reference
@@ -152,12 +153,12 @@ What NOT to do:
    - Issues found and fixes implemented
    - Remaining problems that need further investigation
 
-2. **Documentation Updates**
+1. **Documentation Updates**
    - Updated CLAUDE.md files with current hook commands
    - Updated task files with completed maintenance items
    - New issues documented in appropriate task files
 
-3. **Improvement Suggestions**
+1. **Improvement Suggestions**
    - Recommendations for standardizing hooks across projects
    - Workflow optimization suggestions
    - New features that could enhance the CI/CD pipeline
@@ -174,14 +175,17 @@ What NOT to do:
 After using this prompt, please record its effectiveness to help us improve our documentation:
 
 ```bash
+
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
+
 ```text
 
 Add a new entry with the following format:
 
 ```markdown
-### YYYY-MM-DD - hooks-workflow-maintenance
+
+## YYYY-MM-DD - hooks-workflow-maintenance
 
 - **Task**: Brief description of the maintenance performed
 - **Completion**: ✅ Successful / ❌ Unsuccessful
@@ -189,6 +193,8 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
+
 ```text
 
 This data helps us continuously improve our workflow prompts.
+

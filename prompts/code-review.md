@@ -1,3 +1,4 @@
+
 # Code Review and Quality Checks
 
 This prompt provides a standardized workflow for conducting comprehensive code reviews and quality checks across our Neovim ecosystem projects.
@@ -17,6 +18,7 @@ Our code review process aims to:
 ### 1. Understand the Context
 
 ```bash
+
 # Check recent commits to understand the changes
 git -C /home/gregg/Projects/[project-path] log -n 5 --oneline
 
@@ -25,24 +27,29 @@ git -C /home/gregg/Projects/[project-path] diff [base-branch]...[review-branch]
 
 # List modified files
 git -C /home/gregg/Projects/[project-path] diff --name-only [base-branch]...[review-branch]
+
 ```text
 
-### 2. Check Automated Tests and Checks
+## 2. Check Automated Tests and Checks
 
 ```bash
+
 # Check if hooks-util pre-commit hooks have run successfully
 env -C /home/gregg/Projects/[project-path] lua .hooks-util/run_tests.lua
 env -C /home/gregg/Projects/[project-path] luacheck .
 
 # Check GitHub Actions status if available
 gh -R greggh/[project-name] run list
+
 ```text
 
-### 3. Review Documentation Updates
+## 3. Review Documentation Updates
 
 ```bash
+
 # Check for documentation changes
 git -C /home/gregg/Projects/[project-path] diff [base-branch]...[review-branch] -- "*.md" "*/doc/*" "*/docs/*"
+
 ```text
 
 ## Code Review Checklist
@@ -101,30 +108,35 @@ Use these tools to supplement manual review:
 ### 1. Static Analysis
 
 ```bash
+
 # Run Lua static analysis
 env -C /home/gregg/Projects/[project-path] luacheck .
 
 # Run Lua formatter to check style issues
 env -C /home/gregg/Projects/[project-path] stylua --check .
+
 ```text
 
-### 2. Test Coverage Analysis
+## 2. Test Coverage Analysis
 
 ```bash
+
 # Run test coverage analysis using lust-next
 env -C /home/gregg/Projects/[project-path] lua .hooks-util/deps/lust-next/run_tests.lua --coverage
 
 # Review coverage reports (HTML format)
 xdg-open /home/gregg/Projects/[project-path]/coverage/index.html
+
 ```text
 
-### 3. Performance Measurement
+## 3. Performance Measurement
 
 **Note**: Currently, we don't have standardized performance benchmarking tools integrated with our projects. This is a planned future enhancement for lust-next.
 
 For performance-critical code, manually time and evaluate operations:
 
 ```bash
+
 # Basic timing wrapper in Lua
 env -C /home/gregg/Projects/[project-path] lua -e "
 local start = os.clock()
@@ -133,6 +145,7 @@ local result = require('your_module').function_to_test()
 local elapsed = os.clock() - start
 print(string.format('Execution time: %.6f seconds', elapsed))
 "
+
 ```text
 
 ## Review Feedback
@@ -143,19 +156,19 @@ When providing feedback:
    - Reference specific lines or files
    - Provide clear examples of issues or improvements
 
-2. **Be Constructive**
+1. **Be Constructive**
    - Suggest solutions, not just problems
    - Explain the reasoning behind suggestions
 
-3. **Prioritize Issues**
+1. **Prioritize Issues**
    - Distinguish between critical issues and minor suggestions
    - Focus on the most important aspects first
 
-4. **Balance Positive and Negative**
+1. **Balance Positive and Negative**
    - Highlight what is done well
    - Frame feedback as improvements, not criticisms
 
-5. **Consider Context**
+1. **Consider Context**
    - Take into account the purpose and constraints of the code
    - Recognize trade-offs made in the implementation
 
@@ -164,10 +177,12 @@ When providing feedback:
 ### 1. Initial Review
 
 ```bash
+
 # Check out the branch to review
 git -C /home/gregg/Projects/[project-path] checkout [review-branch]
 
 # Make detailed notes on issues and improvements
+
 ```text
 
 Document feedback in these categories:
@@ -177,16 +192,18 @@ Document feedback in these categories:
 - Consider: Suggestions for improvement that are optional
 - Questions: Areas where clarification is needed
 
-### 2. Follow-up Review
+## 2. Follow-up Review
 
 After issues are addressed:
 
 ```bash
+
 # Pull latest changes
 git -C /home/gregg/Projects/[project-path] pull
 
 # View changes since last review
 git -C /home/gregg/Projects/[project-path] diff [previous-review-commit]..HEAD
+
 ```text
 
 Verify that:
@@ -195,7 +212,7 @@ Verify that:
 - "Should Fix" issues have been addressed or explained
 - "Consider" suggestions have been evaluated
 
-### 3. Final Approval
+## 3. Final Approval
 
 When the code meets all requirements:
 
@@ -209,6 +226,7 @@ When the code meets all requirements:
 After review approval:
 
 ```bash
+
 # Checkout main branch
 git -C /home/gregg/Projects/[project-path] checkout main
 
@@ -217,6 +235,7 @@ git -C /home/gregg/Projects/[project-path] merge [review-branch]
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push origin main
+
 ```text
 
 ## Post-Review Actions
@@ -228,12 +247,12 @@ After completing the review:
    - Update `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md` for significant changes
    - Update relevant task files in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/`
 
-2. **Knowledge Sharing**
+1. **Knowledge Sharing**
    - Document key insights from the review
    - Share lessons learned with the team
    - Update coding guidelines if needed
 
-3. **Process Improvement**
+1. **Process Improvement**
    - Identify patterns in review findings
    - Consider updates to templates or hooks-util to prevent common issues
    - Evaluate if review process could be improved
@@ -245,14 +264,17 @@ Remember that code review is not just about finding issues, but also about learn
 After using this prompt, please record its effectiveness to help us improve our documentation:
 
 ```bash
+
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
+
 ```text
 
 Add a new entry with the following format:
 
 ```markdown
-### YYYY-MM-DD - code-review
+
+## YYYY-MM-DD - code-review
 
 - **Task**: Brief description of the code reviewed
 - **Completion**: ✅ Successful / ❌ Unsuccessful
@@ -260,6 +282,8 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
+
 ```text
 
 This data helps us continuously improve our workflow prompts.
+

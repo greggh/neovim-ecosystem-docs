@@ -1,3 +1,4 @@
+
 # README Maintenance and Standardization Prompt
 
 ## Purpose
@@ -15,7 +16,7 @@ README files in our ecosystem should maintain consistent structure and informati
    - Tests (if applicable)
    - Documentation build (if applicable)
 
-2. **Project Information Badges**
+1. **Project Information Badges**
    - License
    - Neovim version compatibility (for Neovim plugins)
    - Release version
@@ -78,6 +79,7 @@ I will follow standard command patterns for this ecosystem:
 ## Example of Properly Formatted README
 
 ```markdown
+
 # Project Name
 
 [![Lint Markdown](https://github.com/username/repo/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/username/repo/actions/workflows/markdown-lint.yml)
@@ -106,7 +108,8 @@ use {
     require('repo').setup()
   end
 }
-```
+
+```text
 
 ### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -117,14 +120,16 @@ use {
     require('repo').setup()
   end
 }
-```
+
+```text
 
 ## Usage
 
 ```lua
 -- Basic usage example
 require('repo').function()
-```
+
+```text
 
 ## Configuration
 
@@ -133,7 +138,8 @@ require('repo').setup({
   key = 'value',
   another_key = 'another_value'
 })
-```
+
+```text
 
 ## Documentation
 

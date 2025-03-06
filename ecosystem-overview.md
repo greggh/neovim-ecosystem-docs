@@ -1,3 +1,4 @@
+
 # Neovim Ecosystem Overview
 
 ## Project List
@@ -7,15 +8,15 @@
 1. **Neovim Configuration** - Personal Neovim configuration with modern plugins and features
    - Path: `/home/gregg/.config/nvim`
 
-2. **Laravel Helper Plugin** - Neovim plugin for Laravel development with IDE Helper integration
+1. **Laravel Helper Plugin** - Neovim plugin for Laravel development with IDE Helper integration
    - Path: `/home/gregg/Projects/neovim/plugins/laravel-helper`
    - GitHub: <https://github.com/greggh/laravel-helper.nvim>
 
-3. **Claude Code Plugin** - Seamless integration between Claude Code AI assistant and Neovim
+1. **Claude Code Plugin** - Seamless integration between Claude Code AI assistant and Neovim
    - Path: `/home/gregg/Projects/neovim/plugins/claude-code`
    - GitHub: <https://github.com/greggh/claude-code.nvim>
 
-4. **Lust-Next** - Enhanced Lua testing framework
+1. **Lust-Next** - Enhanced Lua testing framework
    - Path: `/home/gregg/Projects/lua-library/lust-next`
    - GitHub: <https://github.com/greggh/lust-next>
    - Features: Test discovery, filtering/tagging, enhanced reporting, async support, mocking
@@ -26,19 +27,19 @@
    - Path: `/home/gregg/Projects/templates/base-project-repo`
    - GitHub: <https://github.com/greggh/base-project-template>
 
-2. **Hooks-Util** - Git hooks framework for pre-commit validation
+1. **Hooks-Util** - Git hooks framework for pre-commit validation
    - Path: `/home/gregg/Projects/lua-library/hooks-util`
    - GitHub: <https://github.com/greggh/hooks-util>
 
-3. **Neovim Plugin Template** - Standardized template for creating Neovim plugins
+1. **Neovim Plugin Template** - Standardized template for creating Neovim plugins
    - Path: `/home/gregg/Projects/templates/neovim-plugin-template`
    - GitHub: <https://github.com/greggh/neovim-plugin-template>
 
-4. **Neovim Config Template** - Template for Neovim configurations with modern plugins
+1. **Neovim Config Template** - Template for Neovim configurations with modern plugins
    - Path: `/home/gregg/Projects/templates/neovim-config-template`
    - GitHub: <https://github.com/greggh/neovim-config-template>
 
-5. **Nvim-Toolkit** - Shared runtime utilities library for Neovim projects
+1. **Nvim-Toolkit** - Shared runtime utilities library for Neovim projects
    - Path: `/home/gregg/Projects/neovim/nvim-toolkit`
    - GitHub: <https://github.com/greggh/nvim-toolkit>
 
@@ -47,13 +48,13 @@
 1. **Lust-Next Testbed** - Pure Lua project for validating lust-next
     - Path: `/home/gregg/Projects/test-projects/lust-next-testbed`
 
-2. **Hooks-Util Testbed Lua Lib** - Testing hooks-util with Lua library adapter
+1. **Hooks-Util Testbed Lua Lib** - Testing hooks-util with Lua library adapter
     - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-lua-lib`
 
-3. **Hooks-Util Testbed Nvim Plugin** - Testing hooks-util with Neovim plugin adapter
+1. **Hooks-Util Testbed Nvim Plugin** - Testing hooks-util with Neovim plugin adapter
     - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-nvim-plugin`
 
-4. **Hooks-Util Testbed Nvim Config** - Testing hooks-util with Neovim config adapter
+1. **Hooks-Util Testbed Nvim Config** - Testing hooks-util with Neovim config adapter
     - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-nvim-config`
 
 ### Documentation

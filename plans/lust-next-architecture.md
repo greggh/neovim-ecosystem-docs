@@ -1,3 +1,4 @@
+
 # Lust-Next Architecture
 
 ## Overview
@@ -16,48 +17,48 @@ The lust-next framework consists of the following primary components:
    - Provides assertion system for validations
    - Handles test execution and reporting
 
-2. **Discovery Module** (internal):
+1. **Discovery Module** (internal):
    - Handles automatic test file discovery
    - Supports platform-independent file finding
    - Implements pattern matching for test files
    - Provides utilities for path manipulation
 
-3. **Tagging Module** (internal):
+1. **Tagging Module** (internal):
    - Implements test filtering based on tags
    - Supports inclusion and exclusion patterns
    - Provides tag inheritance in nested describe blocks
    - Handles tag-based reporting
 
-4. **Async Module** (internal):
+1. **Async Module** (internal):
    - Provides coroutine-based async testing functionality
    - Implements `async()`, `await()`, and `wait_until()`
    - Handles timeout detection and reporting
    - Supports multiple Lua versions with compatibility layer
 
-5. **Mocking System** (internal):
+1. **Mocking System** (internal):
    - Implements comprehensive mock/spy/stub functionality
    - Provides expectation setting and verification
    - Handles call tracking and sequence verification
    - Supports complex object mocking with method tracking
 
-6. **Module Management** (internal):
+1. **Module Management** (internal):
    - Implements `reset_module()` for clean state between tests
    - Provides `with_fresh_module()` for isolated module testing
    - Handles module cache manipulation for reloading
 
-7. **Coverage Module** (`src/coverage.lua`):
+1. **Coverage Module** (`src/coverage.lua`):
    - Tracks code execution using debug hooks
    - Calculates coverage statistics for lines and functions
    - Implements file filtering with pattern matching
    - Gathers structured coverage data for reporting
 
-8. **Quality Module** (`src/quality.lua`):
+1. **Quality Module** (`src/quality.lua`):
    - Implements tiered quality validation system
    - Analyzes test structure and assertion patterns
    - Validates against quality level requirements
    - Collects quality metrics for reporting
 
-9. **Reporting Module** (`src/reporting.lua`):
+1. **Reporting Module** (`src/reporting.lua`):
    - Centralized module for all report generation
    - Handles file I/O operations and directory creation
    - Implements multiple output formats (summary, JSON, HTML, LCOV)
@@ -69,6 +70,7 @@ The lust-next framework consists of the following primary components:
 
 ```text
 [Test Files] → [Discovery] → [Test Runner] → [Execution] → [Results] → [Reporting]
+
 ```text
 
 1. **Test Discovery Phase**:
@@ -76,13 +78,13 @@ The lust-next framework consists of the following primary components:
    - Load discovered test files
    - Register tests in internal structures
 
-2. **Test Execution Phase**:
+1. **Test Execution Phase**:
    - Initialize test environment
    - Execute `describe` and `it` blocks based on filters
    - Track assertion results and errors
    - Collect test execution metadata
 
-3. **Reporting Phase**:
+1. **Reporting Phase**:
    - Gather test results
    - Format results based on configuration
    - Output results to console and/or files
@@ -91,23 +93,24 @@ The lust-next framework consists of the following primary components:
 
 ```text
 [Source Code] → [Debug Hooks] → [Coverage Tracking] → [Stats Calculation] → [Reporting Module] → [Multiple Formats]
+
 ```text
 
 1. **Instrumentation Phase**:
    - Register debug hooks for line and function tracking
    - Set up file filtering patterns
 
-2. **Data Collection Phase**:
+1. **Data Collection Phase**:
    - Track executed lines during test execution
    - Record function calls and returns
    - Associate execution with source files
 
-3. **Processing Phase**:
+1. **Processing Phase**:
    - Calculate coverage statistics
    - Determine covered/uncovered lines
    - Generate structured coverage data
 
-4. **Reporting Phase**:
+1. **Reporting Phase**:
    - Send data to reporting module
    - Generate reports in multiple formats
    - Save reports to files
@@ -116,6 +119,7 @@ The lust-next framework consists of the following primary components:
 
 ```text
 [Test Files] → [Static Analysis] → [Runtime Tracking] → [Quality Rules] → [Validation] → [Reporting Module] → [Reports]
+
 ```text
 
 1. **Analysis Phase**:
@@ -123,12 +127,12 @@ The lust-next framework consists of the following primary components:
    - Track assertion patterns during execution
    - Collect test structure information
 
-2. **Validation Phase**:
+1. **Validation Phase**:
    - Apply quality level requirements
    - Check test structure against rules
    - Validate assertion types and counts
 
-3. **Reporting Phase**:
+1. **Reporting Phase**:
    - Generate structured quality data
    - Send data to reporting module
    - Create quality reports with improvement suggestions
@@ -142,17 +146,17 @@ The lust-next framework consists of the following primary components:
    - Quality module analyzes test quality only (no report generation)
    - Reporting module handles all formatting and file operations
 
-2. **Standardized Data Interfaces**:
+1. **Standardized Data Interfaces**:
    - Coverage data follows consistent structure
    - Quality data follows consistent structure
    - Both integrate with reporting module through standard interfaces
 
-3. **Pluggable Formatters**:
+1. **Pluggable Formatters**:
    - Reporting module supports multiple output formats
    - New formats can be added without changing data collection
    - Each format has dedicated formatter function
 
-4. **Robust File Operations**:
+1. **Robust File Operations**:
    - Centralized directory creation with multiple fallback mechanisms
    - Standardized error handling for file operations
    - Platform-independent path handling
@@ -200,6 +204,7 @@ The lust-next framework consists of the following primary components:
     }
   }
 }
+
 ```text
 
 #### Quality Data Structure
@@ -235,6 +240,7 @@ The lust-next framework consists of the following primary components:
     }
   }
 }
+
 ```text
 
 ### Report Format Implementations
@@ -246,19 +252,19 @@ The reporting module implements multiple output formats for both coverage and qu
    - Color-coded for clarity
    - Concise overview of results
 
-2. **JSON Format**:
+1. **JSON Format**:
    - Complete data representation in machine-readable format
    - Structured for easy parsing and integration
    - Contains all collected metrics and details
 
-3. **HTML Format**:
+1. **HTML Format**:
    - Visual representation with interactive elements
    - File-by-file breakdown with syntax highlighting
    - Line-by-line coverage visualization
    - Quality metrics with detailed suggestions
    - Sortable and filterable tables
 
-4. **LCOV Format**:
+1. **LCOV Format**:
    - Industry-standard format for coverage data
    - Compatible with external tools like Coveralls and Codecov
    - Line-by-line coverage information
@@ -283,6 +289,7 @@ The reporting module implements multiple output formats for both coverage and qu
       ┌────────────┐
       │ reporting  │
       └────────────┘
+
 ```text
 
 - `lust-next.lua` is the main entry point for test execution
@@ -297,17 +304,17 @@ The reporting module implements multiple output formats for both coverage and qu
    - Passes file patterns and configuration options
    - Triggers coverage calculation after tests complete
 
-2. **lust-next → quality**:
+1. **lust-next → quality**:
    - Passes test results for quality analysis
    - Provides configuration for quality level
    - Initiates quality validation after tests
 
-3. **coverage → reporting**:
+1. **coverage → reporting**:
    - Sends structured coverage data for report generation
    - Specifies report formats and output options
    - Receives confirmation of report generation
 
-4. **quality → reporting**:
+1. **quality → reporting**:
    - Sends structured quality data for report generation
    - Specifies report formats and output options
    - Receives confirmation of report generation
@@ -321,12 +328,12 @@ The architecture is designed for extensibility:
    - Maintain the same data structure interface
    - Register with the format registry
 
-2. **Additional Metrics**:
+1. **Additional Metrics**:
    - Extend the coverage or quality data structures
    - Add new collection mechanisms
    - Update formatters to include new metrics
 
-3. **Custom Validation Rules**:
+1. **Custom Validation Rules**:
    - Add custom rules to quality validation
    - Implement rule checking functions
    - Register with the quality module
@@ -337,6 +344,7 @@ The architecture is designed for extensibility:
 
 ```text
 [Pattern] → [Find Matching Files] → [Load Test Files] → [Register Tests] → [Execute Tests]
+
 ```text
 
 1. The discovery process begins with a pattern (e.g., `test_*.lua` or `spec/**/*_spec.lua`)
@@ -349,6 +357,7 @@ The architecture is designed for extensibility:
 
 ```text
 [All Tests] → [Tag Filtering] → [Pattern Filtering] → [Focus Filtering] → [Filtered Tests]
+
 ```text
 
 1. The complete set of tests is gathered from registered tests
@@ -365,6 +374,7 @@ The async testing system uses Lua coroutines to enable asynchronous test pattern
 
 ```text
 [async test] → [Create Coroutine] → [Resume Until Yield] → [Wait/Poll] → [Resume] → [Completion]
+
 ```text
 
 1. Async tests are wrapped in coroutines
@@ -388,6 +398,7 @@ The mocking system uses Lua's metatable capabilities to create sophisticated moc
 
 ```text
 [Original Object] → [Create Mock/Spy] → [Set Expectations] → [Use in Tests] → [Verify Calls]
+
 ```text
 
 1. Original functions or objects are captured
@@ -413,19 +424,20 @@ The mocking system uses Lua's metatable capabilities to create sophisticated moc
    - Registration mechanism for hooks into test lifecycle
    - Standard interface for plugin interaction
 
-2. **Enhanced Reporting**:
+1. **Enhanced Reporting**:
    - Additional output formats (e.g., Cobertura XML)
    - Enhanced visualization in HTML reports
    - Historical trend tracking across runs
 
-3. **Performance Optimization**:
+1. **Performance Optimization**:
    - Improved data structures for large codebases
    - Optimized file scanning algorithms
    - Better memory management for coverage data
 
-4. **Integration Enhancements**:
+1. **Integration Enhancements**:
    - LuaRocks package publication
    - Direct CI platform integration
    - IDE plugin support
 
 This architecture document provides a comprehensive overview of the lust-next design, emphasizing its modular approach and separation of concerns.
+

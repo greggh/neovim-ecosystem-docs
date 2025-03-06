@@ -1,3 +1,4 @@
+
 # Template Repositories Specification
 
 This document defines the structure and features of the template repositories used across the Neovim ecosystem.
@@ -10,12 +11,12 @@ The ecosystem uses the following template repositories:
    - Foundation template with GitHub best practices for all new projects
    - Contains basic GitHub workflows, documentation, and configuration
 
-2. **Neovim Plugin Template** (`/home/gregg/Projects/templates/neovim-plugin-template`)
+1. **Neovim Plugin Template** (`/home/gregg/Projects/templates/neovim-plugin-template`)
    - Specialized template for creating Neovim plugins
    - Inherits from Base Project Template
    - Contains Neovim-specific structure and configuration
 
-3. **Neovim Config Template** (`/home/gregg/Projects/templates/neovim-config-template`)
+1. **Neovim Config Template** (`/home/gregg/Projects/templates/neovim-config-template`)
    - Specialized template for creating Neovim configurations
    - Inherits from Base Project Template
    - Contains configuration-specific structure and organization
@@ -26,6 +27,7 @@ Templates follow an inheritance pattern:
 
 ```text
 Base Project Template → Specialized Templates → Actual Projects
+
 ```text
 
 This ensures that:
@@ -79,18 +81,18 @@ The Neovim plugin template includes:
    - Initialization files following best practices
    - Module organization for maintainability
 
-2. **Plugin Documentation**
+1. **Plugin Documentation**
    - Usage examples with code blocks
    - Installation instructions
    - Configuration options
    - Troubleshooting section
 
-3. **Testing Framework**
+1. **Testing Framework**
    - Test directory with example tests
    - Mocking utilities for Neovim API
    - Lust-next integration
 
-4. **Integration**
+1. **Integration**
    - Ready for nvim-toolkit integration
    - Hooks-util adapter for plugin-specific validations
 
@@ -103,17 +105,17 @@ The Neovim configuration template includes:
    - Performance-optimized loading through lazy.nvim
    - Clear organization of plugins, keymaps, and options
 
-2. **Configuration Documentation**
+1. **Configuration Documentation**
    - Detailed customization guides
    - Performance profiling section
    - Migration instructions
 
-3. **Testing Framework**
+1. **Testing Framework**
    - Lightweight testing for configuration validation
    - Startup time measurement
    - Basic functionality verification
 
-4. **Integration**
+1. **Integration**
    - Ready for nvim-toolkit integration
    - Hooks-util adapter for configuration-specific validations
 
@@ -146,3 +148,4 @@ Templates support integration with:
 - lust-next for testing
 - nvim-toolkit for shared utilities
 - Documentation structure defined in documentation-structure.md
+

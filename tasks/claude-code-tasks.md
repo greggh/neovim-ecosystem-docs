@@ -1,3 +1,4 @@
+
 # Claude Code Plugin Tasks
 
 ## Current Focus
@@ -13,14 +14,14 @@ The current focus for Claude Code plugin is integrating with nvim-toolkit for sh
    - [ ] Integrate with nvim-toolkit API wrappers
    - [ ] Use nvim-toolkit configuration management
 
-2. **Hooks-Util Integration**
+1. **Hooks-Util Integration**
    - [ ] Add hooks-util as git submodule
    - [ ] Configure pre-commit hooks for linting and testing
    - [ ] Set up test quality validation
    - [ ] Create project-specific adapter configuration
    - [ ] Document development workflow with hooks-util
 
-3. **Claude Code CLI Integration Improvements**
+1. **Claude Code CLI Integration Improvements**
    - [ ] Enhance bidirectional communication with Claude Code CLI
    - [ ] Implement better context synchronization
    - [ ] Add buffer-specific context management
@@ -36,14 +37,14 @@ The current focus for Claude Code plugin is integrating with nvim-toolkit for sh
    - [ ] Add syntax highlighting for AI responses
    - [ ] Create customizable keymappings for all operations
 
-2. **Context Management**
+1. **Context Management**
    - [ ] Implement project-wide context collection
    - [ ] Add buffer-specific context management
    - [ ] Create intelligent context pruning for large projects
    - [ ] Add manual context editing capabilities
    - [ ] Implement persistent context across sessions
 
-3. **Documentation and Help**
+1. **Documentation and Help**
    - [ ] Create comprehensive user documentation
    - [ ] Add interactive tutorial for new users
    - [ ] Improve API documentation for extensibility
@@ -59,7 +60,7 @@ The current focus for Claude Code plugin is integrating with nvim-toolkit for sh
    - [ ] Implement code review assistance features
    - [ ] Add integration with testing frameworks
 
-2. **Performance Optimization**
+1. **Performance Optimization**
    - [ ] Optimize context collection for large projects
    - [ ] Implement background operations for non-blocking UI
    - [ ] Add caching for frequent operations

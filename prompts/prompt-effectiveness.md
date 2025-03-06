@@ -1,3 +1,4 @@
+
 # Prompt Effectiveness Tracking System
 
 This document outlines our system for measuring and improving the effectiveness of workflow prompts across our Neovim ecosystem projects.
@@ -52,6 +53,7 @@ We track the following metrics for each prompt:
 Record the following information in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md`:
 
 ```markdown
+
 ### [Date] - [Prompt Name]
 
 - **Task**: Brief description of the task being performed
@@ -60,6 +62,7 @@ Record the following information in `/home/gregg/Projects/docs-projects/neovim-e
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
+
 ```text
 
 ### Monthly Review
@@ -76,6 +79,7 @@ At the end of each month:
 The `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md` file uses the following structure:
 
 ```markdown
+
 # Prompt Effectiveness Metrics
 
 ## Summary Statistics
@@ -95,6 +99,7 @@ The `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-met
 ### [Earlier Entry]
 
 ...
+
 ```text
 
 ## Improvement Workflow
@@ -107,11 +112,11 @@ When prompt improvements are identified:
    - Add missing information
    - Improve formatting
 
-2. **Test the Enhanced Prompt**:
+1. **Test the Enhanced Prompt**:
    - Use the updated prompt for relevant tasks
    - Record effectiveness with the new version
 
-3. **Commit Changes Directly**:
+1. **Commit Changes Directly**:
 
    ```bash
    git -C /home/gregg/Projects/docs add prompts/[prompt-name].md
@@ -126,6 +131,7 @@ When prompt improvements are identified:
 ## Sample Metrics Entry
 
 ```markdown
+
 ### 2025-03-07 - feature-implementation
 
 - **Task**: Add modular reporting to lust-next
@@ -134,6 +140,7 @@ When prompt improvements are identified:
 - **Errors Prevented**: Prevented forgetting to update test coverage
 - **Satisfaction**: 5
 - **Notes**: The prompt was extremely helpful for structuring the implementation, but could use more examples of test setup.
+
 ```text
 
 ## Implementation Plan
@@ -143,12 +150,13 @@ When prompt improvements are identified:
    - Initialize `prompt-metrics.md` file with headers
    - Set up summary section
 
-2. **Establish Documentation Habit**:
+1. **Establish Documentation Habit**:
    - Add reminder notes to prompts about recording metrics
    - Create a prompt for end-of-month metrics review
 
-3. **Automate Where Possible**:
+1. **Automate Where Possible**:
    - Create scripts to calculate summary statistics
    - Set up monthly reminder for metrics review
 
 By consistently tracking prompt effectiveness, we can ensure our documentation system continues to evolve and improve, making development workflows more efficient and reducing errors across our ecosystem projects.
+

@@ -1,3 +1,4 @@
+
 # Feature Implementation Workflow
 
 This prompt provides a standardized workflow for implementing new features across our Neovim ecosystem projects, ensuring consistent quality and proper integration with existing components.
@@ -11,12 +12,12 @@ Before beginning implementation, ensure the following information is clear:
    - What are the boundaries of the feature?
    - How does it integrate with existing components?
 
-2. **Usage Patterns**
+1. **Usage Patterns**
    - How will users interact with the feature?
    - What configuration options are needed?
    - What API does the feature expose?
 
-3. **Quality Requirements**
+1. **Quality Requirements**
    - What tests are needed to validate the feature?
    - What edge cases should be handled?
    - What performance considerations exist?
@@ -26,6 +27,7 @@ Before beginning implementation, ensure the following information is clear:
 ### 1. Environment Setup
 
 ```bash
+
 # Update repository to latest state
 git -C /home/gregg/Projects/[project-path] fetch origin
 git -C /home/gregg/Projects/[project-path] pull
@@ -35,27 +37,28 @@ git -C /home/gregg/Projects/[project-path] checkout -b feature/[feature-name]
 
 # Update submodules if present
 git -C /home/gregg/Projects/[project-path] submodule update --init --recursive
+
 ```text
 
-### 2. Implementation Process
+## 2. Implementation Process
 
 1. **Setup Test Environment First**
    - Create test files to validate the feature before implementing
    - Define test expectations based on planned API and behaviors
    - Set up any necessary test fixtures or mocks
 
-2. **Implement Core Functionality**
+1. **Implement Core Functionality**
    - Begin with minimal implementation that passes tests
    - Focus on correctness before optimization
    - Add documentation as you implement
 
-3. **Enhance and Refine**
+1. **Enhance and Refine**
    - Improve error handling
    - Add validation for edge cases
    - Optimize performance where needed
    - Ensure proper integration with other components
 
-4. **Documentation**
+1. **Documentation**
    - Add inline documentation for all functions and key sections
    - Update README or other documentation files
    - Add usage examples
@@ -63,6 +66,7 @@ git -C /home/gregg/Projects/[project-path] submodule update --init --recursive
 ### 3. Quality Assurance
 
 ```bash
+
 # Run specific tests for the feature
 env -C /home/gregg/Projects/[project-path] [test-command] -f [feature-name]
 
@@ -71,11 +75,12 @@ env -C /home/gregg/Projects/[project-path] [lint-command]
 
 # Run all tests to ensure no regressions
 env -C /home/gregg/Projects/[project-path] [test-command]
+
 ```text
 
 **Note**: hooks-util will typically handle these automatically during commit, but it's good to run them manually during development.
 
-### 4. Code Review Self-Check
+## 4. Code Review Self-Check
 
 Before committing, review the implementation against these criteria:
 
@@ -91,12 +96,14 @@ Before committing, review the implementation against these criteria:
 ### 5. Commit and Push
 
 ```bash
+
 # Commit changes (hooks-util will validate automatically)
 git -C /home/gregg/Projects/[project-path] add .
 git -C /home/gregg/Projects/[project-path] commit -m "Add [feature-name] with [brief description]"
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push -u origin feature/[feature-name]
+
 ```text
 
 ## Integration with Ecosystem
@@ -123,6 +130,7 @@ If the feature affects multiple projects:
 When the feature is complete and tested:
 
 ```bash
+
 # Checkout main branch
 git -C /home/gregg/Projects/[project-path] checkout main
 
@@ -131,9 +139,10 @@ git -C /home/gregg/Projects/[project-path] merge feature/[feature-name]
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push origin main
+
 ```text
 
-### 4. Release Considerations
+## 4. Release Considerations
 
 If the feature warrants a new release:
 
@@ -167,14 +176,17 @@ Remember to follow standard development workflows throughout the implementation 
 After using this prompt, please record its effectiveness to help us improve our documentation:
 
 ```bash
+
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
+
 ```text
 
 Add a new entry with the following format:
 
 ```markdown
-### YYYY-MM-DD - feature-implementation
+
+## YYYY-MM-DD - feature-implementation
 
 - **Task**: Brief description of the feature implemented
 - **Completion**: ✅ Successful / ❌ Unsuccessful
@@ -182,6 +194,8 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
+
 ```text
 
 This data helps us continuously improve our workflow prompts.
+

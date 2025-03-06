@@ -5,15 +5,15 @@
 
 find /home/gregg/Projects/docs-projects/neovim-ecosystem-docs -name "*.md" -type f | while read -r file; do
     echo "Processing $file for list numbering"
-    
+
     # Create a temporary file
     temp_file=$(mktemp)
-    
+
     # Process the file line by line
     in_list=false
     list_counter=0
     previous_line=""
-    
+
     while IFS= read -r line; do
         # Check if line is a heading
         if [[ "$line" =~ ^#+ ]]; then
@@ -23,7 +23,7 @@ find /home/gregg/Projects/docs-projects/neovim-ecosystem-docs -name "*.md" -type
             previous_line="$line"
             continue
         fi
-        
+
         # Check if line is an ordered list item
         if [[ "$line" =~ ^[[:space:]]*[0-9]+\. ]]; then
             # If previous line was empty or a heading, start a new list
@@ -51,10 +51,10 @@ find /home/gregg/Projects/docs-projects/neovim-ecosystem-docs -name "*.md" -type
                 list_counter=0
             fi
         fi
-        
+
         previous_line="$line"
     done < "$file"
-    
+
     # Replace the original file with the fixed one
     mv "$temp_file" "$file"
 done
