@@ -19,10 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
       - name: Install shellcheck
         run: sudo apt-get update && sudo apt-get install -y shellcheck
-      
       - name: List shell scripts
         id: list-scripts
         run: |
@@ -33,7 +31,6 @@ jobs:
             echo "SHELL_SCRIPTS_EXIST=false" >> $GITHUB_ENV
             echo "No shell scripts found in ./scripts directory"
           fi
-      
       - name: Run shellcheck
         if: env.SHELL_SCRIPTS_EXIST == 'true'
         run: |
@@ -44,7 +41,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
       - name: Check for Lua files
         id: check-lua
         run: |
@@ -55,21 +51,17 @@ jobs:
             echo "LUA_FILES_EXIST=false" >> $GITHUB_ENV
             echo "No Lua files found in repository"
           fi
-      
       - name: Set up Lua
         if: env.LUA_FILES_EXIST == 'true'
         uses: leafo/gh-actions-lua@v9
         with:
           luaVersion: "5.1"
-      
       - name: Set up LuaRocks
         if: env.LUA_FILES_EXIST == 'true'
         uses: leafo/gh-actions-luarocks@v4
-      
       - name: Install luacheck
         if: env.LUA_FILES_EXIST == 'true'
         run: luarocks install luacheck
-      
       - name: Run luacheck
         if: env.LUA_FILES_EXIST == 'true'
         run: luacheck .
