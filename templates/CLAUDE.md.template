@@ -1,0 +1,23 @@
+# Project: [Project Name]
+
+## Overview
+[1-2 paragraph description of the project]
+
+## Essential Commands
+- Build: `command`
+- Test: `command`
+- Lint: `command`
+- [Other key commands]
+
+## Project Structure
+- `/src`: [brief description]
+- `/tests`: [brief description]
+- [Other key directories]
+
+## Current Focus
+- [1-3 bullet points about current priorities]
+
+## Documentation Links
+- Tasks: `/home/gregg/Projects/docs/tasks/[project]-tasks.md`
+- Architecture: `/home/gregg/Projects/docs/specs/[relevant-spec].md`
+- [Other relevant links]
