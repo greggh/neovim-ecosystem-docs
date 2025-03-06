@@ -14,10 +14,11 @@ Neovim Ecosystem Documentation is the central knowledge repository for all Neovi
 
 ## Auto-Fix Scripts
 
-- Fix Newlines: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_newlines.sh`
-- Fix Code Blocks: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_code_blocks.sh`
+- Comprehensive Markdown Fix: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_markdown_comprehensive.sh`
 - Fix List Numbering: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_list_numbering.sh`
 - Fix Heading Levels: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_heading_levels.sh`
+- Fix Code Blocks: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_code_blocks.sh`
+- Fix Newlines: `env -C /home/gregg/Projects/docs-projects/neovim-ecosystem-docs ./scripts/fix_newlines.sh`
 
 ## Project Structure
 

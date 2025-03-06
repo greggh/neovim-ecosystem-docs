@@ -27,28 +27,13 @@ repos:
 
   - repo: local
     hooks:
-      - id: markdownlint-fix
-        name: Fix markdown issues automatically
-        entry: bash -c 'markdownlint --fix "**/*.md" --ignore node_modules'
-        language: system
-        pass_filenames: false
-        types: [markdown]
-        verbose: true
-
-      - id: fix-code-blocks
-        name: Fix code blocks in markdown
-        entry: ./scripts/fix_code_blocks.sh
+      - id: fix-markdown-comprehensive
+        name: Fix common markdown issues comprehensively
+        entry: ./scripts/fix_markdown_comprehensive.sh
         language: script
         pass_filenames: false
         verbose: true
-
-      - id: fix-newlines
-        name: Fix missing newlines
-        entry: ./scripts/fix_newlines.sh
-        language: script
-        pass_filenames: false
-        verbose: true
-
+        
       - id: fix-list-numbering
         name: Fix ordered list numbering
         entry: ./scripts/fix_list_numbering.sh
@@ -61,4 +46,12 @@ repos:
         entry: ./scripts/fix_heading_levels.sh
         language: script
         pass_filenames: false
+        verbose: true
+        
+      - id: markdownlint-fix
+        name: Fix remaining markdown issues with markdownlint
+        entry: bash -c 'markdownlint --fix "**/*.md" --ignore node_modules'
+        language: system
+        pass_filenames: false
+        types: [markdown]
         verbose: true
