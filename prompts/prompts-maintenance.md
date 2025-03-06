@@ -124,3 +124,28 @@ Recommended maintenance intervals:
 - Ecosystem Overview: `/home/gregg/Projects/docs/ecosystem-overview.md`
 - Project Status: `/home/gregg/Projects/docs/project-status.md`
 - Documentation Structure: `/home/gregg/Projects/docs/specs/documentation-structure.md`
+- Prompt Effectiveness: `/home/gregg/Projects/docs/prompts/prompt-effectiveness.md`
+
+## Metrics Collection
+
+After using this prompt, please record its effectiveness to help us improve our documentation:
+
+```bash
+# Add a new entry to the metrics file
+[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+```
+
+Add a new entry with the following format:
+
+```markdown
+### YYYY-MM-DD - prompts-maintenance
+
+- **Task**: Brief description of the prompt maintenance performed
+- **Completion**: ✅ Successful / ❌ Unsuccessful
+- **Time Saved**: Estimated time saved (in minutes)
+- **Errors Prevented**: Description of any errors the prompt helped avoid
+- **Satisfaction**: Rating (1-5)
+- **Notes**: Any observations or suggestions for improvement
+```
+
+This data helps us continuously improve our workflow prompts.

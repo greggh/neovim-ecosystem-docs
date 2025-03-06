@@ -55,4 +55,28 @@ Provide a concise report of all documentation updates made (no more than 10 line
 
 After completing the documentation update, respond with:
 
-"Documentation has been updated to reflect today's progress. We're ready to /compact and continue in a new session. In our next session, we should focus on [brief description of next priority]."
+""Documentation has been updated to reflect today's progress. We're ready to /compact and continue in a new session. In our next session, we should focus on [brief description of next priority]."
+
+## Metrics Collection
+
+After using this prompt, please record its effectiveness to help us improve our documentation:
+
+```bash
+# Add a new entry to the metrics file
+[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+```
+
+Add a new entry with the following format:
+
+```markdown
+### YYYY-MM-DD - end-of-session
+
+- **Task**: Brief description of the documentation updated
+- **Completion**: ✅ Successful / ❌ Unsuccessful
+- **Time Saved**: Estimated time saved (in minutes)
+- **Errors Prevented**: Description of any errors the prompt helped avoid
+- **Satisfaction**: Rating (1-5)
+- **Notes**: Any observations or suggestions for improvement
+```
+
+This data helps us continuously improve our workflow prompts."

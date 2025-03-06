@@ -140,3 +140,27 @@ Upon completion, create:
 - Command Patterns: `/home/gregg/Projects/docs/prompts/command-patterns.md`
 
 Remember to follow the command pattern guidelines, using full paths with appropriate tools (fd, rg, git -C, etc.) for all operations.
+
+## Metrics Collection
+
+After using this prompt, please record its effectiveness to help us improve our documentation:
+
+```bash
+# Add a new entry to the metrics file
+[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+```
+
+Add a new entry with the following format:
+
+```markdown
+### YYYY-MM-DD - ecosystem-review
+
+- **Task**: Brief description of the review conducted
+- **Completion**: ✅ Successful / ❌ Unsuccessful
+- **Time Saved**: Estimated time saved (in minutes)
+- **Errors Prevented**: Description of any errors the prompt helped avoid
+- **Satisfaction**: Rating (1-5)
+- **Notes**: Any observations or suggestions for improvement
+```
+
+This data helps us continuously improve our workflow prompts.

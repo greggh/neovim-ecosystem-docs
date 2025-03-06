@@ -246,3 +246,27 @@ Once the bug is fixed, perform a brief analysis:
    - Update relevant documentation
 
 Remember to follow standard development workflows throughout the bug fixing process.
+
+## Metrics Collection
+
+After using this prompt, please record its effectiveness to help us improve our documentation:
+
+```bash
+# Add a new entry to the metrics file
+[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+```
+
+Add a new entry with the following format:
+
+```markdown
+### YYYY-MM-DD - bug-fixing
+
+- **Task**: Brief description of the bug fixed
+- **Completion**: ✅ Successful / ❌ Unsuccessful
+- **Time Saved**: Estimated time saved (in minutes)
+- **Errors Prevented**: Description of any errors the prompt helped avoid
+- **Satisfaction**: Rating (1-5)
+- **Notes**: Any observations or suggestions for improvement
+```
+
+This data helps us continuously improve our workflow prompts.
