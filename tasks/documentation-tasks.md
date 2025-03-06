@@ -2,7 +2,7 @@
 
 ## Current Focus
 
-The current focus for our documentation system is implementing the tiered documentation structure, creating effective session prompts, and establishing standardized conventions across all projects.
+The current focus for our documentation system is enhancing our metrics tracking system with automation scripts, developing clear usage instructions for the new documentation systems, and continuing to improve technical specifications with visual diagrams.
 
 ## High Priority Tasks
 
@@ -71,3 +71,19 @@ The current focus for our documentation system is implementing the tiered docume
    - [ ] Add support for generating PDF documentation
    - [ ] Create documentation export tools
    - [ ] Develop automated documentation checking system
+
+## New Tasks
+
+1. **Metrics Automation**
+   - [ ] Create monthly metrics summary script
+   - [ ] Develop prompt usage visualization tools
+   - [ ] Implement automatic prompt effectiveness reporting
+   - [ ] Create metrics validation script to ensure all prompts are tracked
+   - [ ] Set up automated reminders for monthly reviews
+
+2. **Documentation Usage Guides**
+   - [ ] Create quick-start guide for the documentation system
+   - [ ] Develop detailed user manual for the metrics system
+   - [ ] Create tutorial for using the cross-reference system
+   - [ ] Add examples of effective metrics reporting
+   - [ ] Create cheat sheet for common documentation workflows
