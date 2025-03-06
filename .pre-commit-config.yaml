@@ -33,7 +33,7 @@ repos:
         language: script
         pass_filenames: false
         verbose: true
-        
+
       - id: fix-list-numbering
         name: Fix ordered list numbering
         entry: ./scripts/fix_list_numbering.sh
@@ -47,7 +47,7 @@ repos:
         language: script
         pass_filenames: false
         verbose: true
-        
+
       - id: markdownlint-fix
         name: Fix remaining markdown issues with markdownlint
         entry: bash -c 'markdownlint --fix "**/*.md" --ignore node_modules'
