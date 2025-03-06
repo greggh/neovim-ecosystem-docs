@@ -107,8 +107,8 @@ To continue work on [project]:
 - [1-3 bullet points about current priorities]
 
 ## Documentation Links
-- Tasks: `/home/gregg/Projects/docs/tasks/[project]-tasks.md`
-- Architecture: `/home/gregg/Projects/docs/specs/[relevant-spec].md`
+- Tasks: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/[project]-tasks.md`
+- Architecture: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/[relevant-spec].md`
 - [Other relevant links]
 ```
 

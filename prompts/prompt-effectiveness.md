@@ -49,7 +49,7 @@ We track the following metrics for each prompt:
 
 ### After Using a Prompt
 
-Record the following information in `/home/gregg/Projects/docs/metrics/prompt-metrics.md`:
+Record the following information in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md`:
 
 ```markdown
 ### [Date] - [Prompt Name]
@@ -73,7 +73,7 @@ At the end of each month:
 
 ## Metrics File Format
 
-The `/home/gregg/Projects/docs/metrics/prompt-metrics.md` file uses the following structure:
+The `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md` file uses the following structure:
 
 ```markdown
 # Prompt Effectiveness Metrics
@@ -138,7 +138,7 @@ When prompt improvements are identified:
 ## Implementation Plan
 
 1. **Create Metrics Infrastructure**:
-   - Create `/home/gregg/Projects/docs/metrics/` directory
+   - Create `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/` directory
    - Initialize `prompt-metrics.md` file with headers
    - Set up summary section
 

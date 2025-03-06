@@ -1,5 +1,9 @@
 # Neovim Ecosystem Documentation
 
+[![Lint Markdown](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/markdown-lint.yml)
+[![Lint YAML](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/yaml-lint.yml/badge.svg)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/yaml-lint.yml)
+[![Build Documentation](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/docs-build.yml/badge.svg)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/docs-build.yml)
+
 Documentation for the Neovim ecosystem projects, providing comprehensive guidance for development workflows, project standards, and technical specifications.
 
 ## Documentation Structure
@@ -19,7 +23,8 @@ This documentation repository uses a tiered system to optimize context usage and
 
 - **Technical specifications** in the [specs/](specs/) directory
 - **Implementation plans** in the [plans/](plans/) directory
-- [**project-history.md**](project-history.md) - Chronological record of development sessions
+- [**project-history.md**](project-history.md) - Recent development sessions (latest 10)
+- [**archives/project-history-archive.md**](archives/project-history-archive.md) - Archived development sessions
 
 ## Workflow Prompts
 

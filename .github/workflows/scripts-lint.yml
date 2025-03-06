@@ -1,0 +1,39 @@
+name: Lint Scripts
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.sh'
+      - '**.lua'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.sh'
+      - '**.lua'
+
+jobs:
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './scripts'
+
+  luacheck:
+    runs-on: ubuntu-latest
+    if: ${{ hashFiles('**/*.lua') != '' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Lua
+        uses: leafo/gh-actions-lua@v9
+        with:
+          luaVersion: "5.1"
+      - name: Set up LuaRocks
+        uses: leafo/gh-actions-luarocks@v4
+      - name: Install luacheck
+        run: luarocks install luacheck
+      - name: Run luacheck
+        run: luacheck .

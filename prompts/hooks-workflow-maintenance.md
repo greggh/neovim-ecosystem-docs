@@ -25,17 +25,17 @@ This prompt initiates a comprehensive audit and maintenance of pre-commit hooks 
 1. **Neovim Configuration** - `/home/gregg/.config/nvim`
 2. **Laravel Helper Plugin** - `/home/gregg/Projects/neovim/plugins/laravel-helper`
 3. **Claude Code Plugin** - `/home/gregg/Projects/neovim/plugins/claude-code`
-4. **Lust-Next** - `/home/gregg/Projects/lust-next`
+4. **Lust-Next** - `/home/gregg/Projects/lua-library/lust-next`
 
 ### Supporting Projects
-5. **Base Project Template** - `/home/gregg/Projects/base-project-repo`
-6. **Hooks-Util** - `/home/gregg/Projects/hooks-util`
-7. **Neovim Plugin Template** - `/home/gregg/Projects/neovim/neovim-plugin-template`
-8. **Neovim Config Template** - `/home/gregg/Projects/neovim/neovim-config-template`
+5. **Base Project Template** - `/home/gregg/Projects/templates/base-project-repo`
+6. **Hooks-Util** - `/home/gregg/Projects/lua-library/hooks-util`
+7. **Neovim Plugin Template** - `/home/gregg/Projects/templates/neovim-plugin-template`
+8. **Neovim Config Template** - `/home/gregg/Projects/templates/neovim-config-template`
 9. **Nvim-Toolkit** - `/home/gregg/Projects/neovim/nvim-toolkit`
 
 ### Test Projects
-10. **Lust-Next Testbed** - `/home/gregg/Projects/lust-next-testbed`
+10. **Lust-Next Testbed** - `/home/gregg/Projects/lua-library/lust-next-testbed`
 11. **Hooks-Util Testbed Projects** - Various testbed projects
 
 ## Maintenance Process
@@ -152,10 +152,10 @@ What NOT to do:
 
 ## Reference Materials
 
-- Hooks-Util Documentation: `/home/gregg/Projects/hooks-util/README.md`
-- Workflow Templates: `/home/gregg/Projects/base-project-repo/.github/workflows/`
-- Command Patterns: `/home/gregg/Projects/docs/prompts/command-patterns.md`
-- Ecosystem Overview: `/home/gregg/Projects/docs/ecosystem-overview.md`
+- Hooks-Util Documentation: `/home/gregg/Projects/lua-library/hooks-util/README.md`
+- Workflow Templates: `/home/gregg/Projects/templates/base-project-repo/.github/workflows/`
+- Command Patterns: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
+- Ecosystem Overview: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md`
 
 ## Metrics Collection
 
@@ -163,7 +163,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```bash
 # Add a new entry to the metrics file
-[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+[editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 Add a new entry with the following format:

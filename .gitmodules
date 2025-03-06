@@ -1,0 +1,3 @@
+[submodule ".hooks-util"]
+	path = .hooks-util
+	url = https://github.com/greggh/hooks-util

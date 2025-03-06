@@ -10,7 +10,7 @@ Start by gathering all prompt usage data from the most recent month:
 
 ```bash
 # View the prompt metrics file
-cat /home/gregg/Projects/docs/metrics/prompt-metrics.md
+cat /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 ### 2. Metrics Analysis
@@ -51,7 +51,7 @@ Based on the analysis, create an improvement plan:
 
 ## Monthly Report Template
 
-Document the review findings in `/home/gregg/Projects/docs/metrics/monthly-reviews/YYYY-MM.md`:
+Document the review findings in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/monthly-reviews/YYYY-MM.md`:
 
 ```markdown
 # Prompt Metrics Review: [Month Year]
@@ -101,7 +101,7 @@ After completing the review:
 1. **Update Prompt Files**:
    ```bash
    # Edit prompts that need improvements
-   [editor] /home/gregg/Projects/docs/prompts/[prompt-name].md
+   [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/[prompt-name].md
    
    # Commit changes
    git -C /home/gregg/Projects/docs add prompts/[prompt-name].md
@@ -116,10 +116,10 @@ After completing the review:
 3. **Create New Prompts** (if needed):
    ```bash
    # Create new prompt file
-   [editor] /home/gregg/Projects/docs/prompts/[new-prompt-name].md
+   [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/[new-prompt-name].md
    
    # Add to metrics tracking
-   [editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+   [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
    
    # Commit changes
    git -C /home/gregg/Projects/docs add prompts/[new-prompt-name].md metrics/prompt-metrics.md
@@ -144,7 +144,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```bash
 # Add a new entry to the metrics file
-[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+[editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 Add a new entry with the following format:

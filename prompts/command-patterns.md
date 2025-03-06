@@ -22,37 +22,37 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
 1. **For running commands in a specific directory:**
    ```bash
    # NEVER do this:
-   cd /home/gregg/Projects/lust-next && lua run_tests.lua
+   cd /home/gregg/Projects/lua-library/lust-next && lua run_tests.lua
    
    # ALWAYS do this instead:
-   env -C /home/gregg/Projects/lust-next lua run_tests.lua
+   env -C /home/gregg/Projects/lua-library/lust-next lua run_tests.lua
    ```
 
 2. **For git operations:**
    ```bash
    # NEVER do this:
-   cd /home/gregg/Projects/lust-next && git status
+   cd /home/gregg/Projects/lua-library/lust-next && git status
    
    # ALWAYS do this instead:
-   git -C /home/gregg/Projects/lust-next status
+   git -C /home/gregg/Projects/lua-library/lust-next status
    ```
 
 3. **For operations that don't support -C:**
    ```bash
    # PREFERRED: Use full paths with every command whenever possible
-   ls -la /home/gregg/Projects/lust-next/src
-   rg "function" /home/gregg/Projects/lust-next
-   cat /home/gregg/Projects/lust-next/README.md
+   ls -la /home/gregg/Projects/lua-library/lust-next/src
+   rg "function" /home/gregg/Projects/lua-library/lust-next
+   cat /home/gregg/Projects/lua-library/lust-next/README.md
    ```
 
 4. **ONLY as a last resort - use pushd/popd pattern in a SINGLE COMMAND:**
    ```bash
    # LAST RESORT: If -C isn't supported AND full paths won't work
    # ALWAYS combine pushd, commands, and popd in a SINGLE LINE:
-   pushd /home/gregg/Projects/lust-next > /dev/null && command1 && command2 && popd > /dev/null
+   pushd /home/gregg/Projects/lua-library/lust-next > /dev/null && command1 && command2 && popd > /dev/null
    
    # NEVER do this (separate commands):
-   # pushd /home/gregg/Projects/lust-next
+   # pushd /home/gregg/Projects/lua-library/lust-next
    # command1
    # command2
    # popd
@@ -70,7 +70,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
 
 1. **Full Absolute Paths**
    - Always use full paths instead of relative paths
-   - Example: `/home/gregg/Projects/lust-next` not `../lust-next`
+   - Example: `/home/gregg/Projects/lua-library/lust-next` not `../lust-next`
 
 3. **Modern Command-Line Tools**
    - Prefer modern alternatives with better performance
@@ -78,7 +78,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
 
 4. **Targeted File Operations**
    - Use specific patterns to limit search scope
-   - Example: `fd -p "**/*.lua" /home/gregg/Projects/lust-next`
+   - Example: `fd -p "**/*.lua" /home/gregg/Projects/lua-library/lust-next`
 
 5. **Local Git Workflow**
    - Make changes locally and push, rather than using direct API calls
@@ -90,40 +90,40 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
 
 ```bash
 # Repository status
-git -C /home/gregg/Projects/lust-next status
+git -C /home/gregg/Projects/lua-library/lust-next status
 
 # Add and commit changes
-git -C /home/gregg/Projects/lust-next add src/reporting.lua
-git -C /home/gregg/Projects/lust-next commit -m "Enhance reporting module with better error handling"
+git -C /home/gregg/Projects/lua-library/lust-next add src/reporting.lua
+git -C /home/gregg/Projects/lua-library/lust-next commit -m "Enhance reporting module with better error handling"
 
 # Pull latest changes
-git -C /home/gregg/Projects/lust-next pull origin main
+git -C /home/gregg/Projects/lua-library/lust-next pull origin main
 ```
 
 ### File Operations
 
 ```bash
 # Find specific file types
-fd -p "**/*.lua" /home/gregg/Projects/lust-next
+fd -p "**/*.lua" /home/gregg/Projects/lua-library/lust-next
 
 # Search for patterns in code
-rg --type lua "function setup" /home/gregg/Projects/lust-next
+rg --type lua "function setup" /home/gregg/Projects/lua-library/lust-next
 
 # View file content with syntax highlighting
-bat /home/gregg/Projects/lust-next/src/reporting.lua
+bat /home/gregg/Projects/lua-library/lust-next/src/reporting.lua
 ```
 
 ### Project-Specific Commands
 
 ```bash
 # Run tests (using command from project's CLAUDE.md)
-env -C /home/gregg/Projects/lust-next lua run_tests.lua
+env -C /home/gregg/Projects/lua-library/lust-next lua run_tests.lua
 
 # Update dependencies
-git -C /home/gregg/Projects/lust-next submodule update --remote
+git -C /home/gregg/Projects/lua-library/lust-next submodule update --remote
 
 # Run specific project commands (always check CLAUDE.md)
-env -C /home/gregg/Projects/lust-next ./scripts/version_bump.lua patch
+env -C /home/gregg/Projects/lua-library/lust-next ./scripts/version_bump.lua patch
 ```
 
 ### GitHub CLI Operations
@@ -155,7 +155,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```bash
 # Add a new entry to the metrics file
-[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+[editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 Add a new entry with the following format:

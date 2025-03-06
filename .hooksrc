@@ -1,0 +1,29 @@
+# Hooks configuration file
+
+# Project type for specialized behavior
+# Possible values: lua_lib, neovim_plugin, neovim_config
+project_type = "docs"
+
+# Enable/disable specific pre-commit validation tasks
+[tasks]
+stylua = false
+luacheck = false
+shellcheck = false
+auto_fixes = true
+run_tests = false
+
+# Options for specific tools
+[options.stylua]
+# No Lua files in this documentation project
+
+[options.luacheck]
+# No Lua files in this documentation project
+
+[options.auto_fixes]
+fix_trailing_whitespace = true
+fix_line_endings = true
+fix_unused_variables = true
+add_final_newline = true
+
+[options.tests]
+# No tests to run for documentation project

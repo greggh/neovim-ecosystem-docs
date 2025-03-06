@@ -10,7 +10,7 @@ The documentation system is organized into three tiers to optimize context usage
 
 Files that provide core context about the ecosystem and should be loaded first:
 
-- **ecosystem-overview.md** (`/home/gregg/Projects/docs/ecosystem-overview.md`)
+- **ecosystem-overview.md** (`/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md`)
   - Provides a concise (150-200 lines) overview of all projects in the ecosystem
   - Lists current priorities and focus areas
   - Explains architecture principles and relationships between projects
@@ -20,13 +20,13 @@ Files that provide core context about the ecosystem and should be loaded first:
 
 Files that provide up-to-date information about project status and ongoing tasks:
 
-- **project-status.md** (`/home/gregg/Projects/docs/project-status.md`)
+- **project-status.md** (`/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md`)
   - Shows current status of all projects in the ecosystem
   - Lists key features and their completion status
   - Details active next steps for each project
   - Updated at the end of each session with the latest progress
 
-- **Project-specific task files** (`/home/gregg/Projects/docs/tasks/[project]-tasks.md`)
+- **Project-specific task files** (`/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/[project]-tasks.md`)
   - Contains detailed task lists for each project
   - Organizes tasks by priority (high, medium, low)
   - Tracks completion status with checkboxes
@@ -36,20 +36,21 @@ Files that provide up-to-date information about project status and ongoing tasks
 
 Detailed documentation for reference when specific information is needed:
 
-- **Architecture specifications** (`/home/gregg/Projects/docs/specs/`)
+- **Architecture specifications** (`/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/`)
   - Contains detailed architecture specifications for key components
   - Explains design decisions and implementation details
   - Provides diagrams and structural information
   - Serves as authoritative reference for implementation
 
-- **Implementation plans** (`/home/gregg/Projects/docs/plans/`)
+- **Implementation plans** (`/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/plans/`)
   - Contains detailed plans for implementing specific features
   - Breaks down complex tasks into step-by-step processes
   - Tracks completion status for major implementation efforts
   - Provides reasoning behind implementation approaches
 
-- **Project history** (`/home/gregg/Projects/docs/project-history.md`)
-  - Maintains chronological record of all sessions
+- **Project history** (`/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-history.md` and `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/archives/project-history-archive.md`)
+  - Main file maintains chronological record of 10 most recent sessions
+  - Archive file contains older sessions for reference
   - Preserves details of completed work for reference
   - Documents decisions and their rationale
   - Provides historical context for future development
@@ -68,7 +69,7 @@ Each project maintains its own CLAUDE.md file with project-specific information:
 
 ## Prompt System
 
-Specialized prompts in the `/home/gregg/Projects/docs/prompts/` directory:
+Specialized prompts in the `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/` directory:
 
 ### Session Management Prompts
 - `startup-prompt.md`: Initializes project context efficiently
@@ -107,6 +108,7 @@ The documentation system requires regular maintenance:
    - Update project-status.md with latest progress
    - Update relevant task files with completed tasks
    - Add new entry to project-history.md
+   - Archive oldest history entry if more than 10 entries exist
    - Update project-specific CLAUDE.md files as needed
 
 2. **Regular audits**:

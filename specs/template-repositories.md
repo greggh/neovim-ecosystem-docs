@@ -6,16 +6,16 @@ This document defines the structure and features of the template repositories us
 
 The ecosystem uses the following template repositories:
 
-1. **Base Project Template** (`/home/gregg/Projects/base-project-repo`)
+1. **Base Project Template** (`/home/gregg/Projects/templates/base-project-repo`)
    - Foundation template with GitHub best practices for all new projects
    - Contains basic GitHub workflows, documentation, and configuration
 
-2. **Neovim Plugin Template** (`/home/gregg/Projects/neovim/neovim-plugin-template`)
+2. **Neovim Plugin Template** (`/home/gregg/Projects/templates/neovim-plugin-template`)
    - Specialized template for creating Neovim plugins
    - Inherits from Base Project Template
    - Contains Neovim-specific structure and configuration
 
-3. **Neovim Config Template** (`/home/gregg/Projects/neovim/neovim-config-template`)
+3. **Neovim Config Template** (`/home/gregg/Projects/templates/neovim-config-template`)
    - Specialized template for creating Neovim configurations
    - Inherits from Base Project Template
    - Contains configuration-specific structure and organization

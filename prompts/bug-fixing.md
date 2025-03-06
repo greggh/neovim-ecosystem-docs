@@ -200,8 +200,8 @@ If the bug is in a dependency:
    - Update any user documentation describing the fixed functionality
 
 2. **Update Ecosystem Documentation**
-   - Update `/home/gregg/Projects/docs/project-status.md` if significant
-   - Update task file in `/home/gregg/Projects/docs/tasks/`
+   - Update `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md` if significant
+   - Update task file in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/`
 
 ### 4. Merge to Main
 
@@ -253,7 +253,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```bash
 # Add a new entry to the metrics file
-[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+[editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 Add a new entry with the following format:

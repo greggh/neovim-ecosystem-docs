@@ -223,8 +223,8 @@ After completing the review:
 
 1. **Update Documentation**
    - Update project-specific CLAUDE.md if necessary
-   - Update `/home/gregg/Projects/docs/project-status.md` for significant changes
-   - Update relevant task files in `/home/gregg/Projects/docs/tasks/`
+   - Update `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md` for significant changes
+   - Update relevant task files in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/`
 
 2. **Knowledge Sharing**
    - Document key insights from the review
@@ -244,7 +244,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```bash
 # Add a new entry to the metrics file
-[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+[editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 Add a new entry with the following format:

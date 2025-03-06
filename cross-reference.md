@@ -47,28 +47,28 @@ graph TD
 
 | Document | Path | Description | Related Documents |
 |----------|------|-------------|-------------------|
-| Ecosystem Overview | `/home/gregg/Projects/docs/ecosystem-overview.md` | Core overview of all projects | Project Status, All Task Files |
+| Ecosystem Overview | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md` | Core overview of all projects | Project Status, All Task Files |
 
 ### Tier 2: Current Status
 
 | Document | Path | Description | Related Documents |
 |----------|------|-------------|-------------------|
-| Project Status | `/home/gregg/Projects/docs/project-status.md` | Current status of all projects | Project Tasks, Implementation Plans |
+| Project Status | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md` | Current status of all projects | Project Tasks, Implementation Plans |
 
 #### Project Tasks
 
 | Project | Task File | Related Documents |
 |---------|-----------|-------------------|
-| Documentation | `/home/gregg/Projects/docs/tasks/documentation-tasks.md` | Documentation Structure Spec |
-| Lust-Next | `/home/gregg/Projects/docs/tasks/lust-next-tasks.md` | Lust-Next Architecture Plan |
-| Hooks-Util | `/home/gregg/Projects/docs/tasks/hooks-util-tasks.md` | Hooks-Util Architecture Plan, Adapter Architecture Spec |
-| Neovim Config | `/home/gregg/Projects/docs/tasks/neovim-config-tasks.md` | - |
-| Neovim Plugin Template | `/home/gregg/Projects/docs/tasks/neovim-plugin-template-tasks.md` | Template Repositories Spec |
-| Neovim Config Template | `/home/gregg/Projects/docs/tasks/neovim-config-template-tasks.md` | Template Repositories Spec |
-| Base Project | `/home/gregg/Projects/docs/tasks/base-project-tasks.md` | Template Repositories Spec |
-| Laravel Helper | `/home/gregg/Projects/docs/tasks/laravel-helper-tasks.md` | - |
-| Claude Code | `/home/gregg/Projects/docs/tasks/claude-code-tasks.md` | - |
-| Nvim Toolkit | `/home/gregg/Projects/docs/tasks/nvim-toolkit-tasks.md` | - |
+| Documentation | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/documentation-tasks.md` | Documentation Structure Spec |
+| Lust-Next | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/lust-next-tasks.md` | Lust-Next Architecture Plan |
+| Hooks-Util | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/hooks-util-tasks.md` | Hooks-Util Architecture Plan, Adapter Architecture Spec |
+| Neovim Config | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/neovim-config-tasks.md` | - |
+| Neovim Plugin Template | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/neovim-plugin-template-tasks.md` | Template Repositories Spec |
+| Neovim Config Template | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/neovim-config-template-tasks.md` | Template Repositories Spec |
+| Base Project | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/base-project-tasks.md` | Template Repositories Spec |
+| Laravel Helper | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/laravel-helper-tasks.md` | - |
+| Claude Code | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/claude-code-tasks.md` | - |
+| Nvim Toolkit | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/nvim-toolkit-tasks.md` | - |
 
 ### Tier 3: Reference Materials
 
@@ -76,23 +76,23 @@ graph TD
 
 | Specification | Path | Related Documents |
 |---------------|------|-------------------|
-| Documentation Structure | `/home/gregg/Projects/docs/specs/documentation-structure.md` | Documentation Tasks |
-| Adapter Architecture | `/home/gregg/Projects/docs/specs/adapter-architecture.md` | Hooks-Util Tasks |
-| Template Repositories | `/home/gregg/Projects/docs/specs/template-repositories.md` | Base Project Tasks, Template Tasks |
-| Test Quality Levels | `/home/gregg/Projects/docs/specs/test-quality-levels.md` | Lust-Next Tasks, Hooks-Util Tasks |
+| Documentation Structure | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/documentation-structure.md` | Documentation Tasks |
+| Adapter Architecture | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/adapter-architecture.md` | Hooks-Util Tasks |
+| Template Repositories | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/template-repositories.md` | Base Project Tasks, Template Tasks |
+| Test Quality Levels | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/test-quality-levels.md` | Lust-Next Tasks, Hooks-Util Tasks |
 
 #### Implementation Plans
 
 | Plan | Path | Related Documents |
 |------|------|-------------------|
-| Lust-Next Architecture | `/home/gregg/Projects/docs/plans/lust-next-architecture.md` | Lust-Next Tasks, Test Quality Levels Spec |
-| Hooks-Util Architecture | `/home/gregg/Projects/docs/plans/hooks-util-architecture.md` | Hooks-Util Tasks, Adapter Architecture Spec |
+| Lust-Next Architecture | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/plans/lust-next-architecture.md` | Lust-Next Tasks, Test Quality Levels Spec |
+| Hooks-Util Architecture | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/plans/hooks-util-architecture.md` | Hooks-Util Tasks, Adapter Architecture Spec |
 
 #### Historical Record
 
 | Document | Path | Description |
 |----------|------|-------------|
-| Project History | `/home/gregg/Projects/docs/project-history.md` | Chronological record of development sessions |
+| Project History | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-history.md` | Chronological record of development sessions |
 
 ### Workflow Prompts
 
@@ -100,36 +100,36 @@ graph TD
 
 | Prompt | Path | Related Documents |
 |--------|------|-------------------|
-| Startup Prompt | `/home/gregg/Projects/docs/prompts/startup-prompt.md` | Ecosystem Overview, Command Patterns |
-| End of Session | `/home/gregg/Projects/docs/prompts/end-of-session.md` | Project Status, Project History, Project Tasks |
+| Startup Prompt | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/startup-prompt.md` | Ecosystem Overview, Command Patterns |
+| End of Session | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/end-of-session.md` | Project Status, Project History, Project Tasks |
 
 #### Development Workflows
 
 | Prompt | Path | Related Documents |
 |--------|------|-------------------|
-| Project Initialization | `/home/gregg/Projects/docs/prompts/project-initialization.md` | Template Repositories Spec |
-| Feature Implementation | `/home/gregg/Projects/docs/prompts/feature-implementation.md` | Project Tasks |
-| Bug Fixing | `/home/gregg/Projects/docs/prompts/bug-fixing.md` | - |
-| Code Review | `/home/gregg/Projects/docs/prompts/code-review.md` | Test Quality Levels Spec |
+| Project Initialization | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/project-initialization.md` | Template Repositories Spec |
+| Feature Implementation | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/feature-implementation.md` | Project Tasks |
+| Bug Fixing | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/bug-fixing.md` | - |
+| Code Review | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/code-review.md` | Test Quality Levels Spec |
 
 #### System Maintenance
 
 | Prompt | Path | Related Documents |
 |--------|------|-------------------|
-| Command Patterns | `/home/gregg/Projects/docs/prompts/command-patterns.md` | All workflow prompts |
-| Ecosystem Review | `/home/gregg/Projects/docs/prompts/ecosystem-review.md` | Project Status |
-| Hooks Workflow Maintenance | `/home/gregg/Projects/docs/prompts/hooks-workflow-maintenance.md` | Hooks-Util Tasks |
-| Prompts Maintenance | `/home/gregg/Projects/docs/prompts/prompts-maintenance.md` | Prompt Effectiveness, Metrics Review |
-| Prompt Effectiveness | `/home/gregg/Projects/docs/prompts/prompt-effectiveness.md` | Metrics Review |
-| Metrics Review | `/home/gregg/Projects/docs/prompts/metrics-review.md` | Prompt Effectiveness |
+| Command Patterns | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md` | All workflow prompts |
+| Ecosystem Review | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/ecosystem-review.md` | Project Status |
+| Hooks Workflow Maintenance | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/hooks-workflow-maintenance.md` | Hooks-Util Tasks |
+| Prompts Maintenance | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/prompts-maintenance.md` | Prompt Effectiveness, Metrics Review |
+| Prompt Effectiveness | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/prompt-effectiveness.md` | Metrics Review |
+| Metrics Review | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/metrics-review.md` | Prompt Effectiveness |
 
 ### Templates
 
 | Template | Path | Purpose |
 |----------|------|---------|
-| CLAUDE.md Template | `/home/gregg/Projects/docs/templates/CLAUDE.md.template` | Standard project-specific documentation |
-| Technical Spec with Diagrams | `/home/gregg/Projects/docs/templates/technical-spec-with-diagrams.md` | Creating visual technical specifications |
-| FUNDING.yml | `/home/gregg/Projects/docs/templates/FUNDING.yml` | Standard GitHub sponsorship configuration |
+| CLAUDE.md Template | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/templates/CLAUDE.md.template` | Standard project-specific documentation |
+| Technical Spec with Diagrams | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/templates/technical-spec-with-diagrams.md` | Creating visual technical specifications |
+| FUNDING.yml | `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/templates/FUNDING.yml` | Standard GitHub sponsorship configuration |
 
 ## Navigating Documentation
 
@@ -173,7 +173,7 @@ Example cross-reference footer:
 ---
 
 **Related Documentation:**
-- [Ecosystem Overview](/home/gregg/Projects/docs/ecosystem-overview.md)
-- [Project Status](/home/gregg/Projects/docs/project-status.md)
-- [Feature Implementation Workflow](/home/gregg/Projects/docs/prompts/feature-implementation.md)
+- [Ecosystem Overview](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md)
+- [Project Status](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md)
+- [Feature Implementation Workflow](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/feature-implementation.md)
 ```

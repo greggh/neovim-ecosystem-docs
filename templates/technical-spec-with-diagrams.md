@@ -190,4 +190,4 @@ local DataModel = {
 *Diagrams created with [Mermaid](https://mermaid-js.github.io/mermaid/). To render these diagrams:*
 1. *Use a Markdown editor that supports Mermaid (e.g., VS Code with Markdown Preview Enhanced)*
 2. *Use the Mermaid Live Editor: https://mermaid.live/*
-3. *Export as SVG/PNG and place in `/home/gregg/Projects/docs/assets/diagrams/`*
+3. *Export as SVG/PNG and place in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/assets/diagrams/`*

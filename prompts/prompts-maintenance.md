@@ -5,28 +5,28 @@ This prompt initiates a systematic review and update of all prompts in our tiere
 ## Current Prompt Structure
 
 ### Core Session Prompts
-1. **Startup Prompt** - `/home/gregg/Projects/docs/prompts/startup-prompt.md`
+1. **Startup Prompt** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/startup-prompt.md`
    - Purpose: Initialize projects context efficiently
    - Key components: Project overview, documentation structure, loading instructions
 
-2. **End of Session** - `/home/gregg/Projects/docs/prompts/end-of-session.md`
+2. **End of Session** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/end-of-session.md`
    - Purpose: Document progress before ending a session
    - Key components: Documentation update checklist, summary format, preservation rules
 
 ### Workflow Prompts
-3. **Command Patterns** - `/home/gregg/Projects/docs/prompts/command-patterns.md`
+3. **Command Patterns** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
    - Purpose: Guide efficient command usage across projects
    - Key components: Tool recommendations, command principles, examples
 
-4. **Ecosystem Review** - `/home/gregg/Projects/docs/prompts/ecosystem-review.md`
+4. **Ecosystem Review** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/ecosystem-review.md`
    - Purpose: Comprehensive review of all projects for consistency
    - Key components: Review scope, categories, process details, deliverables
 
-5. **Hooks and Workflows Maintenance** - `/home/gregg/Projects/docs/prompts/hooks-workflow-maintenance.md`
+5. **Hooks and Workflows Maintenance** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/hooks-workflow-maintenance.md`
    - Purpose: Audit and maintain pre-commit hooks and GitHub workflows
    - Key components: Audit process, fix strategy, critical guardrails
 
-6. **Prompts Maintenance** - `/home/gregg/Projects/docs/prompts/prompts-maintenance.md`
+6. **Prompts Maintenance** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/prompts-maintenance.md`
    - Purpose: Self-referential prompt to maintain all prompts
    - Key components: Prompt list, review process, update guidelines
 
@@ -107,7 +107,7 @@ Guidelines for adding new prompts:
    - Update metrics tracking:
      ```bash
      # Add new prompt to the metrics file
-     [editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+     [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
      ```
      - Add a new entry in the Summary Statistics table:
      ```markdown
@@ -115,7 +115,7 @@ Guidelines for adding new prompts:
      ```
      - Include metrics collection section in new prompt using the template:
      ```bash
-     cat /home/gregg/Projects/docs/templates/metrics-reminder.md
+     cat /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/templates/metrics-reminder.md
      ```
 
 ## Removing Prompts
@@ -124,9 +124,9 @@ When a prompt is no longer needed:
 
 1. **Archive the Prompt**
    - Don't delete prompts immediately; archive them first
-   - Move to an archive directory: `/home/gregg/Projects/docs/prompts/archive/`
+   - Move to an archive directory: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/archive/`
    ```bash
-   mkdir -p /home/gregg/Projects/docs/prompts/archive
+   mkdir -p /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/archive
    git -C /home/gregg/Projects/docs mv prompts/obsolete-prompt.md prompts/archive/
    ```
 
@@ -138,7 +138,7 @@ When a prompt is no longer needed:
 3. **Update Metrics Tracking**
    - Remove the prompt from the metrics summary table:
    ```bash
-   [editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+   [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
    ```
    - Preserve historical metrics data in the detailed records section
    - Add a note that the prompt has been archived
@@ -172,10 +172,10 @@ Recommended maintenance intervals:
 
 ## Reference Materials
 
-- Ecosystem Overview: `/home/gregg/Projects/docs/ecosystem-overview.md`
-- Project Status: `/home/gregg/Projects/docs/project-status.md`
-- Documentation Structure: `/home/gregg/Projects/docs/specs/documentation-structure.md`
-- Prompt Effectiveness: `/home/gregg/Projects/docs/prompts/prompt-effectiveness.md`
+- Ecosystem Overview: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md`
+- Project Status: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md`
+- Documentation Structure: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/documentation-structure.md`
+- Prompt Effectiveness: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/prompt-effectiveness.md`
 
 ## Metrics Collection
 
@@ -183,7 +183,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```bash
 # Add a new entry to the metrics file
-[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+[editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 Add a new entry with the following format:

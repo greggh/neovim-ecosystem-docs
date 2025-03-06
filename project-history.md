@@ -1,6 +1,36 @@
 # Project History
 
-*This file archives historical project sessions and provides a reference for past work. For current status, see [`project-status.md`](/home/gregg/Projects/docs/project-status.md).*
+*This file contains the 10 most recent project sessions. For current status, see [`project-status.md`](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md), and for older sessions, see the [`project-history-archive.md`](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/archives/project-history-archive.md).*
+
+## Session: March 6, 2025 - Project Reorganization and Documentation System Updates
+
+In this session, we focused on reorganizing the project directory structure and implementing a more token-efficient documentation system:
+
+### Key Accomplishments
+
+1. **Project Directory Reorganization**
+   - Established clear type-based directory structure for all projects
+   - Moved all projects into their proper type-based directories
+   - Created dedicated directories for each project type:
+     - `/home/gregg/Projects/test-projects/` - For test projects
+     - `/home/gregg/Projects/lua-library/` - For Lua libraries
+     - `/home/gregg/Projects/templates/` - For project templates
+     - `/home/gregg/Projects/docs-projects/` - For documentation projects
+   - Updated all paths in documentation to reflect new organization
+
+2. **Documentation System Enhancements**
+   - Renamed documentation directory from `/home/gregg/Projects/docs/` to `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/`
+   - Implemented history archiving system to reduce token usage
+   - Limited main history file to 10 most recent entries
+   - Created archive file for older historical entries
+   - Updated all prompts to reflect the new organization
+
+3. **Project Initialization Updates**
+   - Enhanced project-initialization.md with clear type-based paths
+   - Added Template as a formal project type
+   - Improved GitHub repository handling
+   - Updated all template paths to reflect reorganization
+   - Added case-based handling for different project types
 
 ## Session: March 6, 2025 - Implementing Documentation Effectiveness Tracking and Cross-Referencing
 
@@ -49,8 +79,8 @@ In this session, we completed a comprehensive improvement of the documentation s
 ### Key Accomplishments
 
 1. **Documentation Structure Formalization**
-   - Created formal specification in `/home/gregg/Projects/docs/specs/documentation-structure.md`
-   - Created template repositories specification in `/home/gregg/Projects/docs/specs/template-repositories.md`
+   - Created formal specification in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/documentation-structure.md`
+   - Created template repositories specification in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/template-repositories.md`
    - Defined three-tiered documentation approach with clear purposes for each tier
    - Established documentation flow and maintenance processes
    - Completed cleanup by removing all outdated documentation sources
@@ -96,7 +126,7 @@ In this session, we implemented a comprehensive documentation reorganization pla
      - Tier 1: Essential context (ecosystem-overview.md)
      - Tier 2: Current status (project-status.md and project-specific task files)
      - Tier 3: Reference materials (specs, plans, and history)
-   - Implemented centralized documentation in `/home/gregg/Projects/docs/`
+   - Implemented centralized documentation in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/`
    - Created documentation-reorganization-plan.md with detailed structure
    - Added task files for all projects in the ecosystem
    - Created architecture specifications and implementation plans
@@ -263,24 +293,3 @@ In this session, we developed a comprehensive testing plan to thoroughly validat
    - Designed validation strategies for all configuration options
    - Established error case testing methodology
 
-## Session: March 2, 2025 - Test Infrastructure Implementation for lust-next and hooks-util
-
-In this session, we implemented the complete test infrastructure for validating lust-next and hooks-util by creating four specialized test projects:
-
-1. **Test Project Creation**:
-   - Created four complete test projects with specialized purposes:
-     - `lust-next-testbed`: Pure Lua project for validating core lust-next functionality
-     - `hooks-util-testbed-lua-lib`: Lua library project with rockspec for testing Lua library adapter
-     - `hooks-util-testbed-nvim-plugin`: Neovim plugin structure for testing plugin adapter
-     - `hooks-util-testbed-nvim-config`: Neovim config with init.lua.d for testing config adapter
-   - Set up complete project structures with appropriate directory layouts
-   - Established proper git repositories for each project for version control
-
-2. **Source File Implementation**:
-   - Created source files with deliberate style and lint issues:
-     - Inconsistent spacing and indentation for StyLua to detect
-     - Global variables and undefined references for Luacheck to flag
-     - Excessively long lines for line length limits
-     - Unused variables and parameters for static analysis
-   - Implemented different module patterns appropriate for each project type
-   - Created realistic code that reflects common development patterns

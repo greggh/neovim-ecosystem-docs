@@ -1,6 +1,13 @@
 # Neovim Ecosystem Project Initialization
 
-Hello Claude, we're continuing our work together on our Neovim ecosystem projects. This prompt is designed to efficiently initialize the proper context.
+## FOR CLAUDE: READ THESE FILES IMMEDIATELY
+
+Hello Claude, we're continuing our work together on our Neovim ecosystem projects. This prompt is designed to efficiently initialize the proper context. As soon as you receive this prompt, please read the following files in order:
+
+1. **THIS ENTIRE PROMPT DOCUMENT FIRST**
+2. `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md`
+3. `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md`
+4. `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
 
 ## Projects Overview
 
@@ -15,39 +22,39 @@ I'm working on multiple interconnected Neovim projects with a focus on standardi
 
 ## Documentation Structure
 
-To save context space, documentation has been organized in a tiered system (fully detailed in `/home/gregg/Projects/docs/specs/documentation-structure.md`):
+To save context space, documentation has been organized in a tiered system (fully detailed in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/documentation-structure.md`):
 
 ### Tier 1: Essential Context (LOAD FIRST)
-- `/home/gregg/Projects/docs/ecosystem-overview.md` - Core context (150-200 lines)
+- `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md` - Core context (150-200 lines)
 
 ### Tier 2: Current Status (LOAD WHEN NEEDED)
-- `/home/gregg/Projects/docs/project-status.md` - Current project statuses
-- `/home/gregg/Projects/docs/tasks/[project]-tasks.md` - Project-specific tasks
+- `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md` - Current project statuses
+- `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/[project]-tasks.md` - Project-specific tasks
 
 ### Tier 3: Reference Materials (LOAD ON DEMAND)
-- `/home/gregg/Projects/docs/specs/` - Architecture specifications
-  - `/home/gregg/Projects/docs/specs/documentation-structure.md` - Documentation system specification
-  - `/home/gregg/Projects/docs/specs/adapter-architecture.md` - Adapter system specification
-  - `/home/gregg/Projects/docs/specs/test-quality-levels.md` - Test quality validation specification
-- `/home/gregg/Projects/docs/plans/` - Implementation plans
-- `/home/gregg/Projects/docs/project-history.md` - Historical session logs
+- `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/` - Architecture specifications
+  - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/documentation-structure.md` - Documentation system specification
+  - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/adapter-architecture.md` - Adapter system specification
+  - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/test-quality-levels.md` - Test quality validation specification
+- `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/plans/` - Implementation plans
+- `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-history.md` - Historical session logs
 
 ## Project-Specific Information
 
 Each project has a CLAUDE.md file with project-specific commands and information:
-- `/home/gregg/Projects/lust-next/CLAUDE.md`
-- `/home/gregg/Projects/hooks-util/CLAUDE.md`
+- `/home/gregg/Projects/lua-library/lust-next/CLAUDE.md`
+- `/home/gregg/Projects/lua-library/hooks-util/CLAUDE.md`
 - `/home/gregg/.config/nvim/CLAUDE.md`
 - etc.
 
 ## START HERE
 
 1. **IMMEDIATELY READ the ecosystem overview**: 
-   - `/home/gregg/Projects/docs/ecosystem-overview.md`
+   - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md`
 
 2. **BASED ON MY TASK, selectively load**:
-   - Project status: `/home/gregg/Projects/docs/project-status.md`
-   - Relevant tasks file: `/home/gregg/Projects/docs/tasks/[project]-tasks.md`
+   - Project status: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md`
+   - Relevant tasks file: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/[project]-tasks.md`
    - Project-specific CLAUDE.md for the project in question
 
 3. **ONLY IF NEEDED, reference**:
@@ -60,10 +67,10 @@ Each project has a CLAUDE.md file with project-specific commands and information
 1. **CRITICAL: NEVER use the `cd` command in any work**
    - Always use `env -C /path/to/dir command` for running commands in specific directories
    - Always use `git -C /path/to/repo` for git operations
-   - For more details, read `/home/gregg/Projects/docs/prompts/command-patterns.md`
+   - For more details, read `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
 
 2. **Always load these essential prompts:**
-   - Command patterns: `/home/gregg/Projects/docs/prompts/command-patterns.md`
+   - Command patterns: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
    - Project-specific CLAUDE.md file for the current project
 
 3. **Follow these workflow guidelines:**
@@ -73,13 +80,23 @@ Each project has a CLAUDE.md file with project-specific commands and information
 
 I'll begin by telling you which project I'm working on, and you should load the appropriate context.
 
+## Required Actions After Reading This Prompt
+
+After reading this entire prompt and the required files, Claude should:
+
+1. **Confirm** that you've read the essential files
+2. **Ask** which specific project we'll be working on today
+3. **Load** project-specific files (tasks and CLAUDE.md) based on my answer
+4. **Acknowledge** understanding of the command patterns and no-cd policy
+5. **Wait** for me to specify the next task before proceeding
+
 ## Metrics Collection
 
 After using this prompt, please record its effectiveness to help us improve our documentation:
 
 ```bash
 # Add a new entry to the metrics file
-[editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+[editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
 ```
 
 Add a new entry with the following format:
