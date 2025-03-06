@@ -143,7 +143,7 @@ Hooks-util supports two configuration formats:
    HOOKS_TEST_COVERAGE_THRESHOLD=80
    ```
 
-2. **Lua-Based Configuration** (`.hooks-util.lua`):
+1. **Lua-Based Configuration** (`.hooks-util.lua`):
    - Modern, structured configuration
    - Support for complex data types
    - Better organization and commenting

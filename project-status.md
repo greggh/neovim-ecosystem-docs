@@ -1,6 +1,6 @@
 # Project Status
 
-*Last Updated: March 7, 2025 - End of Day*
+## Last Updated: March 7, 2025 - End of Day
 
 ## Documentation System
 

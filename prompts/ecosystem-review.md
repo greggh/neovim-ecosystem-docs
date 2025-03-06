@@ -13,16 +13,16 @@ This prompt initiates a systematic review of all projects in our Neovim ecosyste
 
 ### Supporting Projects
 
-5. **Base Project Template** - `/home/gregg/Projects/templates/base-project-repo`
-6. **Hooks-Util** - `/home/gregg/Projects/lua-library/hooks-util`
-7. **Neovim Plugin Template** - `/home/gregg/Projects/templates/neovim-plugin-template`
-8. **Neovim Config Template** - `/home/gregg/Projects/templates/neovim-config-template`
-9. **Nvim-Toolkit** - `/home/gregg/Projects/neovim/nvim-toolkit`
+1. **Base Project Template** - `/home/gregg/Projects/templates/base-project-repo`
+2. **Hooks-Util** - `/home/gregg/Projects/lua-library/hooks-util`
+3. **Neovim Plugin Template** - `/home/gregg/Projects/templates/neovim-plugin-template`
+4. **Neovim Config Template** - `/home/gregg/Projects/templates/neovim-config-template`
+5. **Nvim-Toolkit** - `/home/gregg/Projects/neovim/nvim-toolkit`
 
 ### Test Projects
 
-10. **Lust-Next Testbed** - `/home/gregg/Projects/lua-library/lust-next-testbed`
-11. **Hooks-Util Testbeds** - Various testbed projects
+1. **Lust-Next Testbed** - `/home/gregg/Projects/lua-library/lust-next-testbed`
+2. **Hooks-Util Testbeds** - Various testbed projects
 
 ## Review Categories
 

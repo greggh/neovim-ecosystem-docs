@@ -498,13 +498,13 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
 
    **Note**: The pre-commit hooks from hooks-util should run automatically during the commit. If the hooks fail:
 
-   - Fix the issues in the current project
-   - If the issue is in hooks-util itself:
-     - Fix hooks-util directly
-     - Commit and push the changes
-     - Cascade updates to all dependent projects with `git submodule update --remote` in each project
+- Fix the issues in the current project
+- If the issue is in hooks-util itself:
+  - Fix hooks-util directly
+  - Commit and push the changes
+  - Cascade updates to all dependent projects with `git submodule update --remote` in each project
 
-2. **Create GitHub Repository**:
+1. **Create GitHub Repository**:
 
    ```bash
    # Using GitHub CLI
@@ -540,7 +540,7 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
    esac
    ```
 
-3. **Verify GitHub Actions**:
+2. **Verify GitHub Actions**:
 
    ```bash
    # Check status of workflows
@@ -558,7 +558,7 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
      - For hooks-util: update submodules in dependent projects
      - For lust-next: update dependencies as needed
 
-4. **Configure GitHub Settings**:
+3. **Configure GitHub Settings**:
    - Enable Issues and Discussions
    - Configure branch protection rules
    - Set up GitHub Actions if not automatically configured

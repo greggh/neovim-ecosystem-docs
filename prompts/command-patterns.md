@@ -76,15 +76,15 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    - Always use full paths instead of relative paths
    - Example: `/home/gregg/Projects/lua-library/lust-next` not `../lust-next`
 
-3. **Modern Command-Line Tools**
+2. **Modern Command-Line Tools**
    - Prefer modern alternatives with better performance
    - Example: `rg --type lua "function"` not `grep -r "function" --include="*.lua"`
 
-4. **Targeted File Operations**
+3. **Targeted File Operations**
    - Use specific patterns to limit search scope
    - Example: `fd -p "**/*.lua" /home/gregg/Projects/lua-library/lust-next`
 
-5. **Local Git Workflow**
+4. **Local Git Workflow**
    - Make changes locally and push, rather than using direct API calls
    - Sync local and remote repositories after any API operations
 

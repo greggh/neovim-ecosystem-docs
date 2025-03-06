@@ -2,7 +2,7 @@
 
 *This file contains archived historical project sessions. For recent sessions, see the main [`project-history.md`](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-history.md) file.*
 
-*Last archived: March 6, 2025*
+## Last archived: March 6, 2025
 
 ## Session: March 2, 2025 - Test Infrastructure Implementation for lust-next and hooks-util
 

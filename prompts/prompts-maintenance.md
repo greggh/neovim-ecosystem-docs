@@ -16,19 +16,19 @@ This prompt initiates a systematic review and update of all prompts in our tiere
 
 ### Workflow Prompts
 
-3. **Command Patterns** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
+1. **Command Patterns** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
    - Purpose: Guide efficient command usage across projects
    - Key components: Tool recommendations, command principles, examples
 
-4. **Ecosystem Review** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/ecosystem-review.md`
+2. **Ecosystem Review** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/ecosystem-review.md`
    - Purpose: Comprehensive review of all projects for consistency
    - Key components: Review scope, categories, process details, deliverables
 
-5. **Hooks and Workflows Maintenance** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/hooks-workflow-maintenance.md`
+3. **Hooks and Workflows Maintenance** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/hooks-workflow-maintenance.md`
    - Purpose: Audit and maintain pre-commit hooks and GitHub workflows
    - Key components: Audit process, fix strategy, critical guardrails
 
-6. **Prompts Maintenance** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/prompts-maintenance.md`
+4. **Prompts Maintenance** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/prompts-maintenance.md`
    - Purpose: Self-referential prompt to maintain all prompts
    - Key components: Prompt list, review process, update guidelines
 

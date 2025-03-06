@@ -119,7 +119,7 @@ When prompt improvements are identified:
    git -C /home/gregg/Projects/docs push origin main
    ```
 
-4. **Update Metrics Summary**:
+1. **Update Metrics Summary**:
    - Reset the metrics for the updated prompt
    - Document the enhancement in the prompt history
 

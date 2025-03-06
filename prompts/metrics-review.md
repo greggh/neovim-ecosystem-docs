@@ -110,11 +110,11 @@ After completing the review:
    git -C /home/gregg/Projects/docs push origin main
    ```
 
-2. **Reset Metrics for Updated Prompts**:
+1. **Reset Metrics for Updated Prompts**:
    - Add a note in the metrics file indicating the prompt was updated
    - Begin collecting new metrics to measure improvement
 
-3. **Create New Prompts** (if needed):
+2. **Create New Prompts** (if needed):
 
    ```bash
    # Create new prompt file

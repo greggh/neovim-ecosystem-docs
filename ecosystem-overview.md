@@ -22,43 +22,43 @@
 
 ### Supporting Projects
 
-5. **Base Project Template** - Foundation template for all new projects
+1. **Base Project Template** - Foundation template for all new projects
    - Path: `/home/gregg/Projects/templates/base-project-repo`
    - GitHub: <https://github.com/greggh/base-project-template>
 
-6. **Hooks-Util** - Git hooks framework for pre-commit validation
+2. **Hooks-Util** - Git hooks framework for pre-commit validation
    - Path: `/home/gregg/Projects/lua-library/hooks-util`
    - GitHub: <https://github.com/greggh/hooks-util>
 
-7. **Neovim Plugin Template** - Standardized template for creating Neovim plugins
+3. **Neovim Plugin Template** - Standardized template for creating Neovim plugins
    - Path: `/home/gregg/Projects/templates/neovim-plugin-template`
    - GitHub: <https://github.com/greggh/neovim-plugin-template>
 
-8. **Neovim Config Template** - Template for Neovim configurations with modern plugins
+4. **Neovim Config Template** - Template for Neovim configurations with modern plugins
    - Path: `/home/gregg/Projects/templates/neovim-config-template`
    - GitHub: <https://github.com/greggh/neovim-config-template>
 
-9. **Nvim-Toolkit** - Shared runtime utilities library for Neovim projects
+5. **Nvim-Toolkit** - Shared runtime utilities library for Neovim projects
    - Path: `/home/gregg/Projects/neovim/nvim-toolkit`
    - GitHub: <https://github.com/greggh/nvim-toolkit>
 
 ### Test Projects
 
-10. **Lust-Next Testbed** - Pure Lua project for validating lust-next
+1. **Lust-Next Testbed** - Pure Lua project for validating lust-next
     - Path: `/home/gregg/Projects/test-projects/lust-next-testbed`
 
-11. **Hooks-Util Testbed Lua Lib** - Testing hooks-util with Lua library adapter
+2. **Hooks-Util Testbed Lua Lib** - Testing hooks-util with Lua library adapter
     - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-lua-lib`
 
-12. **Hooks-Util Testbed Nvim Plugin** - Testing hooks-util with Neovim plugin adapter
+3. **Hooks-Util Testbed Nvim Plugin** - Testing hooks-util with Neovim plugin adapter
     - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-nvim-plugin`
 
-13. **Hooks-Util Testbed Nvim Config** - Testing hooks-util with Neovim config adapter
+4. **Hooks-Util Testbed Nvim Config** - Testing hooks-util with Neovim config adapter
     - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-nvim-config`
 
 ### Documentation
 
-14. **Project Documentation** - Centralized documentation and prompts for the ecosystem
+1. **Project Documentation** - Centralized documentation and prompts for the ecosystem
     - Path: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs`
     - GitHub: <https://github.com/greggh/neovim-ecosystem-docs>
     - Features: Tiered documentation, task tracking, technical specs, and session prompts
