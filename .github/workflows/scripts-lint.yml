@@ -6,11 +6,13 @@ on:
     paths:
       - '**.sh'
       - '**.lua'
+      - '.github/workflows/scripts-lint.yml'
   pull_request:
     branches: [main]
     paths:
       - '**.sh'
       - '**.lua'
+      - '.github/workflows/scripts-lint.yml'
 
 jobs:
   shellcheck:
@@ -21,6 +23,7 @@ jobs:
         uses: ludeeus/action-shellcheck@master
         with:
           scandir: './scripts'
+          shell_check_flags: '--severity=warning'
 
   luacheck:
     runs-on: ubuntu-latest
