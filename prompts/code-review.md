@@ -25,7 +25,7 @@ git -C /home/gregg/Projects/[project-path] diff [base-branch]...[review-branch]
 
 # List modified files
 git -C /home/gregg/Projects/[project-path] diff --name-only [base-branch]...[review-branch]
-```
+```text
 
 ### 2. Check Automated Tests and Checks
 
@@ -36,14 +36,14 @@ env -C /home/gregg/Projects/[project-path] luacheck .
 
 # Check GitHub Actions status if available
 gh -R greggh/[project-name] run list
-```
+```text
 
 ### 3. Review Documentation Updates
 
 ```bash
 # Check for documentation changes
 git -C /home/gregg/Projects/[project-path] diff [base-branch]...[review-branch] -- "*.md" "*/doc/*" "*/docs/*"
-```
+```text
 
 ## Code Review Checklist
 
@@ -106,7 +106,7 @@ env -C /home/gregg/Projects/[project-path] luacheck .
 
 # Run Lua formatter to check style issues
 env -C /home/gregg/Projects/[project-path] stylua --check .
-```
+```text
 
 ### 2. Test Coverage Analysis
 
@@ -116,7 +116,7 @@ env -C /home/gregg/Projects/[project-path] lua .hooks-util/deps/lust-next/run_te
 
 # Review coverage reports (HTML format)
 xdg-open /home/gregg/Projects/[project-path]/coverage/index.html
-```
+```text
 
 ### 3. Performance Measurement
 
@@ -133,7 +133,7 @@ local result = require('your_module').function_to_test()
 local elapsed = os.clock() - start
 print(string.format('Execution time: %.6f seconds', elapsed))
 "
-```
+```text
 
 ## Review Feedback
 
@@ -168,11 +168,12 @@ When providing feedback:
 git -C /home/gregg/Projects/[project-path] checkout [review-branch]
 
 # Make detailed notes on issues and improvements
-```
+```text
 
 Document feedback in these categories:
+
 - Must Fix: Critical issues that block approval
-- Should Fix: Important issues that should be addressed 
+- Should Fix: Important issues that should be addressed
 - Consider: Suggestions for improvement that are optional
 - Questions: Areas where clarification is needed
 
@@ -186,9 +187,10 @@ git -C /home/gregg/Projects/[project-path] pull
 
 # View changes since last review
 git -C /home/gregg/Projects/[project-path] diff [previous-review-commit]..HEAD
-```
+```text
 
 Verify that:
+
 - All "Must Fix" issues have been resolved
 - "Should Fix" issues have been addressed or explained
 - "Consider" suggestions have been evaluated
@@ -215,7 +217,7 @@ git -C /home/gregg/Projects/[project-path] merge [review-branch]
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push origin main
-```
+```text
 
 ## Post-Review Actions
 
@@ -245,7 +247,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -258,6 +260,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

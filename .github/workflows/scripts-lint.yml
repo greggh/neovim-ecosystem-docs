@@ -2,12 +2,12 @@ name: Lint Scripts
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - '**.sh'
       - '**.lua'
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
       - '**.sh'
       - '**.lua'

@@ -72,16 +72,19 @@ Each project maintains its own CLAUDE.md file with project-specific information:
 Specialized prompts in the `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/` directory:
 
 ### Session Management Prompts
+
 - `startup-prompt.md`: Initializes project context efficiently
 - `end-of-session.md`: Documents progress before ending session
 
 ### Workflow Prompts
+
 - `command-patterns.md`: Guides efficient command usage
 - `ecosystem-review.md`: Comprehensive project review process
 - `hooks-workflow-maintenance.md`: CI/CD maintenance instructions
 - `prompts-maintenance.md`: Prompt system self-management
 
 ### Future Specialized Prompts
+
 - Project initialization
 - Feature implementation
 - Bug fixing workflow

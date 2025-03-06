@@ -19,6 +19,7 @@ The test quality validation system in lust-next implements a tiered approach to 
 Level 1 represents the minimum acceptable quality for tests, focusing on basic test presence and structure.
 
 **Requirements:**
+
 - Each test file must contain at least one test
 - Each test must have at least one assertion
 - Test names must be descriptive (minimum length check)
@@ -33,6 +34,7 @@ Ensures that tests exist and have minimal validation logic. This level is suitab
 Level 2 builds on Level 1 by requiring more comprehensive test coverage and improved test structure.
 
 **Requirements:**
+
 - All Level 1 requirements
 - Multiple assertions per test (at least 2 on average)
 - Use of multiple assertion types (not just assert.equals)
@@ -48,6 +50,7 @@ Ensures that tests cover more than just the happy path and use a variety of asse
 Level 3 introduces more rigorous requirements for testing edge cases and proper test isolation.
 
 **Requirements:**
+
 - All Level 2 requirements
 - Edge case testing (boundary values, empty inputs, etc.)
 - Type checking assertions where appropriate
@@ -63,6 +66,7 @@ Ensures thorough testing with good isolation between tests. This level is suitab
 Level 4 adds requirements for comprehensive verification and advanced testing scenarios.
 
 **Requirements:**
+
 - All Level 3 requirements
 - Boundary condition testing (min/max values, array limits)
 - Complete mock verification (all expected calls verified)
@@ -79,6 +83,7 @@ Ensures very thorough testing that validates both correctness and behavior. This
 Level 5 represents the highest standard of test quality with comprehensive coverage and specialized tests.
 
 **Requirements:**
+
 - All Level 4 requirements
 - Security vulnerability testing
 - 100% branch coverage (or explicit excluded branches)
@@ -118,6 +123,7 @@ The system uses multiple mechanisms to detect quality issues:
 #### Static Analysis
 
 Examines test file structure and content before execution:
+
 - Function call pattern matching
 - AST-based analysis for structure
 - Naming pattern validation
@@ -126,6 +132,7 @@ Examines test file structure and content before execution:
 #### Runtime Tracking
 
 Monitors test execution to capture behavior:
+
 - Assertion type tracking
 - Assertion count tracking
 - Mock/stub usage tracking
@@ -134,6 +141,7 @@ Monitors test execution to capture behavior:
 #### Heuristic Analysis
 
 Uses pattern-based heuristics to identify advanced test types:
+
 - Security test detection (patterns that check for vulnerabilities)
 - Performance test detection (patterns that measure execution time)
 - Boundary test detection (patterns that check edge values)
@@ -159,7 +167,7 @@ test_quality = {
     }
   }
 }
-```
+```text
 
 ### Report Format
 
@@ -167,7 +175,7 @@ Quality reports are generated in multiple formats:
 
 #### Summary Format
 
-```
+```text
 Test Quality Level: 3 (Comprehensive)
 Overall Quality Score: 82% (pass)
 
@@ -181,11 +189,12 @@ Overall Quality Score: 82% (pass)
 Files needing improvement:
 - test/api_spec.lua: Missing edge case tests
 - test/config_spec.lua: Incomplete mock verification
-```
+```text
 
 #### Detailed JSON/HTML Format
 
 More comprehensive reports include:
+
 - File-by-file breakdown
 - Test-by-test quality metrics
 - Detailed suggestions for improvement
@@ -269,6 +278,6 @@ quality.validate_level1 = function(test_results)
 end
 
 -- Additional validation functions for other levels
-```
+```text
 
 This tiered approach allows projects to gradually improve their test quality while providing clear guidance on what's needed to reach the next level.

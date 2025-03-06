@@ -49,18 +49,20 @@ local Adapter = {
     -- Implementation
   end
 }
-```
+```text
 
 ## Current Adapter Types
 
 ### 1. Neovim Plugin Adapter
 
 Specialized for Neovim plugin projects with the following detection rules:
+
 - Contains `plugin/` directory or `lua/*/init.lua`
 - Has `plugin` in the `rockspec` file (if present)
 - Contains `.nvim` in the repository name
 
 Configuration focus:
+
 - Neovim-specific lint rules
 - Test commands that mock Neovim API
 - Documentation checks for plugin-specific formats
@@ -68,11 +70,13 @@ Configuration focus:
 ### 2. Neovim Configuration Adapter
 
 Specialized for Neovim configuration directories with these detection rules:
+
 - Contains `init.lua` or `init.vim` at the root
 - Has `after/`, `plugin/`, or `ftplugin/` directories
 - Path ends with `.config/nvim` or similar patterns
 
 Configuration focus:
+
 - Relaxed lint rules for configuration files
 - Simplified testing approach for configurations
 - Support for modular configuration structures
@@ -80,11 +84,13 @@ Configuration focus:
 ### 3. Lua Library Adapter
 
 Specialized for standalone Lua libraries with these detection rules:
+
 - Contains `.rockspec` file(s)
 - Has `src/` or `lib/` directory with Lua files
 - No Neovim-specific patterns present
 
 Configuration focus:
+
 - Strict lint rules for library code
 - Comprehensive testing expectations
 - Documentation checks for API references
@@ -92,6 +98,7 @@ Configuration focus:
 ### 4. Generic Lua Adapter (Fallback)
 
 Used when no specific adapter matches, with basic Lua project handling:
+
 - Basic lint rules for Lua syntax
 - Simple test execution patterns
 - Minimal configuration requirements
@@ -111,7 +118,7 @@ registry.register(require("hooks-util.adapters.generic_lua"))
 
 -- Register custom adapter
 registry.register(require("my_custom_adapter"))
-```
+```text
 
 The registry provides discovery mechanisms:
 
@@ -124,7 +131,7 @@ local adapter = registry.get("neovim_plugin")
 
 -- Automatically discover the correct adapter for the current project
 local detected_adapter = registry.detect(cwd)
-```
+```text
 
 ## Configuration Integration
 
@@ -148,7 +155,7 @@ return {
     -- Configuration specific to Lua library adapter
   }
 }
-```
+```text
 
 ## Extension Points
 
@@ -207,6 +214,6 @@ local NeovimPluginAdapter = {
 }
 
 return NeovimPluginAdapter
-```
+```text
 
 This architecture provides a flexible foundation for extending hooks-util to support various project types while maintaining a consistent interface and user experience.

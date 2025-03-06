@@ -19,4 +19,3 @@
 ## Detailed Records
 
 No records available yet. Start tracking by adding entries below this line.
-

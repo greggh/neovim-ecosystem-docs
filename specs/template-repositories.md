@@ -23,11 +23,13 @@ The ecosystem uses the following template repositories:
 ## Template Inheritance
 
 Templates follow an inheritance pattern:
-```
+
+```text
 Base Project Template → Specialized Templates → Actual Projects
-```
+```text
 
 This ensures that:
+
 - Common features are maintained in a single location
 - Specialized needs are addressed at the appropriate template level
 - Projects inherit best practices automatically
@@ -38,12 +40,14 @@ This ensures that:
 All template repositories include:
 
 ### 1. Version Management
+
 - `version.lua` as single source of truth for versioning
 - Version validation in pre-commit hooks
 - Version bump utilities
 - CHANGELOG.md following Keep a Changelog format
 
 ### 2. GitHub Configuration
+
 - Comprehensive GitHub workflows for CI, documentation, and releases
 - GitHub Discussions setup
 - Issue and PR templates
@@ -51,6 +55,7 @@ All template repositories include:
 - Release automation
 
 ### 3. Development Tools
+
 - Pre-commit hooks configuration
 - Hooks-util integration
 - Editor configuration (.editorconfig)
@@ -58,6 +63,7 @@ All template repositories include:
 - Testing framework integration
 
 ### 4. Documentation
+
 - Standardized README.md structure
 - CONTRIBUTING.md with contribution guidelines
 - CLAUDE.md with project-specific guidance
@@ -135,6 +141,7 @@ Templates are maintained through:
 ## Integration with Ecosystem
 
 Templates support integration with:
+
 - hooks-util for pre-commit validation
 - lust-next for testing
 - nvim-toolkit for shared utilities

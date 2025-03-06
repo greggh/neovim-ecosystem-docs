@@ -33,7 +33,7 @@ Choose the appropriate project type to initialize:
      - Bash: shellcheck for shell scripts
      - JSON: jsonlint or prettier for configuration files
      - TOML: taplo for configuration files (such as Cargo.toml or pyproject.toml)
-   - Additional setup: 
+   - Additional setup:
      - Enable MkDocs for documentation publishing
      - Configure mermaid.js for diagram support
      - Add pre-commit hooks for all file types
@@ -118,7 +118,7 @@ git -C /home/gregg/Projects/docs-projects/[project-name] remote add upstream htt
 git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream https://github.com/greggh/base-project-template.git
 # For Template:
 # No upstream for templates as they are the source
-```
+```text
 
 ### 2. Project Customization
 
@@ -130,6 +130,7 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
 
 2. **Configure Development Environment**:
    - Add git hooks for pre-commit validation:
+
      ```bash
      mkdir -p /home/gregg/Projects/[type]/[project-name]/.git/hooks
      git -C /home/gregg/Projects/[type]/[project-name] submodule add https://github.com/greggh/hooks-util .hooks-util
@@ -188,8 +189,9 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
      EOF
      fi
      ```
-   
+
    - For Documentation projects, add additional linting configurations:
+
      ```bash
      # Create .markdownlint.json
      cat > /home/gregg/Projects/[type]/[project-name]/.markdownlint.json << 'EOF'
@@ -242,8 +244,9 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
    - Create project-specific CLAUDE.md from template
    - Create [project]-tasks.md in docs/tasks
    - Copy FUNDING.yml template to .github/FUNDING.yml (from `/home/gregg/Projects/templates/FUNDING.yml`)
-   
+
    - For Documentation projects, set up MkDocs:
+
      ```bash
      # Create mkdocs.yml if it doesn't exist
      cat > /home/gregg/Projects/[type]/[project-name]/mkdocs.yml << 'EOF'
@@ -487,12 +490,14 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
 ### 3. Repository Setup
 
 1. **Initial Commit**:
+
    ```bash
    git -C /home/gregg/Projects/[type]/[project-name] add .
    git -C /home/gregg/Projects/[type]/[project-name] commit -m "Initial commit from template"
    ```
-   
+
    **Note**: The pre-commit hooks from hooks-util should run automatically during the commit. If the hooks fail:
+
    - Fix the issues in the current project
    - If the issue is in hooks-util itself:
      - Fix hooks-util directly
@@ -500,6 +505,7 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
      - Cascade updates to all dependent projects with `git submodule update --remote` in each project
 
 2. **Create GitHub Repository**:
+
    ```bash
    # Using GitHub CLI
    case "$type" in
@@ -535,12 +541,13 @@ git -C /home/gregg/Projects/test-projects/[project-name] remote add upstream htt
    ```
 
 3. **Verify GitHub Actions**:
+
    ```bash
    # Check status of workflows
    gh -R greggh/[project-name] workflow list
    gh -R greggh/[project-name] run list
    ```
-   
+
    If workflows fail:
    - Check workflow logs to identify issues: `gh -R greggh/[project-name] run view [run-id]`
    - Fix workflow issues in the current project
@@ -606,7 +613,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -619,6 +626,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

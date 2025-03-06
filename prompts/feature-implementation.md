@@ -35,7 +35,7 @@ git -C /home/gregg/Projects/[project-path] checkout -b feature/[feature-name]
 
 # Update submodules if present
 git -C /home/gregg/Projects/[project-path] submodule update --init --recursive
-```
+```text
 
 ### 2. Implementation Process
 
@@ -71,7 +71,7 @@ env -C /home/gregg/Projects/[project-path] [lint-command]
 
 # Run all tests to ensure no regressions
 env -C /home/gregg/Projects/[project-path] [test-command]
-```
+```text
 
 **Note**: hooks-util will typically handle these automatically during commit, but it's good to run them manually during development.
 
@@ -97,7 +97,7 @@ git -C /home/gregg/Projects/[project-path] commit -m "Add [feature-name] with [b
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push -u origin feature/[feature-name]
-```
+```text
 
 ## Integration with Ecosystem
 
@@ -131,7 +131,7 @@ git -C /home/gregg/Projects/[project-path] merge feature/[feature-name]
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push origin main
-```
+```text
 
 ### 4. Release Considerations
 
@@ -169,7 +169,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -182,6 +182,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

@@ -60,7 +60,7 @@ Record the following information in `/home/gregg/Projects/docs-projects/neovim-e
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 ### Monthly Review
 
@@ -95,7 +95,7 @@ The `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-met
 ### [Earlier Entry]
 
 ...
-```
+```text
 
 ## Improvement Workflow
 
@@ -112,6 +112,7 @@ When prompt improvements are identified:
    - Record effectiveness with the new version
 
 3. **Commit Changes Directly**:
+
    ```bash
    git -C /home/gregg/Projects/docs add prompts/[prompt-name].md
    git -C /home/gregg/Projects/docs commit -m "Enhance [prompt-name] based on effectiveness metrics"
@@ -133,7 +134,7 @@ When prompt improvements are identified:
 - **Errors Prevented**: Prevented forgetting to update test coverage
 - **Satisfaction**: 5
 - **Notes**: The prompt was extremely helpful for structuring the implementation, but could use more examples of test setup.
-```
+```text
 
 ## Implementation Plan
 

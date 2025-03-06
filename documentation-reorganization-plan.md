@@ -1,7 +1,9 @@
 # Documentation Reorganization Plan
 
 ## Problem
+
 Our current documentation approach requires loading thousands of lines of files at the start of each Claude session, which:
+
 - Consumes valuable context length
 - Makes it difficult to find specific information
 - Contains redundant information across files
@@ -10,13 +12,15 @@ Our current documentation approach requires loading thousands of lines of files 
 ## Tiered Documentation System
 
 ### 1. Create a Tiered Documentation System
+
 - **Tier 1**: Essential context (load at chat start)
 - **Tier 2**: Project-specific details (load when working on a project)
 - **Tier 3**: Reference materials (load only when needed)
 
-### 2. Replace Current Documents With:
+### 2. Replace Current Documents With
 
 #### Tier 1: Core Context (Always Load)
+
 - **ecosystem-overview.md** (150-200 lines)
   - Project list with 1-line descriptions
   - Current priorities (5-7 bullet points)
@@ -24,6 +28,7 @@ Our current documentation approach requires loading thousands of lines of files 
   - Links to other documents
 
 #### Tier 2: Project-Specific Files (Load When Needed)
+
 - **project-status.md** (200-300 lines)
   - Current status of each project (not history)
   - Active next steps only
@@ -32,28 +37,32 @@ Our current documentation approach requires loading thousands of lines of files 
   - Current focus areas
 
 #### Tier 3: Reference Materials
+
 - **project-history.md** (archive historical sessions)
 - **implementation-plans/** (directory with detailed plans)
 - **architecture-specs/** (directory with technical details)
 
 ### 3. CLAUDE.md Improvements
+
 - Standardize format across all projects
 - Limit to critical commands and references
 - Remove duplicated information
 - Include links to Tier 2/3 documents
 
 ### 4. Start-up Script
+
 Create a small script that just lists active projects and directs to load only what's needed:
-```
+
+```text
 To continue work on [project]:
 1. Read ecosystem-overview.md
 2. Read [project]-tasks.md
 3. Load the CLAUDE.md from [project] directory
-```
+```text
 
 ## Proposed Directory Structure
 
-```
+```text
 /home/gregg/Projects/
 ├── docs/                           # Centralized documentation
 │   ├── ecosystem-overview.md       # [TIER 1] Essential ecosystem information
@@ -82,7 +91,7 @@ To continue work on [project]:
 │   ├── CLAUDE.md
 │   └── ...
 └── ...
-```
+```text
 
 ## Standard CLAUDE.md Template
 
@@ -110,7 +119,7 @@ To continue work on [project]:
 - Tasks: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/[project]-tasks.md`
 - Architecture: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/[relevant-spec].md`
 - [Other relevant links]
-```
+```text
 
 ## Migration Plan
 

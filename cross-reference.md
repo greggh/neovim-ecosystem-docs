@@ -45,7 +45,7 @@ graph TD
         Prompts
         Metrics
     end
-```
+```text
 
 ## Document Index
 
@@ -182,4 +182,4 @@ Example cross-reference footer:
 - [Ecosystem Overview](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md)
 - [Project Status](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md)
 - [Feature Implementation Workflow](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/feature-implementation.md)
-```
+```text

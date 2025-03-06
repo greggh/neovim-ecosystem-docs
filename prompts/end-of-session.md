@@ -37,6 +37,7 @@ It's time to update our documentation before ending this session. This prompt en
 ## Summary Format
 
 Provide a concise report of all documentation updates made (no more than 10 lines) covering:
+
 - Which documents were updated
 - Key changes made to each document
 - Any new tasks or priorities identified
@@ -50,7 +51,7 @@ Provide a concise report of all documentation updates made (no more than 10 line
 4. Keep "Current Focus" sections aligned across related documents
 5. All dates should be in YYYY-MM-DD format
 6. Don't add information from the future (today's date is sufficient)
-7. **IMPORTANT HISTORY MANAGEMENT**: 
+7. **IMPORTANT HISTORY MANAGEMENT**:
    - Only keep the 10 most recent entries in project-history.md
    - Archive older entries in the archives/project-history-archive.md file
    - Do not delete entries; move them to the archive instead
@@ -70,7 +71,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -83,6 +84,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts."

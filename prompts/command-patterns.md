@@ -20,6 +20,7 @@ This prompt provides guidance on optimal command patterns and tool usage across 
 Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
 
 1. **For running commands in a specific directory:**
+
    ```bash
    # NEVER do this:
    cd /home/gregg/Projects/lua-library/lust-next && lua run_tests.lua
@@ -29,6 +30,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    ```
 
 2. **For git operations:**
+
    ```bash
    # NEVER do this:
    cd /home/gregg/Projects/lua-library/lust-next && git status
@@ -38,6 +40,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    ```
 
 3. **For operations that don't support -C:**
+
    ```bash
    # PREFERRED: Use full paths with every command whenever possible
    ls -la /home/gregg/Projects/lua-library/lust-next/src
@@ -46,6 +49,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    ```
 
 4. **ONLY as a last resort - use pushd/popd pattern in a SINGLE COMMAND:**
+
    ```bash
    # LAST RESORT: If -C isn't supported AND full paths won't work
    # ALWAYS combine pushd, commands, and popd in a SINGLE LINE:
@@ -57,7 +61,7 @@ Instead of changing directories with `cd`, ALWAYS use one of these alternatives:
    # command2
    # popd
    ```
-   
+
    ⚠️ **IMPORTANT RULES for pushd/popd:**
    - Only use when both `-C` AND full paths are impossible
    - Always chain everything in a SINGLE command line with && operators
@@ -98,7 +102,7 @@ git -C /home/gregg/Projects/lua-library/lust-next commit -m "Enhance reporting m
 
 # Pull latest changes
 git -C /home/gregg/Projects/lua-library/lust-next pull origin main
-```
+```text
 
 ### File Operations
 
@@ -111,7 +115,7 @@ rg --type lua "function setup" /home/gregg/Projects/lua-library/lust-next
 
 # View file content with syntax highlighting
 bat /home/gregg/Projects/lua-library/lust-next/src/reporting.lua
-```
+```text
 
 ### Project-Specific Commands
 
@@ -124,7 +128,7 @@ git -C /home/gregg/Projects/lua-library/lust-next submodule update --remote
 
 # Run specific project commands (always check CLAUDE.md)
 env -C /home/gregg/Projects/lua-library/lust-next ./scripts/version_bump.lua patch
-```
+```text
 
 ### GitHub CLI Operations
 
@@ -137,7 +141,7 @@ gh pr create -R greggh/lust-next --title "Add enhanced reporting" --body "Implem
 
 # Check workflow status
 gh workflow list -R greggh/lust-next
-```
+```text
 
 ## Important Notes
 
@@ -156,7 +160,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -169,6 +173,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

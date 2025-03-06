@@ -59,7 +59,7 @@ The hooks-util framework consists of the following primary components:
 
 The adapter architecture forms the core of hooks-util's flexibility:
 
-```
+```text
                     ┌─────────────────┐
                     │  Registry       │
                     └────────┬────────┘
@@ -75,7 +75,7 @@ The adapter architecture forms the core of hooks-util's flexibility:
 │  Neovim     ││  Neovim   ││  Lua      ││  Generic  ││  Custom   │
 │  Plugin     ││  Config   ││  Library  ││  Lua      ││  Adapter  │
 └─────────────┘└───────────┘└───────────┘└───────────┘└───────────┘
-```
+```text
 
 1. **Registry**: Central component for adapter management
 2. **Adapter Interface**: Defines common contract for all adapters
@@ -83,9 +83,9 @@ The adapter architecture forms the core of hooks-util's flexibility:
 
 ### Adapter Discovery Flow
 
-```
+```text
 [Project Directory] → [Try Each Adapter's detect()] → [Select Matching Adapter] → [Configuration Override Check] → [Final Adapter Selection]
-```
+```text
 
 1. Start with the project directory
 2. Each registered adapter's `detect()` function is called
@@ -117,7 +117,7 @@ Each adapter must implement the following interface:
   -- Helpers
   get_default_config = function()    -- Get default configuration
 }
-```
+```text
 
 ## Configuration System
 
@@ -199,7 +199,7 @@ end
 
 -- Get configuration with defaults
 local lint_config = config.get("lint", {enabled = false})
-```
+```text
 
 ## Lust-Next Integration
 
@@ -207,7 +207,7 @@ local lint_config = config.get("lint", {enabled = false})
 
 Hooks-util integrates with lust-next for test quality validation:
 
-```
+```text
              ┌───────────────┐
              │  hooks-util   │
              └───────┬───────┘
@@ -222,13 +222,13 @@ Hooks-util integrates with lust-next for test quality validation:
 │coverage│◄────┌──────────┐───►│   quality   │
 └────────┘     │lust-next │    └─────────────┘
                └──────────┘
-```
+```text
 
 ### Integration Flow
 
-```
+```text
 [Pre-Commit Hook] → [Check Config] → [Find lust-next] → [Determine Features] → [Run Tests] → [Check Results] → [Pass/Fail Commit]
-```
+```text
 
 1. Pre-commit hook activates test quality check
 2. Configuration is checked for test quality settings
@@ -252,15 +252,15 @@ fi
 if lua -e "pcall(function() require('path.to.lust-next.src.quality') end)" &>/dev/null; then
   # Quality validation is available
 fi
-```
+```text
 
 ## Pre-Commit Hook Implementation
 
 ### Hook Execution Flow
 
-```
+```text
 [git commit] → [pre-commit hook] → [load config] → [select adapter] → [quality check] → [lint check] → [test check] → [commit allowed/blocked]
-```
+```text
 
 1. Git commit triggers pre-commit hook
 2. Configuration is loaded from project
@@ -304,7 +304,7 @@ fi
 
 # All checks passed
 exit 0
-```
+```text
 
 ## CLI and Automation
 
@@ -312,22 +312,22 @@ exit 0
 
 Hooks-util provides a CLI for common operations:
 
-```
+```text
 hooks-util setup      # Set up hooks for the current project
 hooks-util configure  # Run interactive configuration wizard
 hooks-util check      # Run all checks (lint, test, quality)
 hooks-util lint       # Run linting only
 hooks-util test       # Run tests only
 hooks-util quality    # Run quality validation only
-```
+```text
 
 ### Setup Wizard
 
 The interactive setup wizard helps configure hooks-util:
 
-```
+```text
 [Start Wizard] → [Detect Project Type] → [Configure Linting] → [Configure Tests] → [Configure Quality] → [Generate Config] → [Install Hooks]
-```
+```text
 
 1. Wizard is initiated with `hooks-util configure`
 2. Project type is automatically detected or manually selected
@@ -377,15 +377,15 @@ jobs:
         
       - name: Test
         run: busted
-```
+```text
 
 ### Template Generation
 
 CI templates are generated based on project type:
 
-```
+```text
 [Project Type] → [Select Template] → [Fill Variables] → [Generate Workflow] → [Save to Project]
-```
+```text
 
 1. Project type determines which template to use
 2. Template is selected from available options

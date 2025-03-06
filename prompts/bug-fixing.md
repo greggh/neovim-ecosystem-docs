@@ -36,7 +36,7 @@ git -C /home/gregg/Projects/[project-path] checkout -b fix/[bug-description]
 
 # Update submodules if present
 git -C /home/gregg/Projects/[project-path] submodule update --init --recursive
-```
+```text
 
 ### 2. Reproduce the Bug
 
@@ -105,9 +105,10 @@ git -C /home/gregg/Projects/[project-path] submodule update --init --recursive
 [editor] /home/gregg/Projects/[project-path]/[test-file-path]
 
 # Implement test that verifies the fix
-```
+```text
 
 Ensure that:
+
 - The test fails without the fix
 - The test passes with the fix
 - The test clearly demonstrates the fixed behavior
@@ -119,9 +120,10 @@ Ensure that:
 [editor] /home/gregg/Projects/[project-path]/[file-path]
 
 # Implement the fix
-```
+```text
 
 Follow these principles:
+
 - Fix the root cause, not just the symptoms
 - Maintain code style consistency
 - Add comments explaining the fix if necessary
@@ -138,7 +140,7 @@ env -C /home/gregg/Projects/[project-path] [test-command]
 
 # Run linting and formatting
 env -C /home/gregg/Projects/[project-path] [lint-command]
-```
+```text
 
 **Note**: hooks-util will typically handle validation automatically during commit, but it's good to run tests manually during development.
 
@@ -163,7 +165,7 @@ git -C /home/gregg/Projects/[project-path] commit -m "Fix [bug-description]: [br
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push -u origin fix/[bug-description]
-```
+```text
 
 ## Cross-Project Considerations
 
@@ -216,7 +218,7 @@ git -C /home/gregg/Projects/[project-path] merge fix/[bug-description]
 
 # Push to remote
 git -C /home/gregg/Projects/[project-path] push origin main
-```
+```text
 
 ### 5. Release Considerations
 
@@ -254,7 +256,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -267,6 +269,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

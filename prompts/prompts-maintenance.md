@@ -5,6 +5,7 @@ This prompt initiates a systematic review and update of all prompts in our tiere
 ## Current Prompt Structure
 
 ### Core Session Prompts
+
 1. **Startup Prompt** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/startup-prompt.md`
    - Purpose: Initialize projects context efficiently
    - Key components: Project overview, documentation structure, loading instructions
@@ -14,6 +15,7 @@ This prompt initiates a systematic review and update of all prompts in our tiere
    - Key components: Documentation update checklist, summary format, preservation rules
 
 ### Workflow Prompts
+
 3. **Command Patterns** - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/command-patterns.md`
    - Purpose: Guide efficient command usage across projects
    - Key components: Tool recommendations, command principles, examples
@@ -105,15 +107,20 @@ Guidelines for adding new prompts:
    - Update prompt maintenance document
    - Add to documentation system references
    - Update metrics tracking:
+
      ```bash
      # Add new prompt to the metrics file
      [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
      ```
+
      - Add a new entry in the Summary Statistics table:
+
      ```markdown
      | new-prompt-name | 0 | 0% | 0 min | 0.0 |
      ```
+
      - Include metrics collection section in new prompt using the template:
+
      ```bash
      cat /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/templates/metrics-reminder.md
      ```
@@ -125,6 +132,7 @@ When a prompt is no longer needed:
 1. **Archive the Prompt**
    - Don't delete prompts immediately; archive them first
    - Move to an archive directory: `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/archive/`
+
    ```bash
    mkdir -p /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/archive
    git -C /home/gregg/Projects/docs mv prompts/obsolete-prompt.md prompts/archive/
@@ -137,9 +145,11 @@ When a prompt is no longer needed:
 
 3. **Update Metrics Tracking**
    - Remove the prompt from the metrics summary table:
+
    ```bash
    [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
    ```
+
    - Preserve historical metrics data in the detailed records section
    - Add a note that the prompt has been archived
 
@@ -184,7 +194,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -197,6 +207,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

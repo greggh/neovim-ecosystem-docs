@@ -11,7 +11,7 @@ Start by gathering all prompt usage data from the most recent month:
 ```bash
 # View the prompt metrics file
 cat /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 ### 2. Metrics Analysis
 
@@ -92,13 +92,14 @@ Document the review findings in `/home/gregg/Projects/docs-projects/neovim-ecosy
 ## Long-term Trends and Observations
 
 [Analysis of longer-term patterns and strategic implications]
-```
+```text
 
 ## Implementation Plan
 
 After completing the review:
 
 1. **Update Prompt Files**:
+
    ```bash
    # Edit prompts that need improvements
    [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/[prompt-name].md
@@ -114,6 +115,7 @@ After completing the review:
    - Begin collecting new metrics to measure improvement
 
 3. **Create New Prompts** (if needed):
+
    ```bash
    # Create new prompt file
    [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/prompts/[new-prompt-name].md
@@ -145,7 +147,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -158,6 +160,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

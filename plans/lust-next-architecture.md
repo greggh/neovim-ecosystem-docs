@@ -67,9 +67,9 @@ The lust-next framework consists of the following primary components:
 
 ### Test Execution Flow
 
-```
+```text
 [Test Files] → [Discovery] → [Test Runner] → [Execution] → [Results] → [Reporting]
-```
+```text
 
 1. **Test Discovery Phase**:
    - Scan directories for test files based on patterns
@@ -89,9 +89,9 @@ The lust-next framework consists of the following primary components:
 
 ### Coverage Data Flow
 
-```
+```text
 [Source Code] → [Debug Hooks] → [Coverage Tracking] → [Stats Calculation] → [Reporting Module] → [Multiple Formats]
-```
+```text
 
 1. **Instrumentation Phase**:
    - Register debug hooks for line and function tracking
@@ -114,9 +114,9 @@ The lust-next framework consists of the following primary components:
 
 ### Quality Data Flow
 
-```
+```text
 [Test Files] → [Static Analysis] → [Runtime Tracking] → [Quality Rules] → [Validation] → [Reporting Module] → [Reports]
-```
+```text
 
 1. **Analysis Phase**:
    - Perform static analysis of test files
@@ -159,7 +159,7 @@ The lust-next framework consists of the following primary components:
 
 ### Data Structure Interfaces
 
-#### Coverage Data Structure:
+#### Coverage Data Structure
 
 ```lua
 {
@@ -200,9 +200,9 @@ The lust-next framework consists of the following primary components:
     }
   }
 }
-```
+```text
 
-#### Quality Data Structure:
+#### Quality Data Structure
 
 ```lua
 {
@@ -235,7 +235,7 @@ The lust-next framework consists of the following primary components:
     }
   }
 }
-```
+```text
 
 ### Report Format Implementations
 
@@ -267,7 +267,7 @@ The reporting module implements multiple output formats for both coverage and qu
 
 ### Core Dependencies
 
-```
+```text
       ┌──────────────┐
       │  lust-next   │
       └──────┬───────┘
@@ -283,7 +283,7 @@ The reporting module implements multiple output formats for both coverage and qu
       ┌────────────┐
       │ reporting  │
       └────────────┘
-```
+```text
 
 - `lust-next.lua` is the main entry point for test execution
 - `coverage.lua` and `quality.lua` are optional modules for enhanced functionality
@@ -335,9 +335,9 @@ The architecture is designed for extensibility:
 
 ### Test Discovery Process
 
-```
+```text
 [Pattern] → [Find Matching Files] → [Load Test Files] → [Register Tests] → [Execute Tests]
-```
+```text
 
 1. The discovery process begins with a pattern (e.g., `test_*.lua` or `spec/**/*_spec.lua`)
 2. Files matching the pattern are found using platform-specific methods
@@ -347,9 +347,9 @@ The architecture is designed for extensibility:
 
 ### Test Filtering Process
 
-```
+```text
 [All Tests] → [Tag Filtering] → [Pattern Filtering] → [Focus Filtering] → [Filtered Tests]
-```
+```text
 
 1. The complete set of tests is gathered from registered tests
 2. Tests are filtered based on specified tags (inclusion and exclusion)
@@ -363,9 +363,9 @@ The architecture is designed for extensibility:
 
 The async testing system uses Lua coroutines to enable asynchronous test patterns:
 
-```
+```text
 [async test] → [Create Coroutine] → [Resume Until Yield] → [Wait/Poll] → [Resume] → [Completion]
-```
+```text
 
 1. Async tests are wrapped in coroutines
 2. Test execution yields when waiting for operations
@@ -373,7 +373,7 @@ The async testing system uses Lua coroutines to enable asynchronous test pattern
 4. When conditions are met, execution resumes
 5. Timeout detection prevents infinite waiting
 
-### Key Functions:
+### Key Functions
 
 - `async()` - Wraps a function to be executed asynchronously
 - `await(seconds)` - Pauses execution for a specified time
@@ -386,9 +386,9 @@ The async testing system uses Lua coroutines to enable asynchronous test pattern
 
 The mocking system uses Lua's metatable capabilities to create sophisticated mock objects:
 
-```
+```text
 [Original Object] → [Create Mock/Spy] → [Set Expectations] → [Use in Tests] → [Verify Calls]
-```
+```text
 
 1. Original functions or objects are captured
 2. Mock objects are created with metatables for tracking
@@ -396,7 +396,7 @@ The mocking system uses Lua's metatable capabilities to create sophisticated moc
 4. Mock objects are used in test code
 5. Call patterns are verified against expectations
 
-### Key Components:
+### Key Components
 
 - `spy.on(obj, method)` - Creates a spy that tracks calls to a method
 - `spy.new()` - Creates a standalone spy function

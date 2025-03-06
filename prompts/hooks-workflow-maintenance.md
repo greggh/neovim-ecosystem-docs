@@ -22,12 +22,14 @@ This prompt initiates a comprehensive audit and maintenance of pre-commit hooks 
 ## Project List
 
 ### Primary Projects
+
 1. **Neovim Configuration** - `/home/gregg/.config/nvim`
 2. **Laravel Helper Plugin** - `/home/gregg/Projects/neovim/plugins/laravel-helper`
 3. **Claude Code Plugin** - `/home/gregg/Projects/neovim/plugins/claude-code`
 4. **Lust-Next** - `/home/gregg/Projects/lua-library/lust-next`
 
 ### Supporting Projects
+
 5. **Base Project Template** - `/home/gregg/Projects/templates/base-project-repo`
 6. **Hooks-Util** - `/home/gregg/Projects/lua-library/hooks-util`
 7. **Neovim Plugin Template** - `/home/gregg/Projects/templates/neovim-plugin-template`
@@ -35,6 +37,7 @@ This prompt initiates a comprehensive audit and maintenance of pre-commit hooks 
 9. **Nvim-Toolkit** - `/home/gregg/Projects/neovim/nvim-toolkit`
 
 ### Test Projects
+
 10. **Lust-Next Testbed** - `/home/gregg/Projects/lua-library/lust-next-testbed`
 11. **Hooks-Util Testbed Projects** - Various testbed projects
 
@@ -45,6 +48,7 @@ For each project, the following steps will be performed:
 ### 1. Pre-commit Hooks Audit
 
 - Check for proper hooks-util integration:
+
   ```bash
   git -C /path/to/project config --get-regexp 'hooks'
   git -C /path/to/project submodule status -- hooks-util
@@ -52,6 +56,7 @@ For each project, the following steps will be performed:
   ```
 
 - Verify hook configuration:
+
   ```bash
   cat /path/to/project/.hooks-util.lua
   # or
@@ -59,6 +64,7 @@ For each project, the following steps will be performed:
   ```
 
 - Test hook execution:
+
   ```bash
   env -C /path/to/project git hooks run pre-commit
   # or
@@ -73,12 +79,14 @@ For each project, the following steps will be performed:
 ### 2. GitHub Workflows Audit
 
 - Check workflow configuration files:
+
   ```bash
   ls -la /path/to/project/.github/workflows/
   cat /path/to/project/.github/workflows/ci.yml
   ```
 
 - Verify workflow status:
+
   ```bash
   gh workflow list -R owner/repo
   gh run list -R owner/repo -w "CI"
@@ -92,16 +100,19 @@ For each project, the following steps will be performed:
 ### 3. Integration Verification
 
 - Check hooks-util submodule:
+
   ```bash
   git -C /path/to/project submodule status
   ```
 
 - Verify nvim-toolkit integration (where applicable):
+
   ```bash
   rg -g "*.lua" -l "require.*nvim-toolkit" /path/to/project
   ```
 
 - Check template upstream configuration:
+
   ```bash
   git -C /path/to/project remote -v
   ```
@@ -128,6 +139,7 @@ When addressing issues:
 ## Critical Guardrails
 
 What NOT to do:
+
 - NEVER disable checks to make workflows pass
 - NEVER comment out failing tests
 - NEVER use `|| true` to mask failures
@@ -164,7 +176,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -177,6 +189,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.

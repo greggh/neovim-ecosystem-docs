@@ -25,13 +25,16 @@ I'm working on multiple interconnected Neovim projects with a focus on standardi
 To save context space, documentation has been organized in a tiered system (fully detailed in `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/documentation-structure.md`):
 
 ### Tier 1: Essential Context (LOAD FIRST)
+
 - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md` - Core context (150-200 lines)
 
 ### Tier 2: Current Status (LOAD WHEN NEEDED)
+
 - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md` - Current project statuses
 - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/tasks/[project]-tasks.md` - Project-specific tasks
 
 ### Tier 3: Reference Materials (LOAD ON DEMAND)
+
 - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/` - Architecture specifications
   - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/documentation-structure.md` - Documentation system specification
   - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/specs/adapter-architecture.md` - Adapter system specification
@@ -42,6 +45,7 @@ To save context space, documentation has been organized in a tiered system (full
 ## Project-Specific Information
 
 Each project has a CLAUDE.md file with project-specific commands and information:
+
 - `/home/gregg/Projects/lua-library/lust-next/CLAUDE.md`
 - `/home/gregg/Projects/lua-library/hooks-util/CLAUDE.md`
 - `/home/gregg/.config/nvim/CLAUDE.md`
@@ -49,7 +53,7 @@ Each project has a CLAUDE.md file with project-specific commands and information
 
 ## START HERE
 
-1. **IMMEDIATELY READ the ecosystem overview**: 
+1. **IMMEDIATELY READ the ecosystem overview**:
    - `/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/ecosystem-overview.md`
 
 2. **BASED ON MY TASK, selectively load**:
@@ -97,7 +101,7 @@ After using this prompt, please record its effectiveness to help us improve our 
 ```bash
 # Add a new entry to the metrics file
 [editor] /home/gregg/Projects/docs-projects/neovim-ecosystem-docs/metrics/prompt-metrics.md
-```
+```text
 
 Add a new entry with the following format:
 
@@ -110,6 +114,6 @@ Add a new entry with the following format:
 - **Errors Prevented**: Description of any errors the prompt helped avoid
 - **Satisfaction**: Rating (1-5)
 - **Notes**: Any observations or suggestions for improvement
-```
+```text
 
 This data helps us continuously improve our workflow prompts.
