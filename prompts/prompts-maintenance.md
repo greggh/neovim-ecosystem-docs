@@ -104,6 +104,49 @@ Guidelines for adding new prompts:
    - Reference from appropriate existing prompts
    - Update prompt maintenance document
    - Add to documentation system references
+   - Update metrics tracking:
+     ```bash
+     # Add new prompt to the metrics file
+     [editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+     ```
+     - Add a new entry in the Summary Statistics table:
+     ```markdown
+     | new-prompt-name | 0 | 0% | 0 min | 0.0 |
+     ```
+     - Include metrics collection section in new prompt using the template:
+     ```bash
+     cat /home/gregg/Projects/docs/templates/metrics-reminder.md
+     ```
+
+## Removing Prompts
+
+When a prompt is no longer needed:
+
+1. **Archive the Prompt**
+   - Don't delete prompts immediately; archive them first
+   - Move to an archive directory: `/home/gregg/Projects/docs/prompts/archive/`
+   ```bash
+   mkdir -p /home/gregg/Projects/docs/prompts/archive
+   git -C /home/gregg/Projects/docs mv prompts/obsolete-prompt.md prompts/archive/
+   ```
+
+2. **Update References**
+   - Remove references to the prompt from other prompts
+   - Update the cross-reference guide
+   - Remove from documentation lists
+
+3. **Update Metrics Tracking**
+   - Remove the prompt from the metrics summary table:
+   ```bash
+   [editor] /home/gregg/Projects/docs/metrics/prompt-metrics.md
+   ```
+   - Preserve historical metrics data in the detailed records section
+   - Add a note that the prompt has been archived
+
+4. **Document Reasons**
+   - Record why the prompt was removed
+   - Note any replacement prompts or workflows
+   - Keep this information in the commit message
 
 ## Maintenance Schedule
 
@@ -113,11 +156,19 @@ Recommended maintenance intervals:
    - Full prompts audit every 3 months
    - Verification after major ecosystem changes
    - Update references when file paths change
+   - Review metrics data using the metrics-review.md prompt
 
 2. **Incremental Updates**
    - Update affected prompts after workflow changes
    - Add new prompts as needs are identified
    - Revise examples to reflect current best practices
+   - Keep metrics tracking synchronized with prompt changes
+
+3. **Metrics System Maintenance**
+   - Ensure all prompts have metrics collection sections
+   - Verify the metrics file contains entries for all active prompts
+   - Create monthly review reports in metrics/monthly-reviews/
+   - Use metrics data to prioritize prompt improvements
 
 ## Reference Materials
 
