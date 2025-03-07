@@ -14,6 +14,12 @@ $RECYCLE.BIN/
 *.swo
 *.tmp
 
+# Hooks-util installation backup files
+*.backup.*
+*.backup
+lib.backup*/
+*.backup.*/
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
