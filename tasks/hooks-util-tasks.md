@@ -1,60 +1,83 @@
 
 # Hooks-Util Tasks
 
-## Current Focus
+## Current Focus: Centralized Code Quality Framework
 
-The current focus for hooks-util is thoroughly testing our fixes across all adapter types. We've successfully fixed the update_hook.sh script to properly detect paths in different installation scenarios, enhanced the install.sh script to make itself available to update processes, and fixed version file handling to properly manage empty files and avoid unnecessary warnings. We've validated that the infinite recursion protection in quality.sh works correctly with its HOOKS_PROCESSING_QUALITY flag. Our next step is to comprehensively test pre-commit hooks across all adapter types (lua-lib, nvim-plugin, nvim-config, and docs) and fix the GitHub workflow failures before deploying hooks-util to template repositories.
+We have developed a comprehensive plan for a centralized code quality system across all Neovim ecosystem projects. This new approach replaces our previous task lists with a more structured, phased implementation that centralizes all linting and fixing capabilities through hooks-util and lust-next. See the [Code Quality Plan](/home/gregg/Projects/test-projects/hooks-util-testbed-lua-lib/.githooks/hooks-util/docs/CODE_QUALITY_PLAN.md) for complete details.
 
-## High Priority Tasks
+### Phase 1: Tools Integration and Enhancement (Current Focus)
 
-1. **Run Comprehensive Tests and Verify Fixes**
-   - [ ] Run automated tests across all adapter types
-   - [ ] Push test branch to verify GitHub workflow fixes
-   - [ ] Validate infinite recursion fix in real-world commits
-   - [ ] Test shellcheck detection in different environments
-   - [ ] Verify template distribution in all adapter types
+1. **Lua Codefix Module in lust-next**
+   - [x] Create comprehensive codefix.lua module in lust-next
+   - [x] Integrate with StyLua for formatting
+   - [x] Integrate with Luacheck for linting
+   - [x] Implement custom fixers for edge cases:
+     - [x] Trailing whitespace in multiline strings
+     - [x] Proper unused variable handling
+     - [x] Type annotation generation
+     - [x] String concatenation optimization
+     - [x] Lua version compatibility handling
+   - [x] Create hooks-util adapter for Lua codefix operations
 
-1. **Fix CI Workflow Failures**
-   - [x] Fix GitHub workflow failures in hooks-util repository
-   - [x] Remove disabling of linting checks in CI workflows
-   - [x] Create proper CI validation tests for core features
-   - [ ] Fix GitHub workflow failures in neovim-ecosystem-docs
-   - [ ] Ensure CI workflows are consistent across all repositories
+2. **Shell Script Tools**
+   - [ ] Continue using shellcheck for linting (already present)
+   - [ ] Add shfmt integration for automatic formatting
+   - [ ] Create a unified shell script formatter in hooks-util
+   - [ ] Add custom fixers for shellcheck issues that aren't auto-fixable
 
-1. **Fix Critical Submodule and Path Issues**
-   - [x] Fix pre-commit hook's handling of submodule references
-   - [x] Fix infinite recursion issue in hooks_fix_staged_quality
-   - [x] Fix update_hook.sh to properly handle both normal and submodule installations
-   - [x] Fix version file handling to properly manage empty files and avoid warnings
-   - [x] Test template file distribution mechanism across test environments
-   - [ ] Create proper file tracking system to assist with adding generated files to git
-   - [ ] Enhance error logging to better diagnose issues across environments
+3. **Markdown Tools**
+   - [ ] Enhance existing fix_markdown_comprehensive.sh with additional fixers
+   - [ ] Integrate markdownlint-cli for auto-fixing capability
+   - [ ] Add pre-commit hook for markdown validation
+   - [ ] Include fixes for link checking and table formatting
 
-1. **Fix Shellcheck and Tool Detection**
-   - [x] Fix shellcheck detection across common environments
-   - [x] Add comprehensive fallback mechanisms for shellcheck
-   - [ ] Implement similar fallback mechanisms for other required tools
-   - [ ] Test tool detection with various installation methods
+4. **Data Format Tools**
+   - [ ] Add prettier integration for YAML and JSON auto-formatting
+   - [ ] Create hooks_yaml_fix function in yaml.sh
+   - [ ] Enhance json.sh with auto-fixing capabilities
+   - [ ] Integrate taplo for TOML validation and formatting
 
-1. **Pre-commit Hook Integration**
-   - [x] Create shell script wrappers (markdown.sh, yaml.sh, json.sh, toml.sh) for linting modules
-   - [x] Update pre-commit hook to call these new functions
-   - [x] Fix pre-commit hook execution issues
-   - [ ] Fix error handling in pre-commit hook for various edge cases
-   - [ ] Test with various file types and edge cases
-   - [x] Add proper debug mode support for troubleshooting
+### Phase 2: Unified Interface and Configuration (Next Steps)
 
-1. **Comprehensive Testing Strategy**
-   - [x] Create a standardized testing procedure for hooks-util
-   - [x] Implement automated test suite for all functionality
-   - [x] Document testing approach in TESTING.md
-   - [x] Create test automation scripts for continuous validation
-   - [ ] Test all fixes across all adapter types
+1. **CLI Interface**
+   - [ ] Create a unified CLI in hooks-util for all quality operations
+   - [ ] Support operations for specific file types or all files
+   - [ ] Provide detailed reporting capabilities
 
-1. **Deployment Preparation** (Dependent on fixing critical issues)
-   - [ ] Update base-project-repo with enhanced and fully tested hooks-util
-   - [ ] Propagate changes to template repositories
-   - [ ] Update end-product repositories with improved hooks-util
+2. **Configuration Management**
+   - [ ] Standardize all linting configurations in templates/
+   - [ ] Create configuration management system
+   - [ ] Add auto-generation for new projects
+
+3. **Tool Installation**
+   - [ ] Create setup script for required tools
+   - [ ] Add detection for existing installations
+   - [ ] Support partial installations based on project needs
+
+### Phase 3: Pre-commit Hooks and Workflows (Future)
+
+1. **Pre-commit Hook Enhancements**
+   - [ ] Update to use our enhanced tools for each file type
+   - [ ] Add seamless integration with lust-next
+   - [ ] Provide detailed error reporting
+   - [ ] Add graceful fallbacks for missing tools
+
+2. **GitHub Workflow Standardization**
+   - [ ] Create consistent workflow files for each file type
+   - [ ] Ensure workflows use centralized configurations
+   - [ ] Add detailed reporting for CI/CD
+
+### Phase 4: Testing and Deployment (Final Phase)
+
+1. **Comprehensive Testing**
+   - [ ] Create extensive test suite for all tools
+   - [ ] Test integration between components
+   - [ ] Verify tool installation across environments
+
+2. **Deployment Across Projects**
+   - [ ] Update all testbed projects with enhanced hooks-util
+   - [ ] Propagate to template repositories
+   - [ ] Deploy to end-product repositories
 
 1. ~~**Core Enhancement for Documentation Tools**~~ ✅ COMPLETED
    - [x] Integrate markdown linting and fixing scripts from neovim-ecosystem-docs
