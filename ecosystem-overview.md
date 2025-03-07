@@ -69,14 +69,14 @@
 
 ## Current Priorities
 
-1. **Complete hooks-util v0.6.0 Testing** - Thoroughly test all features across all adapter types using testbed projects
-2. **Deploy Enhanced hooks-util 0.6.0** - Add the enhanced hooks-util as a submodule to all ecosystem repositories, starting with base-project-repo
-3. **Integrate Base+Adapter Workflow System** - Begin with base-project-repo and propagate to all projects
-4. **Establish Repository Upstreams** - Set up proper upstream relationships for consistent propagation of changes
+1. **Deploy Enhanced hooks-util 0.6.0** - Add the enhanced hooks-util as a submodule to all ecosystem repositories, starting with base-project-repo
+2. **Integrate Base+Adapter Workflow System** - Begin with base-project-repo and propagate to all projects
+3. **Establish Repository Upstreams** - Set up proper upstream relationships for consistent propagation of changes
+4. **Non-Destructive Synchronization** - Develop system for preserving customizations during upstream merges
 5. ~~**Documentation Linting Standardization**~~ ✅ - Implemented in hooks-util core and docs adapter
-6. **Non-Destructive Synchronization** - Develop system for preserving customizations during upstream merges
-7. ~~**Comprehensive Repository Audit**~~ ✅ - Completed audit of hooks, workflows, and linting tools
-8. ~~**Submodule Update Mechanism**~~ ✅ - Added gitmodules-hooks.sh for automatic submodule updates
+6. ~~**Comprehensive Repository Audit**~~ ✅ - Completed audit of hooks, workflows, and linting tools
+7. ~~**Submodule Update Mechanism**~~ ✅ - Added gitmodules-hooks.sh for automatic submodule updates
+8. ~~**Complete hooks-util v0.6.0 Testing**~~ ✅ - Thoroughly tested all features across all adapter types using testbed projects
 9. **Metrics System Enhancement** - Build comprehensive metrics tracking and validation for documentation
 10. **Documentation Visualization** - Create visual documentation for architecture and workflows
 
