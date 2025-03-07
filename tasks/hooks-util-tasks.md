@@ -3,19 +3,56 @@
 
 ## Current Focus
 
-The current focus for hooks-util is completing thorough testing of all enhanced features across all adapter types using the testbed projects, before proceeding to deployment. While the submodule update mechanism and docs adapter testing have been implemented, we need to complete comprehensive testing of all other features.
+The current focus for hooks-util is thoroughly testing our fixes across all adapter types. We've successfully fixed the update_hook.sh script to properly detect paths in different installation scenarios, enhanced the install.sh script to make itself available to update processes, and fixed version file handling to properly manage empty files and avoid unnecessary warnings. We've validated that the infinite recursion protection in quality.sh works correctly with its HOOKS_PROCESSING_QUALITY flag. Our next step is to comprehensively test pre-commit hooks across all adapter types (lua-lib, nvim-plugin, nvim-config, and docs) and fix the GitHub workflow failures before deploying hooks-util to template repositories.
 
 ## High Priority Tasks
 
-1. **Integration and Testing**
-   - [x] Update hooks-util documentation with new functionality
-   - [x] Create comprehensive integration tests for all features
-   - [ ] Complete testing with all adapter types and features:
-     - [x] Test docs adapter with hooks-util-testbed-docs
-     - [x] Test lua-lib adapter with hooks-util-testbed-lua-lib  
-     - [x] Test nvim-plugin adapter with hooks-util-testbed-nvim-plugin
-     - [x] Test nvim-config adapter with hooks-util-testbed-nvim-config
-   - [ ] Update base-project-repo with enhanced hooks-util
+1. **Run Comprehensive Tests and Verify Fixes**
+   - [ ] Run automated tests across all adapter types
+   - [ ] Push test branch to verify GitHub workflow fixes
+   - [ ] Validate infinite recursion fix in real-world commits
+   - [ ] Test shellcheck detection in different environments
+   - [ ] Verify template distribution in all adapter types
+
+1. **Fix CI Workflow Failures**
+   - [x] Fix GitHub workflow failures in hooks-util repository
+   - [x] Remove disabling of linting checks in CI workflows
+   - [x] Create proper CI validation tests for core features
+   - [ ] Fix GitHub workflow failures in neovim-ecosystem-docs
+   - [ ] Ensure CI workflows are consistent across all repositories
+
+1. **Fix Critical Submodule and Path Issues**
+   - [x] Fix pre-commit hook's handling of submodule references
+   - [x] Fix infinite recursion issue in hooks_fix_staged_quality
+   - [x] Fix update_hook.sh to properly handle both normal and submodule installations
+   - [x] Fix version file handling to properly manage empty files and avoid warnings
+   - [x] Test template file distribution mechanism across test environments
+   - [ ] Create proper file tracking system to assist with adding generated files to git
+   - [ ] Enhance error logging to better diagnose issues across environments
+
+1. **Fix Shellcheck and Tool Detection**
+   - [x] Fix shellcheck detection across common environments
+   - [x] Add comprehensive fallback mechanisms for shellcheck
+   - [ ] Implement similar fallback mechanisms for other required tools
+   - [ ] Test tool detection with various installation methods
+
+1. **Pre-commit Hook Integration**
+   - [x] Create shell script wrappers (markdown.sh, yaml.sh, json.sh, toml.sh) for linting modules
+   - [x] Update pre-commit hook to call these new functions
+   - [x] Fix pre-commit hook execution issues
+   - [ ] Fix error handling in pre-commit hook for various edge cases
+   - [ ] Test with various file types and edge cases
+   - [x] Add proper debug mode support for troubleshooting
+
+1. **Comprehensive Testing Strategy**
+   - [x] Create a standardized testing procedure for hooks-util
+   - [x] Implement automated test suite for all functionality
+   - [x] Document testing approach in TESTING.md
+   - [x] Create test automation scripts for continuous validation
+   - [ ] Test all fixes across all adapter types
+
+1. **Deployment Preparation** (Dependent on fixing critical issues)
+   - [ ] Update base-project-repo with enhanced and fully tested hooks-util
    - [ ] Propagate changes to template repositories
    - [ ] Update end-product repositories with improved hooks-util
 
