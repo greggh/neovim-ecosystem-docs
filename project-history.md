@@ -3,6 +3,132 @@
 
 *This file contains the 10 most recent project sessions. For current status, see [`project-status.md`](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/project-status.md), and for older sessions, see the [`project-history-archive.md`](/home/gregg/Projects/docs-projects/neovim-ecosystem-docs/archives/project-history-archive.md).*
 
+## Session: March 6, 2025 - Hooks-Util Submodule Update Mechanism and Initial Testing
+
+In this session, we focused on implementing the submodule update mechanism and beginning the testing phase for hooks-util v0.6.0:
+
+### Key Accomplishments
+
+1. **Submodule Update Mechanism**
+   - Created `scripts/gitmodules-hooks.sh` to provide a wrapper for git commands that detect submodule updates
+   - Implemented a `post-submodule-update` hook that runs automatically after submodule updates
+   - Enhanced the installation script to properly handle updates with version checking
+   - Added proper file path resolution in the installation script and core modules
+   - Fixed syntax errors in the GitHub workflows section of install.sh
+   - Created detailed documentation in `docs/submodule-update.md`
+
+2. **Initial Testing and Test Environment Setup**
+   - Created the missing testbed project for the docs adapter (hooks-util-testbed-docs)
+   - Began testing with the docs adapter type
+   - Verified initial functionality of the installation script
+   - Started preliminary testing of linting configurations (markdown, YAML, JSON, TOML)
+   - Started validation of GitHub workflow setup with adapter-specific configurations
+   - Tested the basic functionality of the submodule update mechanism
+
+3. **Documentation Enhancement**
+   - Created comprehensive `docs/version-0.6.0-changes.md` with detailed feature overview
+   - Updated README.md to include new features and capabilities
+   - Bumped version number to 0.6.0 in all documentation
+   - Added clear usage instructions for the new features
+   - Documented the submodule update workflow for users
+
+4. **Installation Script Improvements**
+   - Fixed file path resolution in installation script by addressing variable scoping issues
+   - Enhanced update mechanism between install.sh and update_hook.sh
+   - Added `--check-updates-only` and `--quiet` flags to the installation script
+   - Ensured backward compatibility with previous versions
+   - Implemented proper file backup and versioning during updates
+
+### Next Steps
+
+1. Complete comprehensive testing with all testbed projects:
+   - Test lua-lib adapter with hooks-util-testbed-lua-lib
+   - Test nvim-plugin adapter with hooks-util-testbed-nvim-plugin
+   - Test nvim-config adapter with hooks-util-testbed-nvim-config
+2. Verify all adapter-specific validations and workflows
+3. Test edge cases in the submodule update mechanism
+4. Only then proceed to integration with base-project-repo
+
+## Session: March 7, 2025 - Hooks-Util Core and Adapter Enhancements Implementation
+
+In this session, we implemented Phases 1 and 2 of the hooks-util enhancement plan, focusing on core functionality and adapter-specific improvements:
+
+### Key Accomplishments
+
+1. **Core Enhancements (Phase 1)**
+   - Created comprehensive documentation linting modules: markdown.lua, yaml.lua, json.lua, and toml.lua
+   - Developed workflow management system in workflows.lua for base+adapter architecture
+   - Created YAML utilities for merging workflows with lib/yaml_util.lua
+   - Added configuration templates for various linting tools
+   - Enhanced installation script to handle documentation tools and workflows
+
+2. **Adapter Enhancements (Phase 2)**
+   - Enhanced nvim-plugin adapter with health check, runtime path, and plugin structure validation
+   - Added code coverage tracking, LuaRocks validation, and multi-version testing to lua-lib adapter
+   - Implemented mock Neovim environment, config validation, and plugin loading verification for nvim-config adapter
+   - Created a new docs adapter with markdown, YAML, and cross-reference validation
+   - Ensured all adapters properly support Lua linting (luacheck) and formatting (stylua)
+
+3. **Testing Improvements**
+   - Created comprehensive test files for all new modules and adapters
+   - Implemented proper mocking for file system operations in tests
+   - Standardized on correct require paths for lust-next in all test files
+   - Set up workflow combination testing with proper YAML merging
+
+## Session: March 6, 2025 - Repository Audit and Hooks-Util Enhancement Plan
+
+In this session, we conducted a comprehensive audit of existing repositories and developed a detailed enhancement plan for hooks-util with a focus on a base+adapter workflow architecture:
+
+### Key Accomplishments
+
+1. **Repository Audit**
+   - Examined all Neovim ecosystem repositories for current hook and workflow configurations
+   - Cataloged existing workflows in each repository (CI, markdown-lint, yaml-lint, scripts-lint, docs, release)
+   - Identified duplication and inconsistencies across repositories
+   - Documented valuable components from each project type that should be preserved
+
+2. **Base+Adapter Architecture Design**
+   - Developed a new workflow architecture approach with base templates and adapter configurations
+   - Created a plan for workflow templating system to merge base workflows with adapter configurations
+   - Designed a non-destructive approach to preserve project-specific customizations
+   - Ensured all projects get core functionality while allowing for specialized extensions
+
+3. **Hooks-Util Enhancement Specification**
+   - Created a detailed specification for enhancing hooks-util's core functionality
+   - Designed structure for incorporating markdown tools from neovim-ecosystem-docs
+   - Planned for YAML, JSON, and TOML linting capabilities
+   - Outlined an update mechanism for propagating changes from submodule updates
+
+4. **Implementation Planning**
+   - Established proper implementation order: hooks-util → base-project-repo → templates → end projects
+   - Updated project tasks to reflect the new approach
+   - Created an audit report detailing findings and recommendations
+   - Updated documentation and workflow prompts to reflect the refined strategy
+
+## Session: March 6, 2025 - Documentation Linting and Hooks Standardization
+
+In this session, we developed a comprehensive approach to standardize documentation linting and validation across all repositories in the ecosystem:
+
+### Key Accomplishments
+
+1. **Markdown Tooling Development**
+   - Created a comprehensive set of markdown fixing scripts in the `scripts/markdown/` directory
+   - Developed scripts for fixing common markdown issues, list numbering, and heading levels
+   - Added configuration files (.markdownlint.json, .yamllint.yml) for linting tools
+   - Created GitHub workflow files for markdown, YAML, and scripts linting
+
+2. **Git Hooks Integration Planning**
+   - Identified the need to use hooks-util as the foundation for git hooks across repositories
+   - Created a script to add hooks-util as a submodule to repositories
+   - Researched hooks-util's existing installation and configuration processes
+   - Developed a plan to integrate our custom markdown tools with the hooks-util framework
+
+3. **Repository Standardization Strategy**
+   - Planned the implementation of proper upstream relationships between repositories
+   - Developed a non-destructive approach for syncing template changes across repositories
+   - Created a structured plan for auditing existing repositories and implementing changes
+   - Established clear priorities for standardization while preserving project identity
+
 ## Session: March 6, 2025 - README Standardization and .gitignore Consistency
 
 In this session, we focused on standardizing README files across all repositories and ensuring consistent .gitignore files throughout the ecosystem:
@@ -286,55 +412,4 @@ In this session, we focused on debugging and fixing issues with the modular repo
    - Improved the command-line interface for better report configuration
    - Enhanced error detection and correction in the test runner
    - Fixed path handling to ensure proper module loading across environments
-
-## Session: March 5, 2025 - Completing Modular Report Generation with Fallbacks in lust-next
-
-In this session, we successfully completed and tested the fixes for the modular reporting architecture in lust-next:
-
-1. **Comprehensive Fallback Mechanisms**:
-   - Enhanced `coverage.lua` to add fallback source file tracking when debug hooks fail
-   - Implemented manual dataset creation in `run_tests.lua` to ensure reports always generate
-   - Added robust input validation throughout the reporting process to handle missing data
-   - Created multiple directory creation methods to handle different environment limitations
-   - Added extensive diagnostic output to pinpoint issues in the data flow chain
-
-1. **Data Flow Improvements**:
-   - Fixed issues with the `get_report_data()` function to always return properly structured data
-   - Enhanced the `calculate_stats()` function with better debugging and source tracking
-   - Improved the reporting module's input validation to gracefully handle incomplete data
-   - Added pattern-based source file detection when debug tracking fails
-   - Enhanced file path normalization for better pattern matching and directory handling
-
-1. **Testing and Verification**:
-   - Successfully tested the enhanced reporting with HTML, JSON, and LCOV formats
-   - Verified that reports are generated even when debug hooks fail to track files
-   - Confirmed that file operations are reliable with proper directory creation
-   - Ensured proper data flow between modules with comprehensive diagnostics
-   - Tested with various edge cases to verify the robustness of our solutions
-
-## Session: March 5, 2025 - Implementing Modular Report Generation for lust-next
-
-In this session, we focused on implementing the modular reporting architecture in lust-next:
-
-1. **Reporting Module Implementation**:
-   - Created src/reporting.lua as a centralized module for all report generation and file I/O
-   - Implemented standardized data interfaces for communication between modules
-   - Added multiple report formatters (summary, JSON, HTML, LCOV) for coverage data
-   - Added multiple report formatters (summary, JSON, HTML) for quality data
-   - Implemented robust file operations with directory creation and error handling
-   - Added auto-save functionality for multiple report formats in a single operation
-
-1. **Module Refactoring for Separation of Concerns**:
-   - Updated coverage.lua to return structured data instead of generating reports
-   - Updated quality.lua to follow the same pattern with proper data structures
-   - Maintained backward compatibility with existing module interfaces
-   - Added proper error handling and graceful fallbacks throughout
-   - Created a consistent pattern across modules for better maintainability
-
-1. **lust-next Integration**:
-   - Enhanced lust-next.lua to use the new reporting module for report generation
-   - Improved file path handling with centralized directory creation
-   - Added parallel report generation for multiple formats
-   - Implemented better error detection and reporting for file operations
-   - Maintained backward compatibility for existing usage patterns
 

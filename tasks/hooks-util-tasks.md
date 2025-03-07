@@ -3,49 +3,78 @@
 
 ## Current Focus
 
-The current focus for hooks-util is completing comprehensive testing across all adapter types and finalizing documentation before integrating it as a git submodule in all Neovim ecosystem projects.
+The current focus for hooks-util is completing thorough testing of all enhanced features across all adapter types using the testbed projects, before proceeding to deployment. While the submodule update mechanism and docs adapter testing have been implemented, we need to complete comprehensive testing of all other features.
 
 ## High Priority Tasks
 
-1. **Comprehensive Testing Completion**
+1. **Integration and Testing**
+   - [x] Update hooks-util documentation with new functionality
+   - [ ] Create comprehensive integration tests for all features
+   - [ ] Complete testing with all adapter types and features:
+     - [x] Test docs adapter with hooks-util-testbed-docs
+     - [ ] Test lua-lib adapter with hooks-util-testbed-lua-lib  
+     - [ ] Test nvim-plugin adapter with hooks-util-testbed-nvim-plugin
+     - [ ] Test nvim-config adapter with hooks-util-testbed-nvim-config
+   - [ ] Update base-project-repo with enhanced hooks-util
+   - [ ] Propagate changes to template repositories
+   - [ ] Update end-product repositories with improved hooks-util
+
+1. ~~**Core Enhancement for Documentation Tools**~~ ✅ COMPLETED
+   - [x] Integrate markdown linting and fixing scripts from neovim-ecosystem-docs
+   - [x] Add YAML linting capabilities to core hooks-util
+   - [x] Add JSON linting support to core functionality
+   - [x] Add TOML linting capabilities
+   - [x] Ensure script linting (shellcheck, luacheck) is comprehensive
+   - [x] Create comprehensive markdown module (core/markdown.lua)
+
+1. ~~**Adapter Analysis and Enhancement**~~ ✅ COMPLETED
+   - [x] Audit neovim-plugin repositories for unique hooks/workflows to incorporate
+   - [x] Audit lua-lib repositories for library-specific validation needs
+   - [x] Audit neovim-config for configuration-specific requirements
+   - [x] Determine if a dedicated docs adapter is needed for documentation projects
+   - [x] Update all adapters with project-specific functionality identified in audit
+
+1. ~~**Installation System Improvement**~~ ✅ COMPLETED
+   - [x] Enhance installation to properly handle GitHub workflow setup
+   - [x] Create post-update hook system to detect and apply submodule updates
+   - [x] Improve configuration system to better handle project-specific customizations
+   - [x] Create more intelligent project type detection for auto-adapter selection
+
+1. ~~**Workflow Management System**~~ ✅ COMPLETED
+   - [x] Create base workflow templates for all common validation types
+   - [x] Develop adapter-specific configuration files that extend base workflows
+   - [x] Create workflow templating system to merge base and adapter configuration
+   - [x] Ensure all projects get core functionality regardless of adapter
+   - [x] Add documentation workflow with MkDocs support
+   - [x] Add standardized release workflow with appropriate configurations
+
+1. **Integration Tools Development**
+   - [ ] Create comprehensive integration script for adding to repositories
+   - [ ] Develop system for preserving project-specific customizations during integration
+   - [ ] Build update mechanism for keeping repositories in sync with hooks-util changes
+   - [ ] Document integration and update processes thoroughly
+
+## Medium Priority Tasks
+
+1. **Testing Standardization**
    - [ ] Test all adapter types thoroughly with different configurations
    - [ ] Verify project detection mechanisms across various project structures
    - [ ] Test error handling and fallback mechanisms
    - [ ] Validate configuration loading from different sources
-   - [ ] Test pre-commit hooks with various quality settings
+   - [ ] Test pre-commit hooks with all linting tools (including new documentation tools)
 
-1. **Documentation Finalization**
+1. **Documentation Enhancement**
    - [ ] Complete adapter system documentation with detailed examples
-   - [ ] Finalize Lua configuration documentation
    - [ ] Create detailed setup guide for each project type
+   - [ ] Document configuration options for all linting tools
    - [ ] Add troubleshooting guide for common issues
-   - [ ] Enhance README with clear feature overview
+   - [ ] Create integration and update workflow documentation
 
-1. **Integration Preparation**
-   - [ ] Create standardized integration workflow for adding to projects
-   - [ ] Test integration with all project templates
-   - [ ] Prepare submodule setup scripts
-   - [ ] Document integration process for maintainers
-
-## Medium Priority Tasks
-
-1. **Feature Enhancements**
-   - [ ] Add support for additional linting tools
-   - [ ] Enhance configuration validation
-   - [ ] Improve error messages and user feedback
-   - [ ] Add automated setup wizard improvements
-
-1. **Adapter Improvements**
-   - [ ] Create additional specialized adapters for specific project types
-   - [ ] Add extended configuration options for existing adapters
-   - [ ] Improve detection accuracy for edge cases
-   - [ ] Implement adapter-specific documentation
-
-1. **CI Integration**
-   - [ ] Enhance GitHub Actions workflow templates
-   - [ ] Add support for additional CI platforms
-   - [ ] Improve test reporting in CI context
-   - [ ] Create visualization for test quality in CI reports
+1. **CI Workflow Templates**
+   - [ ] Create standardized workflow templates for all common validation types
+   - [ ] Develop project-specific workflow templates for each adapter type
+   - [ ] Ensure workflows properly handle documentation validation
+   - [ ] Add intelligent conditionals to only run workflows on relevant file changes
 
 ## Low Priority Tasks
 

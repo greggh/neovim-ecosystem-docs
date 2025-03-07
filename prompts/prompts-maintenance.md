@@ -199,7 +199,9 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```text
 
-Add a new entry with the following format:
+**IMPORTANT: Always ADD a NEW entry - NEVER edit existing entries - these are historical records!**
+
+Add a new entry at the top of the Detailed Records section with the following format:
 
 ```markdown
 
@@ -214,5 +216,7 @@ Add a new entry with the following format:
 
 ```text
 
-This data helps us continuously improve our workflow prompts.
+Then update the Summary Statistics table at the top to reflect the averaged metrics across all entries.
+
+This data helps us continuously improve our workflow prompts and track effectiveness over time.
 

@@ -57,6 +57,9 @@
 1. **Hooks-Util Testbed Nvim Config** - Testing hooks-util with Neovim config adapter
     - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-nvim-config`
 
+1. **Hooks-Util Testbed Docs** - Testing hooks-util with Documentation adapter
+    - Path: `/home/gregg/Projects/test-projects/hooks-util-testbed-docs`
+
 ### Documentation
 
 1. **Project Documentation** - Centralized documentation and prompts for the ecosystem
@@ -66,11 +69,16 @@
 
 ## Current Priorities
 
-1. **Metrics System Enhancement** - Build comprehensive metrics tracking and validation for documentation
-2. **Documentation Visualization** - Create visual documentation for architecture and workflows
-3. **Automated README Updates** - Create workflow for automated README updates across all projects
-4. **Standardize Version Management** - Ensure consistent version handling across all projects
-5. **Implement Nvim-Toolkit Integration** - Integrate shared utilities into plugins and configurations
+1. **Complete hooks-util v0.6.0 Testing** - Thoroughly test all features across all adapter types using testbed projects
+2. **Deploy Enhanced hooks-util 0.6.0** - Add the enhanced hooks-util as a submodule to all ecosystem repositories, starting with base-project-repo
+3. **Integrate Base+Adapter Workflow System** - Begin with base-project-repo and propagate to all projects
+4. **Establish Repository Upstreams** - Set up proper upstream relationships for consistent propagation of changes
+5. ~~**Documentation Linting Standardization**~~ ✅ - Implemented in hooks-util core and docs adapter
+6. **Non-Destructive Synchronization** - Develop system for preserving customizations during upstream merges
+7. ~~**Comprehensive Repository Audit**~~ ✅ - Completed audit of hooks, workflows, and linting tools
+8. ~~**Submodule Update Mechanism**~~ ✅ - Added gitmodules-hooks.sh for automatic submodule updates
+9. **Metrics System Enhancement** - Build comprehensive metrics tracking and validation for documentation
+10. **Documentation Visualization** - Create visual documentation for architecture and workflows
 
 ## Architecture Principles
 

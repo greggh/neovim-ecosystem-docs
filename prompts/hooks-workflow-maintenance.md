@@ -3,6 +3,26 @@
 
 This prompt initiates a comprehensive audit and maintenance of pre-commit hooks and GitHub workflows across all Neovim ecosystem projects.
 
+## Recent Plans and Discoveries
+
+1. **Base+Adapter Workflow Architecture:**
+   - Base workflow templates contain core functionality for all projects
+   - Adapter-specific configurations extend base templates without duplication
+   - Templating system merges base workflows with adapter configurations
+   - All projects get both core functionality and adapter-specific enhancements
+
+2. **Repository Integration Strategy:**
+   - Prioritize hooks-util enhancement before deployment
+   - Implement in proper order: hooks-util → base-project-repo → templates → end projects
+   - Use non-destructive synchronization to preserve project identity
+   - Follow proper upstream relationships when propagating changes
+
+3. **Core Documentation Tool Requirements:**
+   - Comprehensive markdown fixing scripts
+   - YAML, JSON, and TOML linting capabilities
+   - Script validation (shellcheck, luacheck)
+   - Base workflow templates with adapter configurations
+
 ## Scope and Objectives
 
 1. **Verify and Fix Pre-commit Hooks**
@@ -12,7 +32,7 @@ This prompt initiates a comprehensive audit and maintenance of pre-commit hooks 
 
 1. **Validate GitHub Workflows**
    - Verify CI/CD, documentation, and release workflows
-   - Ensure consistent patterns across projects
+   - Ensure consistent patterns using base+adapter architecture
    - Fix any failing or misconfigured workflows
 
 1. **Check Integration Components**
@@ -129,8 +149,13 @@ When addressing issues:
 
 1. **Preserve Consistency**
    - Apply fixes that maintain cross-project consistency
-   - Follow established patterns from template repositories
+   - Use base workflow templates with adapter configurations
    - Document any necessary exceptions with clear rationale
+
+1. **Implement Base+Adapter Architecture**
+   - Ensure core functionality exists in base workflows
+   - Place project-specific functionality in adapter configurations
+   - Use templating system to merge base workflows with adapter configurations
 
 1. **Verify Fixes**
    - Test all hooks and workflows after changes
@@ -159,9 +184,10 @@ What NOT to do:
    - New issues documented in appropriate task files
 
 1. **Improvement Suggestions**
-   - Recommendations for standardizing hooks across projects
-   - Workflow optimization suggestions
+   - Recommendations for enhancing hooks-util's core and adapter functionality
+   - Base+adapter workflow implementation details
    - New features that could enhance the CI/CD pipeline
+   - Template merging efficiency improvements
 
 ## Reference Materials
 
@@ -181,7 +207,9 @@ After using this prompt, please record its effectiveness to help us improve our 
 
 ```text
 
-Add a new entry with the following format:
+**IMPORTANT: Always ADD a NEW entry - NEVER edit existing entries - these are historical records!**
+
+Add a new entry at the top of the Detailed Records section with the following format:
 
 ```markdown
 
@@ -196,5 +224,7 @@ Add a new entry with the following format:
 
 ```text
 
-This data helps us continuously improve our workflow prompts.
+Then update the Summary Statistics table at the top to reflect the averaged metrics across all entries.
+
+This data helps us continuously improve our workflow prompts and track effectiveness over time.
 

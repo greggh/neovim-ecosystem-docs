@@ -3,7 +3,7 @@
 
 ## Current Focus
 
-The current focus for our documentation system is implementing a comprehensive metrics tracking and validation system to measure documentation effectiveness, developing the visual documentation system for architecture diagrams, and continuing to enhance our auto-fixing tools across all repositories.
+The current focus for our documentation system is standardizing git hooks using hooks-util across all repositories, implementing our markdown linting tools in conjunction with hooks-util, establishing proper upstream relationships between repositories, and developing a comprehensive metrics tracking and validation system.
 
 ## High Priority Tasks
 
@@ -86,6 +86,50 @@ The current focus for our documentation system is implementing a comprehensive m
    - [ ] Develop automated documentation checking system
 
 ## New Tasks
+
+1. **Repository Hooks Standardization**
+   - [ ] Conduct comprehensive repository audit:
+     - [ ] Identify repositories with custom pre-commit hooks vs hooks-util
+     - [ ] Catalog all GitHub workflow files across repositories
+     - [ ] Document unique linting and validation tools used in each project
+     - [ ] Map which hooks-util adapters are needed for each repository
+     - [ ] Note outdated hooks-util installations that need updating
+   - [ ] Enhance hooks-util with documentation tools:
+     - [ ] Add markdown linting/fixing scripts from neovim-ecosystem-docs
+     - [ ] Ensure YAML, JSON, and TOML linting capabilities are included
+     - [ ] Verify script linting tools are comprehensive
+     - [ ] Create base workflow templates for all document validation
+     - [ ] Develop adapter-specific workflow configurations that extend base templates
+     - [ ] Implement workflow templating system to merge base workflows with adapter configs
+   - [ ] Create integration and update system:
+     - [ ] Develop script for initial hooks-util installation
+     - [ ] Create post-update mechanism for hooks-util changes
+     - [ ] Build configuration system for preserving customizations
+     - [ ] Document integration process for repository maintainers
+   - [ ] Implement in proper order:
+     - [ ] First enhance hooks-util with all required functionality
+     - [ ] Install in base-project-repo with comprehensive testing
+     - [ ] Propagate to template repositories with appropriate adapters
+     - [ ] Update all end-product repositories with non-destructive merging
+
+1. **Repository Upstream Management**
+   - [ ] Document correct upstream relationships between repositories:
+     - [ ] base-project-repo → all template repositories 
+     - [ ] neovim-plugin-template → plugin repositories
+     - [ ] neovim-config-template → Neovim configurations
+   - [ ] Configure upstream remotes with proper tracking:
+     - [ ] Add appropriate remote entries to all git repositories
+     - [ ] Set up correct branch tracking relationships
+     - [ ] Document upstream configuration in each repository
+   - [ ] Develop non-destructive upstream merging process:
+     - [ ] Create scripts for safe upstream merging
+     - [ ] Implement verification to prevent overwriting customizations
+     - [ ] Document conflict resolution strategy for maintainers
+     - [ ] Test with simulated merge conflicts to validate process
+   - [ ] Build upstream compliance verification system:
+     - [ ] Create automated checks for upstream compatibility
+     - [ ] Define standards that downstream repositories must meet
+     - [ ] Implement regular validation in CI workflows
 
 1. **Metrics Automation**
    - [ ] Create monthly metrics summary script

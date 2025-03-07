@@ -3,9 +3,9 @@
 
 # Neovim Ecosystem Documentation
 
-[![Lint Markdown](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/markdown-lint.yml)
-[![Lint YAML](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/yaml-lint.yml/badge.svg)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/yaml-lint.yml)
-[![Build Documentation](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/docs-build.yml/badge.svg)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/docs-build.yml)
+[![Lint Markdown](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/markdown-lint.yml/badge.svg?style=flat-square)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/markdown-lint.yml)
+[![Lint YAML](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/yaml-lint.yml/badge.svg?style=flat-square)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/yaml-lint.yml)
+[![Build Documentation](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/docs-build.yml/badge.svg?style=flat-square)](https://github.com/greggh/neovim-ecosystem-docs/actions/workflows/docs-build.yml)
 [![GitHub License](https://img.shields.io/github/license/greggh/neovim-ecosystem-docs?style=flat-square)](https://github.com/greggh/neovim-ecosystem-docs/blob/main/LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/greggh/neovim-ecosystem-docs?style=flat-square)](https://github.com/greggh/neovim-ecosystem-docs/stargazers)
 [![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)](https://github.com/greggh/neovim-ecosystem-docs/releases/tag/v1.0.0)
@@ -124,6 +124,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by <a href="https://github.com/greggh">Gregg Housh</a></p>
+</div>
 
 ---
 
