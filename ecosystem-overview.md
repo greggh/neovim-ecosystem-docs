@@ -69,16 +69,19 @@
 
 ## Current Priorities
 
-1. **Deploy Enhanced hooks-util 0.6.0** - Add the enhanced hooks-util as a submodule to all ecosystem repositories, starting with base-project-repo
-2. **Integrate Base+Adapter Workflow System** - Begin with base-project-repo and propagate to all projects
-3. **Establish Repository Upstreams** - Set up proper upstream relationships for consistent propagation of changes
-4. **Non-Destructive Synchronization** - Develop system for preserving customizations during upstream merges
-5. ~~**Documentation Linting Standardization**~~ ✅ - Implemented in hooks-util core and docs adapter
-6. ~~**Comprehensive Repository Audit**~~ ✅ - Completed audit of hooks, workflows, and linting tools
-7. ~~**Submodule Update Mechanism**~~ ✅ - Added gitmodules-hooks.sh for automatic submodule updates
-8. ~~**Complete hooks-util v0.6.0 Testing**~~ ✅ - Thoroughly tested all features across all adapter types using testbed projects
-9. **Metrics System Enhancement** - Build comprehensive metrics tracking and validation for documentation
-10. **Documentation Visualization** - Create visual documentation for architecture and workflows
+1. ~~**Implement Comprehensive Code Quality System**~~ ✅ - Implemented codefix.lua module in lust-next
+2. **Integrate Codefix with hooks-util** - Create hooks-util adapter for the codefix module
+3. **Fix Critical hooks-util Issues** - Resolve submodule handling, path resolution, and template distribution issues
+4. **Integrate Unified Fixing Tools** - Implement auto-fixing for all file types with centralized configuration
+5. **Deploy Enhanced hooks-util 0.6.0** - Add the fixed and tested hooks-util as a submodule to all ecosystem repositories
+6. **Integrate Base+Adapter Workflow System** - Begin with base-project-repo and propagate to all projects
+7. **Establish Repository Upstreams** - Set up proper upstream relationships for consistent propagation of changes
+8. **Non-Destructive Synchronization** - Develop system for preserving customizations during upstream merges
+9. **Backup File Management** - Implement standard process for managing installation backup files
+10. ~~**Documentation Linting Standardization**~~ ✅ - Implemented in hooks-util core and docs adapter
+11. ~~**Comprehensive Repository Audit**~~ ✅ - Completed audit of hooks, workflows, and linting tools
+12. ~~**Submodule Update Mechanism**~~ ✅ - Added gitmodules-hooks.sh for automatic submodule updates
+13. **Metrics System Enhancement** - Build comprehensive metrics tracking and validation for documentation
 
 ## Architecture Principles
 
