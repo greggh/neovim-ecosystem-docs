@@ -1,90 +1,88 @@
+# lust-next Tasks
 
-# Lust-Next Tasks
+## Last Updated: 2025-03-08 - Implemented Filesystem Module
 
-## Current Focus: Comprehensive Lua Code Quality Module (Codefix)
+## High Priority
 
-Our top priority is now developing a comprehensive Lua code quality module (codefix.lua) that integrates with hooks-util and provides advanced fixing capabilities beyond what existing tools offer.
+- [x] Create standalone filesystem module as foundational utility
+  - [x] Implement platform-independent file operations
+  - [x] Add directory operations (create, list, delete)
+  - [x] Create robust path manipulation utilities
+  - [x] Implement comprehensive file discovery system
+  - [x] Add detailed error handling for all operations
+  - [x] Create basic test suite
+  - [x] Design for future extraction to separate library
 
-## High Priority Tasks
+- [x] Fix test failures in fix_markdown.lua integration tests
+  - [x] Debug and fix failing tests in fix_markdown_script_test.lua
+  - [x] Improve file creation and verification in test environment
+  - [x] Enhance error handling in test infrastructure
+  - [x] Ensure proper cleanup of test resources
 
-1. **Create Core Codefix Module**
-   - [x] Design codefix.lua architecture with strong separation of concerns
-   - [x] Implement core file analysis functionality 
-   - [x] Create flexible configuration system
-   - [x] Build plugin system for custom rules and fixers
-   - [x] Develop command-line interface for standalone use
-   - [x] Add hooks-util integration layer
+- [x] Fix test reporting in run_all_tests.lua
+  - [x] Ensure failures are properly reported even when no runtime errors
+  - [x] Enhance failure reporting with details on assertion failures
+  - [x] Update pass/fail detection to consider assertion results
 
-2. **Integrate Existing Tools**
-   - [x] Create StyLua integration for formatting
-   - [x] Implement Luacheck integration for linting
-   - [x] Add selectable rule configurations
-   - [x] Build validation layer to verify fixes
-   - [x] Create reporting capabilities for issues
+- [x] Enhance code coverage module with filesystem foundation
+  - [x] Improve file discovery for coverage reporting
+  - [x] Add configuration for source directories
+  - [x] Implement discovery of uncovered files
+  - [x] Refactor to use new filesystem module
+  - [ ] Improve coverage visualization
 
-3. **Implement Custom Fixers**
-   - [x] Multiline string whitespace fixing
-   - [x] Unused variable handling with underscore prefixing
-   - [x] String concatenation optimization
-   - [x] Type annotation generation and validation
-   - [x] Lua version compatibility handling
-   - [x] Neovim-specific module configuration
+- [x] Upgrade quality validation system
+  - [x] Refactor to use new filesystem module
+  - [ ] Run level 5 code quality tests
+  - [ ] Address any quality issues identified
+  - [ ] Improve test structure based on quality analysis
 
-4. **Create Testing Framework**
-   - [ ] Develop test fixtures with common Lua errors
-   - [ ] Create validation tests for each fixer
-   - [ ] Add integration tests with hooks-util
-   - [ ] Build performance benchmarks for large codebases
+- [ ] Complete filesystem module integration and testing
+  - [ ] Complete integration with reporting module
+  - [ ] Update all test files to use filesystem module
+  - [ ] Create comprehensive test suite for filesystem module
+  - [ ] Add tests for edge cases and platform-specific behaviors
+  - [ ] Prepare for eventual extraction as standalone library
 
-## Medium Priority Tasks
+- [ ] Complete integration with hooks-util project
+  - [ ] Create integration tests with hooks-util
+  - [ ] Document integration patterns for custom projects
+  - [ ] Create comprehensive examples for various integration scenarios
+  - [ ] Implement hooks-util-specific configurations
 
-1. **Documentation**
-   - [ ] Create comprehensive API documentation
-   - [ ] Develop examples for each fixer type
-   - [ ] Add troubleshooting guide
-   - [ ] Create visual guides for common errors
+## Medium Priority
 
-2. **Improve Reporting Module** *(Previous focus, now secondary)*
-   - [ ] Create additional test cases for reporting module validation
-   - [ ] Add Cobertura XML output format for CI systems
-   - [ ] Enhance HTML reports with source highlighting
-   - [ ] Add configuration for report file naming
+- [ ] Improve report formatting
+  - [ ] Add syntax highlighting for all supported languages
+  - [ ] Implement collapsible sections in HTML reports
+  - [ ] Add filtering options for test results
+  - [ ] Create interactive coverage visualization
 
-## Medium Priority Tasks
+- [ ] Enhance performance for large test suites
+  - [ ] Optimize module loading time
+  - [ ] Improve memory management for long-running tests
+  - [ ] Implement more efficient coverage data storage
+  - [ ] Add performance benchmarking tools
 
-1. **Performance Benchmarking Module**
-   - [ ] Implement benchmark runner functionality with precise timing
-   - [ ] Create timing utilities with nanosecond precision when available
-   - [ ] Support benchmark suites with multiple test cases
-   - [ ] Add statistical analysis of benchmark results (mean, median, std dev)
-   - [ ] Implement comparison between benchmark runs
-   - [ ] Create visual benchmark reports in HTML format
-   - [ ] Add performance regression detection
-   - [ ] Support profiling integration for deeper analysis
+- [ ] Create video tutorials
+  - [ ] Basic testing workflow
+  - [ ] Advanced mocking techniques
+  - [ ] Coverage and quality analysis
+  - [ ] Integration with various CI systems
 
-1. **Performance Optimization**
-   - [ ] Optimize coverage data processing for large codebases
-   - [ ] Improve file scanning performance with better caching
-   - [ ] Add option for lightweight reporting mode for faster execution
+## Low Priority
 
-1. **Integration Improvements**
-   - [ ] Create streamlined API for third-party tools to consume reports
-   - [ ] Add export capabilities for common code quality platforms
-   - [ ] Implement report merging for distributed test execution
+- [ ] Add additional report formats
+  - [ ] Markdown output for documentation integration
+  - [ ] Badge generation for README files
+  - [ ] Custom templating system for reports
 
-1. **Usability Enhancements**
-   - [ ] Add progress indicators during report generation
-   - [ ] Improve report file organization with configurable structures
-   - [ ] Create report comparison utilities to track improvements
+- [ ] Implement specialty assertions
+  - [ ] File system assertions (file exists, contains)
+  - [ ] Performance assertions (execution time within range)
+  - [ ] Network assertions (for API testing)
 
-## Low Priority Tasks
-
-1. **Advanced Features**
-   - [ ] Add support for Git integration in reports (show who last modified lines)
-   - [ ] Implement historical trend tracking for coverage and quality metrics
-   - [ ] Create dashboard view for multi-project report aggregation
-
-1. **Extensibility**
-   - [ ] Add plugin system for custom report formats
-   - [ ] Create hooks for pre/post report generation
-   - [ ] Implement custom metrics collection framework
+- [ ] Create Neovim plugin integration
+  - [ ] Test runner integration with Neovim
+  - [ ] Results display in floating window
+  - [ ] Jump to failure location
